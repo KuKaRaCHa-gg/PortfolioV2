@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Site Musée - WordPress",
+    "short": "Site web pour un musée avec gestion de contenu",
+    "stack": ["WordPress", "PHP", "MySQL", "CSS"],
+    "images": [
+      {
+        "url": "/images/projet1-home.jpg",
+        "alt": "Page d'accueil du site musée",
+        "caption": "Interface d'accueil avec galerie d'œuvres"
+      },
+      {
+        "url": "/images/projet1-admin.jpg",
+        "alt": "Interface d'administration",
+        "caption": "Panneau d'administration WordPress personnalisé"
+      }
+    ]
+  },
+  {
+    "title": "Application FXML",
+    "short": "Application de gestion en JavaFX",
+    "stack": ["JavaFX", "FXML", "MySQL"],
+    "images": [
+      {
+        "url": "/images/projet2-interface.jpg",
+        "alt": "Interface principale de l'application",
+        "caption": "Tableau de bord avec graphiques"
+      }
+    ]
+  },
+  {
+    "title": "Portfolio Terminal",
+    "short": "Portfolio interactif style rétro terminal",
+    "stack": ["React", "Vite", "Three.js", "Web Audio API"],
+    "images": []
+  }
+]

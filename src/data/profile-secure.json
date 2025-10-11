@@ -1,0 +1,140 @@
+{
+  "name": "Daniil MINEVICH",
+  "age": 19,
+  "title": "Étudiant BUT Informatique - Développeur Full Stack",
+  "summary": "Étudiant passionné en BUT Informatique à l'IUT de Laval, je développe des applications web et desktop avec une forte affinité pour les designs rétro-terminaux. Expérience en stages et projets collaboratifs.",
+  "contact": {
+    "github": "https://github.com/KuKaRaCHa-gg",
+    "location": "Laval, France",
+    "links": "https://many.link/minevich",
+    "linkedin": "https://linkedin.com/in/daniil-minevich"
+  },
+  "experiences": [
+    {
+      "role": "Alternant DevOps / Développeur",
+      "company": "Séché Alliance",
+      "year": "2024-2025",
+      "details": [
+        "Développement d'applications métiers",
+        "Automatisation des processus DevOps",
+        "Gestion de bases de données SQL/TSQL"
+      ]
+    },
+    {
+      "role": "Stagiaire Développeur",
+      "company": "ASGL Conseil",
+      "year": "2024",
+      "details": [
+        "Scripts PowerShell pour Active Directory et SCCM/MECM",
+        "Automatisation de la gestion des postes de travail",
+        "Administration système Windows Server"
+      ]
+    },
+    {
+      "role": "Stagiaire en administration informatique",
+      "company": "ESIEA, École d'ingénieurs",
+      "year": "2023",
+      "details": [
+        "Entretien de PC et du matériel informatique",
+        "Support technique pour les utilisateurs",
+        "Développement web PHP/MySQL"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Baccalauréat STI2D (Lycée Réaumur Laval)",
+      "note": "Mention Assez Bien"
+    },
+    {
+      "school": "BUT Informatique (IUT de Laval)",
+      "status": "Depuis septembre 2023 - 2ème année"
+    }
+  ],
+  "skills": [
+    "JavaScript / TypeScript",
+    "Python",
+    "Java / JavaFX",
+    "C / C++",
+    "PHP / WordPress",
+    "SQL / TSQL / MySQL / SQLite",
+    "HTML / CSS",
+    "React / Vite",
+    "Node.js / Discord.js",
+    "Git / GitHub",
+    "PowerShell / Bash",
+    "Active Directory / SCCM",
+    "Linux / Windows Server",
+    "Android / Kotlin",
+    "Figma / DaVinci Resolve",
+    "Arduino",
+    "Obsidian / Data Management"
+  ],
+  "languages": [
+    "Français (courant)",
+    "Russe (maternelle)",
+    "Anglais (A2+)",
+    "Espagnol (A2)"
+  ],
+  "interests": [
+    "Jeux vidéo (FPS, Survival, Stratégie)",
+    "Développement de jeux vidéo",
+    "Design rétro-terminal / Cyberpunk",
+    "Automatisation système",
+    "Open Source",
+    "Compétitions de code (Nuit de l'Info)",
+    "Musculation",
+    "Anime / Manga",
+    "Électronique"
+  ],
+  "activities": [
+    {
+      "icon": "🎮",
+      "title": "Game Development",
+      "description": "Création de jeux en Java, JavaScript et C++. Exploration de Game of Life, Snake, et algorithmes de pathfinding"
+    },
+    {
+      "icon": "💻",
+      "title": "Open Source",
+      "description": "Contribution aux projets open source. Plus de 30 repositories publics sur GitHub"
+    },
+    {
+      "icon": "🌙",
+      "title": "Nuit de l'Info",
+      "description": "Participation aux challenges de développement web intensifs. Projet DEALLOC 2024"
+    },
+    {
+      "icon": "🏋️",
+      "title": "Musculation",
+      "description": "Entraînement régulier pour maintenir un équilibre physique et mental"
+    },
+    {
+      "icon": "🎬",
+      "title": "Anime & Manga",
+      "description": "Passionné de culture japonaise, animation et storytelling"
+    },
+    {
+      "icon": "⚡",
+      "title": "Électronique",
+      "description": "Projets Arduino et exploration de l'IoT. Hardware et software combinés"
+    },
+    {
+      "icon": "🎨",
+      "title": "Design Terminal",
+      "description": "Création d'interfaces rétro-terminal, style cyberpunk et animations Matrix"
+    },
+    {
+      "icon": "📊",
+      "title": "Data Management",
+      "description": "Organisation de connaissances avec Obsidian. Systèmes de gestion de bases de données"
+    }
+  ],
+  "stats": {
+    "repositories": 30,
+    "followers": 7,
+    "following": 14,
+    "projects_completed": 12,
+    "languages_mastered": 10,
+    "years_experience": 2
+  }
+}

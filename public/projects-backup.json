@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Site Musée (TP)",
+    "short": "Modélisation et création d'une base de donnée pour un site musée",
+    "stack": ["HTML","CSS","MySQL"]
+  },
+  {
+    "title": "Application FXML",
+    "short": "Application de gestion (projet étudiant)",
+    "stack": ["Java","FXML","MySQL"]
+  }
+]

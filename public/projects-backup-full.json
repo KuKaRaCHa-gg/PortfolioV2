@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Obsidian Data",
+    "short": "Base de données personnelle Obsidian avec requêtes TSQL avancées",
+    "stack": ["TSQL", "Database", "Obsidian"],
+    "github": "https://github.com/KuKaRaCHa-gg/ObsiDaniil",
+    "date": "2025-01",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "Portfolio Terminal",
+    "short": "Portfolio WordPress avec thème rétro-terminal personnalisé",
+    "stack": ["PHP", "WordPress", "CSS", "JavaScript"],
+    "github": "https://github.com/KuKaRaCHa-gg/Daniil-Bedrock-Roots-Portfolio-TERMINAL",
+    "date": "2024-03",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "GeMoHi - Game Map",
+    "short": "Jeu utilisant l'API Google Maps pour une expérience interactive",
+    "stack": ["Kotlin", "Google Maps API", "Android"],
+    "github": "https://github.com/KuKaRaCHa-gg/GeMoHi",
+    "date": "2024-03",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "SCCM/MECM Delete PCs",
+    "short": "Script PowerShell pour gérer la suppression de PC dans SCCM/MECM",
+    "stack": ["PowerShell", "SCCM", "System Admin"],
+    "github": "https://github.com/KuKaRaCHa-gg/SCCM-MECM-DELETE-PCS",
+    "date": "2024-04",
+    "images": []
+  },
+  {
+    "title": "Active Directory PC Management",
+    "short": "Scripts PowerShell pour automatiser la gestion des ordinateurs dans Active Directory",
+    "stack": ["PowerShell", "Active Directory", "Windows Server"],
+    "github": "https://github.com/KuKaRaCHa-gg/AD-DELET-COMPUTER",
+    "date": "2024-04",
+    "images": []
+  },
+  {
+    "title": "Product Manager",
+    "short": "Application de gestion de produits avec interface web",
+    "stack": ["PHP", "MySQL", "Bootstrap"],
+    "github": "https://github.com/KuKaRaCHa-gg/Product-Manager",
+    "date": "2024-01",
+    "images": []
+  },
+  {
+    "title": "Game Collection",
+    "short": "Site de gestion de collection de jeux vidéo avec recherche avancée",
+    "stack": ["PHP", "JavaScript", "MySQL", "CSS"],
+    "github": "https://github.com/KuKaRaCHa-gg/GAME_COLLECTION",
+    "date": "2024-12",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "DEALLOC - Nuit de l'Info 2024",
+    "short": "Projet réalisé lors de la Nuit de l'Informatique 2024",
+    "stack": ["JavaScript", "HTML", "CSS", "Node.js"],
+    "github": "https://github.com/KuKaRaCHa-gg/DEALLOC",
+    "date": "2024-12",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "CSV Generator",
+    "short": "Générateur de fichiers CSV en Python avec interface simple",
+    "stack": ["Python", "CSV", "Data Processing"],
+    "github": "https://github.com/KuKaRaCHa-gg/CSV-GENERATOR",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Système d'Information",
+    "short": "Projet de gestion de système d'information en Python",
+    "stack": ["Python", "Database", "OOP"],
+    "github": "https://github.com/KuKaRaCHa-gg/Information-Systeme",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Calcule de Moyenne BUT",
+    "short": "Calculateur de moyenne pour BUT Informatique en POO Java",
+    "stack": ["Java", "OOP", "JavaFX"],
+    "github": "https://github.com/KuKaRaCHa-gg/CalculeDeMoyenne",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Duck - Simulateur Français",
+    "short": "Simulateur amusant de canards en Java",
+    "stack": ["Java", "OOP", "Design Patterns"],
+    "github": "https://github.com/KuKaRaCHa-gg/Duck",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Java Threads",
+    "short": "Exploration des threads et concurrence en Java",
+    "stack": ["Java", "Multithreading", "Concurrency"],
+    "github": "https://github.com/KuKaRaCHa-gg/Java-Threads",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Discord Ping Bot",
+    "short": "Bot Discord expérimental avec commande ping-pong",
+    "stack": ["JavaScript", "Discord.js", "Node.js"],
+    "github": "https://github.com/KuKaRaCHa-gg/Discord-Ping",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Portfolio Moderne",
+    "short": "Portfolio showcase avec mockups et code source propre",
+    "stack": ["HTML", "CSS", "JavaScript", "Responsive"],
+    "github": "https://github.com/KuKaRaCHa-gg/Portfolio",
+    "date": "2024-11",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "MortPion - Tic Tac Toe",
+    "short": "Jeu Java avec plusieurs modes et règles personnalisables",
+    "stack": ["Java", "Game Dev", "JavaFX"],
+    "github": "https://github.com/KuKaRaCHa-gg/MortPion",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "La Police d'Écriture",
+    "short": "Application de gestion et modification de polices",
+    "stack": ["Java", "JavaFX", "GUI"],
+    "github": "https://github.com/KuKaRaCHa-gg/LaPoliceDecriture",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Calculatrice JavaFX",
+    "short": "Premier projet FXML - calculatrice interactive avec interface soignée",
+    "stack": ["Java", "JavaFX", "FXML"],
+    "github": "https://github.com/KuKaRaCHa-gg/Calculatrice",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Catalogue de Bijoux",
+    "short": "Site vitrine élégant pour catalogue de bijouterie responsive",
+    "stack": ["HTML", "CSS", "Responsive Design"],
+    "github": "https://github.com/KuKaRaCHa-gg/catalogue",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "SAE 2.01 - Gestionnaire Jeux Vidéo",
+    "short": "Application Java/JavaFX collaborative de gestion de bibliothèque de jeux vidéo",
+    "stack": ["Java", "JavaFX", "SQLite", "Git"],
+    "github": "https://github.com/KuKaRaCHa-gg/SAE2.01",
+    "date": "2024-11",
+    "featured": true,
+    "team": ["Daniil Minevich", "Noé Galopin", "Mattis Schaefer", "Lou", "Justine Gallet"],
+    "images": []
+  },
+  {
+    "title": "Date C++ Class",
+    "short": "Implémentation C++ d'une classe Date avec manipulation intuitive et flexible",
+    "stack": ["C++", "OOP", "BUT 3"],
+    "github": "https://github.com/KuKaRaCHa-gg/Date_C-",
+    "date": "2024-09",
+    "images": []
+  },
+  {
+    "title": "Intro C++",
+    "short": "TD1 C++ - Introduction aux concepts de base",
+    "stack": ["C++", "Learning"],
+    "github": "https://github.com/KuKaRaCHa-gg/Intro-C-",
+    "date": "2024-09",
+    "images": []
+  },
+  {
+    "title": "Méthode Optimisation Chemin",
+    "short": "Algorithmes d'optimisation de chemins",
+    "stack": ["Algorithm", "Pathfinding"],
+    "github": "https://github.com/KuKaRaCHa-gg/M-thode-optimisation-chemin",
+    "date": "2024",
+    "images": []
+  },
+  {
+    "title": "Numérateur d'Énumérateur C++",
+    "short": "Implémentation de numérateurs et énumérateurs en C++",
+    "stack": ["C++", "Iterators"],
+    "github": "https://github.com/KuKaRaCHa-gg/Num-rateur-d-enum-rateur-C-",
+    "date": "2024",
+    "images": []
+  }
+]

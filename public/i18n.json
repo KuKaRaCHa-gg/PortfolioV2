@@ -1,0 +1,60 @@
+{
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Contact",
+      "pong": "Pong"
+    },
+    "home": {
+      "welcome": "Bienvenue sur le portfolio de Daniil Minevich",
+      "subtitle": "Développeur Full Stack - Codeur Rétro",
+      "enter": "Appuyez sur Entrée pour continuer...",
+      "boot1": "[OK] Initialisation du système...",
+      "boot2": "[OK] Chargement du profil..."
+    },
+    "about": {
+      "title": "À propos"
+    },
+    "projects": {
+      "title": "Projets",
+      "preview3d": "Aperçu 3D"
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Nom",
+      "message": "Message",
+      "send": "Envoyer (simulation)"
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact",
+      "pong": "Pong"
+    },
+    "home": {
+      "welcome": "Welcome to Daniil Minevich's portfolio",
+      "subtitle": "Full Stack Developer - Retro Coder",
+      "enter": "Press Enter to continue...",
+      "boot1": "[OK] System initialization...",
+      "boot2": "[OK] Loading profile..."
+    },
+    "about": {
+      "title": "About"
+    },
+    "projects": {
+      "title": "Projects",
+      "preview3d": "3D Preview"
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Name",
+      "message": "Message",
+      "send": "Send (simulated)"
+    }
+  }
+}

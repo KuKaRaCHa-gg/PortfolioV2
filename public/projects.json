@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Portfolio Terminal - WordPress",
+    "short": "Portfolio professionnel avec thème rétro-terminal personnalisé, style cyberpunk et animations Matrix. Développé avec Bedrock et Roots",
+    "stack": ["PHP", "WordPress", "CSS", "JavaScript", "Bedrock"],
+    "github": "https://github.com/KuKaRaCHa-gg/Daniil-Bedrock-Roots-Portfolio-TERMINAL",
+    "date": "2024-03",
+    "featured": true,
+    "images": [
+      "/images/image.png"
+    ]
+  },
+  {
+    "title": "GeMoHi - Game on Map",
+    "short": "Application Android de jeu interactif utilisant Google Maps API. Expérience ludique basée sur la géolocalisation",
+    "stack": ["Kotlin", "Google Maps API", "Android", "Mobile"],
+    "github": "https://github.com/KuKaRaCHa-gg/GeMoHi",
+    "date": "2024-03",
+    "featured": true,
+    "images": [
+      "/images/GeoMoHIDE/ScreenGamplayGeoMoHi.jpg",
+      "/images/GeoMoHIDE/Logo_GeoMoHi.png"
+    ]
+  },
+  {
+    "title": "Game Collection Manager",
+    "short": "Application web complète de gestion de collection de jeux vidéo avec recherche avancée, filtres et statistiques",
+    "stack": ["PHP", "JavaScript", "MySQL", "CSS", "Bootstrap"],
+    "github": "https://github.com/KuKaRaCHa-gg/GAME_COLLECTION",
+    "date": "2024-12",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "DEALLOC - Nuit de l'Info 2024",
+    "short": "Projet développé lors de la Nuit de l'Informatique 2024. Challenge de développement web intensif en équipe",
+    "stack": ["JavaScript", "HTML", "CSS", "Node.js", "Teamwork"],
+    "github": "https://github.com/KuKaRaCHa-gg/DEALLOC",
+    "date": "2024-12",
+    "featured": true,
+    "images": []
+  },
+  {
+    "title": "SAE 2.01 - Gestionnaire de Jeux Vidéo",
+    "short": "Application Java/JavaFX collaborative de gestion de bibliothèque de jeux vidéo. Projet académique BUT Informatique avec base SQLite",
+    "stack": ["Java", "JavaFX", "SQLite", "Git", "Scrum"],
+    "github": "https://github.com/KuKaRaCHa-gg/SAE2.01",
+    "date": "2024-11",
+    "featured": true,
+    "team": ["Daniil Minevich", "Noé Galopin", "Mattis Schaefer", "Lou", "Justine Gallet"],
+    "images": []
+  },
+  {
+    "title": "SCCM/MECM Admin Tools",
+    "short": "Suite de scripts PowerShell pour automatiser la gestion des postes de travail dans SCCM/MECM. Développé en stage chez ASGL Conseil",
+    "stack": ["PowerShell", "SCCM", "System Admin", "Automation"],
+    "github": "https://github.com/KuKaRaCHa-gg/SCCM-MECM-DELETE-PCS",
+    "date": "2024-04",
+    "images": []
+  },
+  {
+    "title": "Active Directory Manager",
+    "short": "Scripts PowerShell pour automatiser la gestion des ordinateurs dans Active Directory. Administration système Windows Server",
+    "stack": ["PowerShell", "Active Directory", "Windows Server"],
+    "github": "https://github.com/KuKaRaCHa-gg/AD-DELET-COMPUTER",
+    "date": "2024-04",
+    "images": []
+  },
+  {
+    "title": "Portfolio Moderne",
+    "short": "Portfolio showcase responsive avec design moderne et animations fluides. Code source propre et optimisé",
+    "stack": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "github": "https://github.com/KuKaRaCHa-gg/Portfolio",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Duck Simulator",
+    "short": "Simulateur de canards en Java avec design patterns avancés. Projet OOP explorant Strategy, Factory et Observer",
+    "stack": ["Java", "OOP", "Design Patterns", "Education"],
+    "github": "https://github.com/KuKaRaCHa-gg/Duck",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "MortPion - Tic Tac Toe Avancé",
+    "short": "Jeu de morpion Java avec plusieurs modes, règles personnalisables et IA. Interface JavaFX soignée",
+    "stack": ["Java", "JavaFX", "Game Dev", "AI"],
+    "github": "https://github.com/KuKaRaCHa-gg/MortPion",
+    "date": "2024-11",
+    "images": []
+  },
+  {
+    "title": "Date C++ Class",
+    "short": "Implémentation C++ d'une classe Date complète avec opérateurs surchargés et manipulation intuitive",
+    "stack": ["C++", "OOP", "Standard Library"],
+    "github": "https://github.com/KuKaRaCHa-gg/Date_C-",
+    "date": "2024-09",
+    "images": []
+  }
+]

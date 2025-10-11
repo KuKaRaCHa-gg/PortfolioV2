@@ -1,0 +1,332 @@
+/* Game of Life Styles */
+.gameoflife-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.gameoflife-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gameoflife-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gameoflife-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: #001100;
+  border: 2px solid #00ff00;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.stat-label {
+  display: block;
+  color: #00aa00;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff00;
+  animation: valueUpdate 0.3s ease;
+}
+
+@keyframes valueUpdate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.gameoflife-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  height: 8px;
+  background: #1a1a1a;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff00;
+  border: none;
+}
+
+.gameoflife-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.terminal-button {
+  background: #0a0a0a;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 1rem 2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #00ff00, transparent);
+  transition: left 0.5s;
+}
+
+.terminal-button:hover::before {
+  left: 100%;
+}
+
+.terminal-button:hover {
+  background: #001100;
+  box-shadow: 0 0 20px #00ff00;
+  transform: translateY(-2px);
+}
+
+.terminal-button:active {
+  transform: translateY(0);
+}
+
+.terminal-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.terminal-button.primary {
+  background: #00ff00;
+  color: #0a0a0a;
+}
+
+.terminal-button.primary:hover {
+  background: #00cc00;
+  box-shadow: 0 0 30px #00ff00;
+}
+
+.gameoflife-canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  background: #0a0a0a;
+  border: 3px solid #00ff00;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(0, 255, 0, 0.05);
+  position: relative;
+}
+
+.gameoflife-canvas-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.02) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 255, 0, 0.02) 3px
+  );
+  pointer-events: none;
+  animation: scanlineMove 3s linear infinite;
+}
+
+@keyframes scanlineMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.gameoflife-canvas {
+  image-rendering: pixelated;
+  cursor: crosshair;
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.patterns-section {
+  margin-bottom: 2rem;
+}
+
+.patterns-section h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.pattern-button {
+  background: #0a0a0a;
+  border: 2px solid #00ff00;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+}
+
+.pattern-button:hover:not(:disabled) {
+  background: #001100;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  transform: translateY(-4px);
+}
+
+.pattern-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pattern-icon {
+  font-size: 2rem;
+}
+
+.gameoflife-instructions {
+  padding: 1.5rem;
+  background: #0a0a0a;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+}
+
+.gameoflife-instructions h3 {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.gameoflife-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gameoflife-instructions li {
+  color: #00aa00;
+  font-family: 'Courier New', monospace;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: #001100;
+  border-left: 3px solid #00ff00;
+  padding-left: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gameoflife-container {
+    padding: 1rem;
+  }
+
+  .gameoflife-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .gameoflife-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .gameoflife-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .gameoflife-buttons {
+    flex-direction: column;
+  }
+
+  .terminal-button {
+    width: 100%;
+  }
+
+  .gameoflife-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .patterns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

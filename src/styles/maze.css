@@ -1,0 +1,328 @@
+/* Maze Generator Styles */
+.maze-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.maze-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.maze-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+.maze-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-group label {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  height: 8px;
+  background: #1a1a1a;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff00;
+  border: none;
+}
+
+.terminal-select {
+  background: #0a0a0a;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 0.8rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.terminal-select:hover {
+  background: #001100;
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.terminal-select option {
+  background: #0a0a0a;
+  color: #00ff00;
+}
+
+.maze-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.terminal-button {
+  background: #0a0a0a;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 1rem 2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #00ff00, transparent);
+  transition: left 0.5s;
+}
+
+.terminal-button:hover::before {
+  left: 100%;
+}
+
+.terminal-button:hover {
+  background: #001100;
+  box-shadow: 0 0 20px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.terminal-button:active {
+  transform: translateY(0);
+}
+
+.terminal-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.terminal-button.primary {
+  background: #00ff00;
+  color: #0a0a0a;
+}
+
+.terminal-button.primary:hover {
+  background: #00cc00;
+  box-shadow: 0 0 30px #00ff00;
+}
+
+.maze-canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+  border: 3px solid #00ff00;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(0, 255, 0, 0.1);
+  position: relative;
+}
+
+.maze-canvas-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.03) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 255, 0, 0.03) 3px
+  );
+  pointer-events: none;
+  animation: scanlineMove 4s linear infinite;
+}
+
+.maze-canvas {
+  image-rendering: pixelated;
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.maze-stats {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #0a0a0a;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.maze-stats h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  background: #001100;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+}
+
+.stat-label {
+  color: #00aa00;
+  font-family: 'Courier New', monospace;
+}
+
+.stat-value {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.maze-legend {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #0a0a0a;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+}
+
+.maze-legend h3 {
+  color: #00ff00;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.legend-items {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.legend-color {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #00ff00;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.legend-color.start {
+  background: #00ff00;
+}
+
+.legend-color.end {
+  background: #ff0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.legend-color.visited {
+  background: #004400;
+}
+
+.legend-color.solution {
+  background: #00ff00;
+}
+
+@keyframes scanlineMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .maze-container {
+    padding: 1rem;
+  }
+
+  .maze-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .maze-buttons {
+    flex-direction: column;
+  }
+
+  .terminal-button {
+    width: 100%;
+  }
+
+  .maze-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legend-items {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

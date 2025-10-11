@@ -1,0 +1,342 @@
+/* Tetris Game Styles */
+.tetris-game {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 1rem;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.tetris-game h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-shadow: 0 0 20px #00ff00;
+  animation: pulse 2s infinite;
+}
+
+.tetris-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.tetris-main {
+  position: relative;
+  border: 3px solid #00ff00;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+  background: #000;
+}
+
+.tetris-canvas {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.tetris-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.game-over-text {
+  text-align: center;
+  animation: pulse 1s infinite;
+}
+
+.game-over-text .glitch-text {
+  font-size: 3rem;
+  color: #ff0000;
+  text-shadow: 0 0 20px #ff0000;
+  margin-bottom: 1rem;
+}
+
+.new-record {
+  color: #ffff00;
+  font-size: 1.5rem;
+  text-shadow: 0 0 15px #ffff00;
+  animation: blink 0.5s infinite;
+  margin-top: 1rem;
+}
+
+.pause-text {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  animation: pulse 2s infinite;
+}
+
+/* Sidebar */
+.tetris-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 200px;
+}
+
+.tetris-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-box {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-label {
+  color: #00aa00;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+/* Next Piece Preview */
+.next-piece-box {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  padding: 1rem;
+}
+
+.next-piece-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.preview-row {
+  display: flex;
+  gap: 2px;
+}
+
+.preview-cell {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+/* Controls */
+.tetris-controls {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  padding: 1rem;
+}
+
+.control-list {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #00cc00;
+}
+
+.control-list div {
+  padding: 0.2rem 0;
+}
+
+/* Mobile Controls */
+.mobile-controls {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mobile-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.control-btn {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+
+.control-btn:hover {
+  background: rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+}
+
+/* Terminal Button */
+.terminal-button {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.terminal-button:hover {
+  background: #00ff00;
+  color: #000;
+  box-shadow: 0 0 30px #00ff00;
+  transform: translateY(-2px);
+}
+
+.terminal-button:active {
+  transform: translateY(0);
+}
+
+/* Legend */
+.tetris-legend {
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff00;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.legend-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #00cc00;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 20px #00ff00;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 30px #00ff00;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tetris-game {
+    padding: 1rem 0.5rem;
+  }
+
+  .tetris-game h2 {
+    font-size: 1.5rem;
+  }
+
+  .tetris-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tetris-main {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+
+  .tetris-sidebar {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .tetris-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stat-box {
+    padding: 0.8rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .mobile-controls {
+    display: flex;
+  }
+
+  .tetris-controls {
+    display: none;
+  }
+
+  .game-over-text .glitch-text {
+    font-size: 2rem;
+  }
+
+  .pause-text {
+    font-size: 2rem;
+  }
+
+  .legend-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tetris-main {
+    transform: scale(0.75);
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .control-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .terminal-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

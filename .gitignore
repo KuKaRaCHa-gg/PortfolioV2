@@ -1,0 +1,139 @@
+# ===================================node_modules/
+
+# SÉCURITÉ - Données Sensiblesdist/
+
+# ===================================.env
+
+
+# Fichiers de configuration avec données sensibles
+.env
+.env.local
+.env.production
+.env.*.local
+*.key
+*.pem
+*.p12
+secrets.json
+config.secret.js
+
+# Anciens fichiers profile avec email/téléphone
+src/data/profile-old.json
+src/data/profile-new.json
+
+# Clés API et tokens
+*-api-key*
+*-token*
+*.secret
+
+# ===================================
+# Node / Dependencies
+# ===================================
+
+# Dossier des dépendances
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===================================
+# Build / Dist
+# ===================================
+
+# Fichiers de build
+dist/
+dist-ssr/
+build/
+*.local
+
+# ===================================
+# Vite
+# ===================================
+
+# Cache Vite
+.vite/
+vite.config.js.timestamp-*
+
+# ===================================
+# Editor / IDE
+# ===================================
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===================================
+# Système d'exploitation
+# ===================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===================================
+# Images lourdes (à optimiser avant push)
+# ===================================
+
+# Décommenter si images trop lourdes pour GitHub
+# public/images/PP&logo/PhotoProfileDaniilMinevich.png
+# public/images/PP&logo/LogoRond.png
+
+# ===================================
+# Logs
+# ===================================
+
+*.log
+logs/
+*.log.*
+
+# ===================================
+# Temporary
+# ===================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# ===================================
+# Testing
+# ===================================
+
+coverage/
+.nyc_output/
+*.lcov
+
+# ===================================
+# Backup
+# ===================================
+
+*.backup
+*.bak
+*.orig
