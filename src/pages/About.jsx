@@ -7,9 +7,13 @@ export default function About() {
   const [profile, setProfile] = useState(null)
 
   useEffect(()=>{
-    fetch('/src/data/profile.json')
+    fetch('/profile.json')
       .then(r=>r.json())
       .then(setProfile)
+      .catch(err => {
+        console.error('Erreur chargement profile:', err)
+        setProfile({}) // Évite le chargement infini
+      })
   },[])
 
   if(!profile) return <div className="terminal-screen"><div className="terminal-frame">Chargement...</div></div>
