@@ -38,6 +38,11 @@ export default function About() {
             <a href={profile.contact.links} target="_blank" rel="noopener noreferrer" className="social-btn">
               <span className="icon">🔗</span> Liens
             </a>
+            {profile.cvVideo && (
+              <a href={profile.cvVideo} target="_blank" rel="noopener noreferrer" className="social-btn cv-video-btn">
+                <span className="icon">🎬</span> CV Vidéo
+              </a>
+            )}
             <span className="location-badge">
               <span className="icon">📍</span> {profile.contact.location}
             </span>

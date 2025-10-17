@@ -1,146 +1,149 @@
 {
   "name": "Daniil MINEVICH",
   "age": 19,
-  "title": "Étudiant BUT Informatique - Développeur Full Stack",
-  "summary": "Étudiant passionné en BUT Informatique à l'IUT de Laval, je développe des applications web et desktop avec une forte affinité pour les designs rétro-terminaux. Expérience en stages et projets collaboratifs.",
+  "title": "Étudiant à IUT de Laval & Alternant Séché Alliance",
+  "summary": "Je suis étudiant en troisième année de BUT Informatique à Laval et je travaille en alternance chez Séché Alliance. J'avance pas à pas dans mon parcours en développant mes compétences en programmation, gestion de projet et systèmes d'information.",
   "avatar": "/images/PP&logo/PhotoProfileDaniilMinevich.png",
   "logo": "/images/PP&logo/LogoRond.png",
+  "cvVideo": "https://youtu.be/YHs_1_mAryU",
   "contact": {
     "github": "https://github.com/KuKaRaCHa-gg",
-    "location": "Laval, France",
+    "location": "Laval, Pays de la Loire, France",
     "links": "https://many.link/minevich",
     "linkedin": "https://linkedin.com/in/daniil-minevich"
   },
   "experiences": [
     {
-      "role": "Alternant DevOps / Développeur",
-      "company": "Séché Alliance",
-      "year": "2024-2025",
+      "role": "Développeur / IT Support – Workplace & Device Management",
+      "company": "Séché Environnement (Séché Alliance)",
+      "year": "Sept. 2024 - Aujourd'hui (1 an 2 mois)",
+      "location": "Changé, Pays de la Loire, France",
       "details": [
-        "Développement d'applications métiers",
-        "Automatisation des processus DevOps",
-        "Gestion de bases de données SQL/TSQL"
+        "Device Management et Packaging avec Microsoft Intune",
+        "Scripting Python pour automatiser et optimiser des outils internes",
+        "Développement spécifique dans l'application Pytheas",
+        "Suivi du Secure Score Defender",
+        "Gestion des droits utilisateurs et déploiement d'applications"
       ]
     },
     {
-      "role": "Stagiaire Développeur",
-      "company": "ASGL Conseil",
-      "year": "2024",
+      "role": "Technicien maintenance",
+      "company": "ACGL CONSEIL",
+      "year": "Juin 2023 (1 mois)",
       "details": [
-        "Scripts PowerShell pour Active Directory et SCCM/MECM",
-        "Automatisation de la gestion des postes de travail",
-        "Administration système Windows Server"
+        "Maintenance proactive de serveurs distants",
+        "Diagnostic hardware sur une borne d'arcade vintage",
+        "Mise en place de monitoring basique"
       ]
     },
     {
-      "role": "Stagiaire en administration informatique",
-      "company": "ESIEA, École d'ingénieurs",
-      "year": "2023",
+      "role": "Assistance technique",
+      "company": "ESIEA - École d'Ingénieur·e·s d'un numérique utile",
+      "year": "Juin 2019 (1 mois)",
+      "location": "Laval, Pays de la Loire, France",
       "details": [
-        "Entretien de PC et du matériel informatique",
-        "Support technique pour les utilisateurs",
-        "Développement web PHP/MySQL"
+        "Support utilisateur et maintenance de parc informatique",
+        "Résolution de problèmes software et hardware"
       ]
     }
   ],
   "education": [
     {
-      "school": "Baccalauréat STI2D (Lycée Réaumur Laval)",
-      "note": "Mention Assez Bien"
+      "school": "IUT de Laval - BUT Informatique",
+      "status": "2023 - 2026 (3ème année en cours)",
+      "note": "Formation en alternance"
     },
     {
-      "school": "BUT Informatique (IUT de Laval)",
-      "status": "Depuis septembre 2023 - 2ème année"
+      "school": "Lycée Réaumur - Baccalauréat STI2D",
+      "status": "2020 - 2023",
+      "note": "Mention Assez Bien - Spécialité Technologie/Informatique"
     }
   ],
   "skills": [
     "JavaScript / TypeScript",
     "Python",
-    "Java / JavaFX",
-    "C / C++",
-    "PHP / WordPress",
-    "SQL / TSQL / MySQL / SQLite",
-    "HTML / CSS",
-    "React / Vite",
-    "Node.js / Discord.js",
+    "Java",
+    "Kotlin",
+    "C",
+    "PHP",
+    "SQL",
+    "HTML",
+    "CSS",
+    "React",
+    "Vite",
+    "Node.js",
+    "WordPress (Bedrock)",
+    "Symfony",
     "Git / GitHub",
-    "PowerShell / Bash",
-    "Active Directory / SCCM",
-    "Linux / Windows Server",
-    "Android / Kotlin",
-    "Figma / DaVinci Resolve",
-    "Arduino",
-    "Obsidian / Data Management"
+    "UML",
+    "Microsoft Intune",
+    "PowerShell",
+    "Bash",
+    "Linux",
+    "Windows",
+    "Figma",
+    "Arduino"
   ],
   "languages": [
     "Français (courant)",
     "Russe (maternelle)",
-    "Anglais (A2+)",
-    "Espagnol (A2)"
+    "Anglais (compétence professionnelle)",
+    "Espagnol (compétence professionnelle limitée)"
   ],
   "interests": [
-    "Jeux vidéo (FPS, Survival, Stratégie)",
-    "Développement de jeux vidéo",
-    "Design rétro-terminal / Cyberpunk",
-    "Automatisation système",
-    "Open Source",
-    "Compétitions de code (Nuit de l'Info)",
-    "Musculation",
-    "Anime / Manga",
-    "Électronique"
+    "Développement web & applications",
+    "Scripting & Automatisation",
+    "Cybersécurité",
+    "Réseaux informatiques",
+    "Développement de bases de données",
+    "Réparation informatique",
+    "Hardware & Diagnostics matériel",
+    "Jeux vidéo",
+    "Basket",
+    "Judo"
   ],
   "activities": [
-    {
-      "icon": "🎮",
-      "title": "Game Development",
-      "description": "Création de jeux en Java, JavaScript et C++. Exploration de Game of Life, Snake, et algorithmes de pathfinding"
-    },
-    {
-      "icon": "💻",
-      "title": "Open Source",
-      "description": "Contribution aux projets open source. Plus de 30 repositories publics sur GitHub"
-    },
-    {
-      "icon": "🌙",
-      "title": "Nuit de l'Info",
-      "description": "Participation aux challenges de développement web intensifs. Projet DEALLOC 2024"
-    },
-    {
-      "icon": "🏋️",
-      "title": "Musculation",
-      "description": "Entraînement régulier pour maintenir un équilibre physique et mental"
-    },
-    {
-      "icon": "🎬",
-      "title": "Anime & Manga",
-      "description": "Passionné de culture japonaise, animation et storytelling"
-    },
-    {
-      "icon": "⚡",
-      "title": "Électronique",
-      "description": "Projets Arduino et exploration de l'IoT. Hardware et software combinés"
-    },
     {
       "icon": "💻",
       "title": "Web Coding",
       "description": "J'adore faire du web coding pour me détendre. Ça me permet d'apprendre de nouvelles choses tout en créant des designs uniques"
     },
     {
-      "icon": "🎨",
-      "title": "Design Terminal",
-      "description": "Création d'interfaces rétro-terminal, style cyberpunk et animations Matrix"
+      "icon": "🔧",
+      "title": "Scripting & Automatisation",
+      "description": "Développement de scripts Python pour automatiser et optimiser des outils internes chez Séché Alliance"
     },
     {
-      "icon": "📊",
-      "title": "Data Management",
-      "description": "Organisation de connaissances avec Obsidian. Systèmes de gestion de bases de données"
+      "icon": "🖥️",
+      "title": "Device Management",
+      "description": "Gestion des droits utilisateurs et déploiement d'applications avec Microsoft Intune"
+    },
+    {
+      "icon": "🎮",
+      "title": "Jeux vidéo",
+      "description": "Passionné de gaming et de développement de jeux. Création de mini-jeux en JavaScript et Java"
+    },
+    {
+      "icon": "🏀",
+      "title": "Basket",
+      "description": "Esprit d'équipe et discipline sportive"
+    },
+    {
+      "icon": "🥋",
+      "title": "Judo",
+      "description": "Persévérance et rigueur à travers les arts martiaux"
+    },
+    {
+      "icon": "🎯",
+      "title": "Objectif professionnel",
+      "description": "Continuer à progresser et préparer un poste de développeur junior, avec possibilité de poursuite en école d'ingénieur"
     }
   ],
   "stats": {
-    "repositories": 30,
+    "repositories": 35,
     "followers": 7,
-    "following": 14,
-    "projects_completed": 12,
+    "following": 15,
+    "projects_completed": 15,
     "languages_mastered": 10,
     "years_experience": 2
   }

@@ -1,29 +1,19 @@
 [
   {
-    "title": "Portfolio Terminal V2 - React",
-    "short": "Portfolio React avec design terminal rétro (Matrix style). Animations 3D avec Three.js, système de sons synthétiques, 5 mini-jeux intégrés (Tetris, Snake, Pong, Game of Life, Maze). 100% Responsive.",
-    "stack": ["React", "Vite", "Three.js", "Web Audio API", "JavaScript"],
-    "github": "https://github.com/KuKaRaCHa-gg/PortfolioV2",
-    "demo": "https://daniilminevich.com",
-    "date": "2025-10",
+    "title": "Portfolio Terminal - WordPress",
+    "short": "Portfolio professionnel avec thème rétro-terminal personnalisé, style cyberpunk et animations Matrix. Développé avec Bedrock et Roots",
+    "stack": ["PHP", "WordPress", "CSS", "JavaScript", "Bedrock"],
+    "github": "https://github.com/KuKaRaCHa-gg/Daniil-Bedrock-Roots-Portfolio-TERMINAL",
+    "date": "2024-03",
     "featured": true,
     "images": [
       "/images/image.png"
     ]
   },
   {
-    "title": "Simple Progress Tracker",
-    "short": "Plugin Obsidian pour tracker sa progression personnelle avec stats et niveaux. Visualisations de progression, système de niveaux et XP, statistiques détaillées.",
-    "stack": ["TypeScript", "Obsidian API", "Data Visualization"],
-    "github": "https://github.com/KuKaRaCHa-gg/simple-progress-tracker",
-    "date": "2025-10",
-    "featured": true,
-    "images": []
-  },
-  {
-    "title": "GeoMoHi - Game on Map",
-    "short": "Jeu Android utilisant l'API Google Maps. Explorez le monde réel pour collecter des pièces et découvrir de nouveaux territoires. Suivi GPS en arrière-plan, personnalisation des zones explorées.",
-    "stack": ["Kotlin", "Google Maps API", "Android", "Location Services"],
+    "title": "GeMoHi - Game on Map",
+    "short": "Application Android de jeu interactif utilisant Google Maps API. Expérience ludique basée sur la géolocalisation",
+    "stack": ["Kotlin", "Google Maps API", "Android", "Mobile"],
     "github": "https://github.com/KuKaRaCHa-gg/GeMoHi",
     "date": "2024-03",
     "featured": true,
@@ -31,15 +21,6 @@
       "/images/GeoMoHIDE/ScreenGamplayGeoMoHi.jpg",
       "/images/GeoMoHIDE/Logo_GeoMoHi.png"
     ]
-  },
-  {
-    "title": "Portfolio Terminal - WordPress",
-    "short": "Portfolio professionnel avec thème rétro-terminal personnalisé, style cyberpunk et animations Matrix. Développé avec Bedrock et Roots. Thème enfant Twenty Twenty avec code flottant et curseur vert néon.",
-    "stack": ["PHP", "WordPress", "Bedrock", "CSS", "JavaScript"],
-    "github": "https://github.com/KuKaRaCHa-gg/Daniil-Bedrock-Roots-Portfolio-TERMINAL",
-    "date": "2024-03",
-    "featured": true,
-    "images": []
   },
   {
     "title": "Game Collection Manager",
