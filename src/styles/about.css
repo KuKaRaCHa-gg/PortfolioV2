@@ -543,3 +543,59 @@
     font-size: 0.7rem;
   }
 }
+
+/* Games Section */
+.games-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.steam-profile-link {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.game-tag {
+  padding: 0.8rem 1.2rem;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.game-tag:hover {
+  background: rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .games-section {
+    padding: 1rem;
+  }
+  
+  .games-grid {
+    gap: 0.5rem;
+  }
+  
+  .game-tag {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}

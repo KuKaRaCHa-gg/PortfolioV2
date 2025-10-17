@@ -103,15 +103,14 @@ Effets de bord et cycle de vie...
         <div className="linkedin-section">
           <h2 className="section-title neon-text">💼 MES ACTUALITÉS LINKEDIN</h2>
           <div className="linkedin-embed-container">
-            <iframe
-              src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25505046"
-              frameBorder="0"
-              width="100%"
-              height="1000"
-              title="LinkedIn Posts"
-              className="linkedin-iframe"
-            ></iframe>
+            {/* Badge LinkedIn Profile */}
+            <div className="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="daniil-minevich" data-version="v1">
+              <a className="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/daniil-minevich?trk=profile-badge">Daniil Minevich</a>
+            </div>
           </div>
+          <p className="terminal-text" style={{textAlign: 'center', margin: '2rem 0'}}>
+            📊 <strong>Mes dernières activités :</strong> Postes partagés, articles et actualités professionnelles
+          </p>
           <a 
             href="https://linkedin.com/in/daniil-minevich" 
             target="_blank" 

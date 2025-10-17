@@ -171,6 +171,25 @@ export default function About() {
           ))}
         </div>
 
+        {/* Section Jeux Steam */}
+        {profile.games && (
+          <div className="games-section">
+            <h2 className="section-title neon-text">🎮 MES JEUX</h2>
+            <div className="steam-profile-link">
+              <a href={profile.steamProfile} target="_blank" rel="noopener noreferrer" className="social-btn">
+                <span className="icon">🎮</span> Voir mon profil Steam complet
+              </a>
+            </div>
+            <div className="games-grid">
+              {profile.games.map((game, i) => (
+                <div key={i} className="game-tag">
+                  {game}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Stats GitHub */}
         {profile.stats && (
           <div className="github-stats">

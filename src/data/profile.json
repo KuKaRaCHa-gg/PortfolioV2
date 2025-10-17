@@ -98,13 +98,23 @@
     "Développement de bases de données",
     "Réparation informatique",
     "Hardware & Diagnostics matériel",
-    "Jeux vidéo",
+    "Jeux vidéo (FPS, Survival, RPG)",
     "Basket",
-    "Judo"
+    "Vibe Coding"
   ],
   "activities": [
     {
-      "icon": "💻",
+      "icon": "🎵",
+      "title": "Vibe Coding",
+      "description": "Je code souvent en écoutant de la musique, ça me met dans un flow créatif parfait pour résoudre des problèmes complexes"
+    },
+    {
+      "icon": "�",
+      "title": "Plugin Obsidian en cours",
+      "description": "Création d'un plugin Obsidian pour tracker ma progression personnelle avec stats, niveaux et visualisations (TypeScript)"
+    },
+    {
+      "icon": "�💻",
       "title": "Web Coding",
       "description": "J'adore faire du web coding pour me détendre. Ça me permet d'apprendre de nouvelles choses tout en créant des designs uniques"
     },
@@ -120,8 +130,8 @@
     },
     {
       "icon": "🎮",
-      "title": "Jeux vidéo",
-      "description": "Passionné de gaming et de développement de jeux. Création de mini-jeux en JavaScript et Java"
+      "title": "Gaming",
+      "description": "Passionné de jeux vidéo : FPS (CS2, Valorant, Apex), Survival (Satisfactory, STALKER), RPG (Cyberpunk 2077, Dark Souls). Profil Steam : steamcommunity.com/id/MINEVICH"
     },
     {
       "icon": "🏀",
@@ -129,9 +139,9 @@
       "description": "Esprit d'équipe et discipline sportive"
     },
     {
-      "icon": "🥋",
-      "title": "Judo",
-      "description": "Persévérance et rigueur à travers les arts martiaux"
+      "icon": "📜",
+      "title": "Certifications à venir",
+      "description": "Préparation de certifications professionnelles pour valider mes compétences en développement et cybersécurité"
     },
     {
       "icon": "🎯",
@@ -139,6 +149,31 @@
       "description": "Continuer à progresser et préparer un poste de développeur junior, avec possibilité de poursuite en école d'ingénieur"
     }
   ],
+  "games": [
+    "Counter-Strike 2",
+    "VALORANT",
+    "Apex Legends",
+    "Overwatch 2",
+    "THE FINALS",
+    "HELLDIVERS 2",
+    "Satisfactory",
+    "Lethal Company",
+    "Cyberpunk 2077",
+    "Dark Souls Remastered",
+    "S.T.A.L.K.E.R. Series",
+    "Metro Series",
+    "Alien Isolation",
+    "ULTRAKILL",
+    "Portal 2",
+    "GTA V",
+    "Cities Skylines II",
+    "Warframe",
+    "War Thunder",
+    "SCP Secret Laboratory",
+    "Brotato",
+    "Persona 4 Golden"
+  ],
+  "steamProfile": "https://steamcommunity.com/id/MINEVICH/",
   "stats": {
     "repositories": 35,
     "followers": 7,

@@ -21,16 +21,24 @@
 }
 
 .linkedin-embed-container {
-  margin: 2rem 0;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 255, 0, 0.05);
   border: 1px solid #00ff00;
   border-radius: 4px;
-  overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
 }
 
-.linkedin-iframe {
-  border: none;
-  display: block;
+.badge-base {
+  display: inline-block !important;
+  margin: 0 auto;
+}
+
+.terminal-text {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
 }
 
 .linkedin-btn {
@@ -44,8 +52,12 @@
     padding: 1rem;
   }
   
-  .linkedin-embed-container iframe {
-    height: 600px;
+  .linkedin-embed-container {
+    padding: 0.5rem;
+  }
+  
+  .terminal-text {
+    font-size: 0.9rem;
   }
 }
 
