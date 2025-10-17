@@ -22,29 +22,18 @@ export default function Contact() {
     e.preventDefault()
     setSending(true)
     
-    // Utilisation de Formspree (service gratuit)
-    const formspreeEndpoint = 'https://formspree.io/f/xvgoodnr' // Vous devez créer un compte sur formspree.io
+    // Utilisation de mailto avec votre vraie adresse Hostinger
+    const mailtoLink = `mailto:contact@daniilminevich.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`De: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`
     
-    fetch(formspreeEndpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => {
-      if (response.ok) {
-        setSent(true)
-        setSending(false)
-        setFormData({ name: '', email: '', subject: '', message: '' })
-      }
-    })
-    .catch(() => {
-      // Fallback : ouvrir client email
-      const mailtoLink = `mailto:contact@daniilminevich.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`De: ${formData.name} (${formData.email})\n\n${formData.message}`)}`
-      window.location.href = mailtoLink
+    // Ouvrir le client email
+    window.location.href = mailtoLink
+    
+    // Simuler succès après 1 seconde
+    setTimeout(() => {
+      setSent(true)
       setSending(false)
-    })
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    }, 1000)
   }
 
   return (
@@ -146,6 +135,9 @@ export default function Contact() {
         <div className="contact-info">
           <h3 className="section-title neon-text">AUTRES MOYENS DE CONTACT</h3>
           <div className="contact-links">
+            <a href="mailto:contact@daniilminevich.com" className="contact-link">
+              <span className="icon">✉️</span> contact@daniilminevich.com
+            </a>
             <a href="https://github.com/KuKaRaCHa-gg" target="_blank" rel="noopener noreferrer" className="contact-link">
               <span className="icon">💻</span> GitHub
             </a>
