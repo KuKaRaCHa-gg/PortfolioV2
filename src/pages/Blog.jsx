@@ -95,8 +95,31 @@ Effets de bord et cycle de vie...
     <div className="terminal-screen blog-page">
       <div className="terminal-frame">
         <div className="blog-header">
-          <h1 className="glitch-text" data-text="BLOG TECHNIQUE">BLOG TECHNIQUE</h1>
-          <p className="terminal-text">Articles sur le développement, algorithmes et technologies</p>
+          <h1 className="glitch-text" data-text="BLOG & ACTUALITÉS">BLOG & ACTUALITÉS</h1>
+          <p className="terminal-text">Articles techniques et actualités professionnelles</p>
+        </div>
+
+        {/* Section LinkedIn Feed */}
+        <div className="linkedin-section">
+          <h2 className="section-title neon-text">💼 MES ACTUALITÉS LINKEDIN</h2>
+          <div className="linkedin-embed-container">
+            <iframe
+              src="https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25505046"
+              frameBorder="0"
+              width="100%"
+              height="1000"
+              title="LinkedIn Posts"
+              className="linkedin-iframe"
+            ></iframe>
+          </div>
+          <a 
+            href="https://linkedin.com/in/daniil-minevich" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="terminal-button primary linkedin-btn"
+          >
+            📎 Voir mon profil LinkedIn complet
+          </a>
         </div>
 
         {!selectedArticle ? (

@@ -10,6 +10,45 @@
   border-bottom: 2px solid #00ff00;
 }
 
+/* LinkedIn Section */
+.linkedin-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.linkedin-embed-container {
+  margin: 2rem 0;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.linkedin-iframe {
+  border: none;
+  display: block;
+}
+
+.linkedin-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+  .linkedin-section {
+    padding: 1rem;
+  }
+  
+  .linkedin-embed-container iframe {
+    height: 600px;
+  }
+}
+
 .blog-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;

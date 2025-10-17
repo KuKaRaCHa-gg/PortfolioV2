@@ -49,6 +49,25 @@ export default function About() {
           </div>
         </div>
 
+        {/* Section CV Vidéo intégré */}
+        {profile.cvVideo && (
+          <div className="cv-video-section">
+            <h2 className="section-title neon-text">🎬 MON CV EN VIDÉO</h2>
+            <div className="video-container">
+              <iframe
+                width="100%"
+                height="500"
+                src="https://www.youtube.com/embed/YHs_1_mAryU"
+                title="CV Vidéo Daniil Minevich"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="cv-video-iframe"
+              ></iframe>
+            </div>
+          </div>
+        )}
+
         {/* Section Activités & Passions */}
         {profile.activities && (
           <div className="activities-section">
