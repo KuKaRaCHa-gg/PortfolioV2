@@ -1,0 +1,467 @@
+/* ===== OPTIMISATIONS MOBILE COMPLÈTES ===== */
+
+/* Désactiver TOUTES les animations sur mobile */
+@media (max-width: 768px) {
+  
+  /* ========== DÉSACTIVATION ANIMATIONS ========== */
+  
+  /* Désactiver les scanlines */
+  body::before {
+    display: none !important;
+  }
+  
+  /* Désactiver l'animation du background */
+  body {
+    animation: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Désactiver toutes les animations globales */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Curseurs normaux sur mobile */
+  * {
+    cursor: default !important;
+  }
+  
+  a, button, .clickable, [onclick] {
+    cursor: pointer !important;
+  }
+  
+  input, textarea {
+    cursor: text !important;
+  }
+  
+  /* ========== IMAGES FIXES ========== */
+  
+  /* Logo et avatar carrés, pas d'oval */
+  .logo-container img,
+  .avatar-container img,
+  .profile-avatar,
+  img {
+    border-radius: 8px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Logos tech en grille simple */
+  .tech-logos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+  
+  .tech-logo-card {
+    padding: 1rem !important;
+    min-height: auto !important;
+    transform: none !important;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3) !important;
+  }
+  
+  .tech-logo-card:hover,
+  .tech-logo-card:active {
+    transform: none !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5) !important;
+  }
+  
+  /* ========== HEADER SIMPLIFIÉ ========== */
+  
+  .header-content {
+    padding: 1rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .profile-info {
+    text-align: center !important;
+    padding: 1rem !important;
+  }
+  
+  .profile-info h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .profile-info .subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* ========== NAVIGATION SIMPLIFIÉE ========== */
+  
+  .sidebar {
+    position: fixed !important;
+    width: 100% !important;
+    height: auto !important;
+    bottom: 0 !important;
+    top: auto !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    border-top: 2px solid #00ff00 !important;
+    border-left: none !important;
+    padding: 0.5rem !important;
+  }
+  
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+  
+  .nav-link {
+    flex: 1 !important;
+    padding: 0.75rem 0.5rem !important;
+    text-align: center !important;
+    font-size: 0.75rem !important;
+    border: none !important;
+    margin: 0 !important;
+  }
+  
+  .nav-link .icon {
+    font-size: 1.2rem !important;
+    display: block !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* ========== CONTENU PRINCIPAL ========== */
+  
+  .main-content {
+    margin-left: 0 !important;
+    margin-bottom: 70px !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* ========== SECTIONS ========== */
+  
+  .section,
+  .about-section,
+  .projects-section,
+  .blog-section,
+  .contact-section {
+    padding: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  
+  /* ========== CARDS ========== */
+  
+  .card,
+  .project-card,
+  .article-card,
+  .experience-card,
+  .education-card {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    transform: none !important;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3) !important;
+  }
+  
+  .card:hover,
+  .project-card:hover,
+  .article-card:hover {
+    transform: none !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5) !important;
+  }
+  
+  /* ========== GRILLES SIMPLIFIÉES ========== */
+  
+  .projects-grid,
+  .articles-grid,
+  .skills-grid,
+  .games-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  /* Jeux en 2 colonnes max */
+  .games-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  
+  .game-tag {
+    padding: 0.5rem !important;
+    font-size: 0.75rem !important;
+    text-align: center !important;
+  }
+  
+  /* ========== BOUTONS ========== */
+  
+  .terminal-button,
+  .btn,
+  button {
+    width: 100% !important;
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .social-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .social-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  
+  /* ========== FORMULAIRE ========== */
+  
+  .contact-form {
+    padding: 1rem !important;
+  }
+  
+  .form-input,
+  .form-textarea {
+    font-size: 16px !important; /* Évite le zoom iOS */
+    padding: 0.75rem !important;
+  }
+  
+  /* ========== CV VIDEO ========== */
+  
+  .cv-video-section {
+    padding: 1rem !important;
+  }
+  
+  .video-container {
+    padding-bottom: 56.25% !important;
+    height: 0 !important;
+    position: relative !important;
+  }
+  
+  .cv-video-iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  /* ========== LINKEDIN BADGE ========== */
+  
+  .linkedin-section {
+    padding: 1rem !important;
+  }
+  
+  .linkedin-embed-container {
+    padding: 0.5rem !important;
+    overflow: hidden !important;
+  }
+  
+  .badge-base {
+    transform: scale(0.9) !important;
+    transform-origin: center !important;
+  }
+  
+  /* ========== SKILLS SHOWCASE ========== */
+  
+  .skills-showcase {
+    padding: 1rem !important;
+  }
+  
+  .skill-category {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .skill-item {
+    padding: 0.75rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .progress-bar {
+    height: 6px !important;
+  }
+  
+  /* ========== STATS ========== */
+  
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  
+  .stat-item {
+    padding: 0.75rem !important;
+    text-align: center !important;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem !important;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem !important;
+  }
+  
+  /* ========== HOME PAGE ========== */
+  
+  .home-hero {
+    padding: 2rem 1rem !important;
+    text-align: center !important;
+  }
+  
+  .hero-logo img {
+    max-width: 150px !important;
+    height: auto !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-content .tagline {
+    font-size: 0.9rem !important;
+  }
+  
+  /* ========== DÉSACTIVER 3D/PARTICLES ========== */
+  
+  .flying-code,
+  .three-background,
+  .particles,
+  canvas {
+    display: none !important;
+  }
+  
+  /* ========== TEXTES LISIBLES ========== */
+  
+  p, li, span, div {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Titres proportionnels */
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.3rem !important; }
+  h3 { font-size: 1.1rem !important; }
+  h4, h5, h6 { font-size: 1rem !important; }
+  
+  /* ========== ESPACEMENTS COHÉRENTS ========== */
+  
+  .container {
+    padding: 1rem !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* ========== FIX DÉBORDEMENTS ========== */
+  
+  * {
+    max-width: 100vw !important;
+  }
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  pre, code {
+    overflow-x: auto !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* ========== MENU HAMBURGER SI PRÉSENT ========== */
+  
+  .menu-toggle {
+    display: block !important;
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    z-index: 1001 !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    border: 2px solid #00ff00 !important;
+    padding: 0.5rem !important;
+    font-size: 1.5rem !important;
+  }
+  
+  /* ========== PERFORMANCES ========== */
+  
+  /* Désactiver les ombres complexes */
+  .glow,
+  .shadow,
+  [class*="glow"],
+  [class*="shadow"] {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3) !important;
+    text-shadow: none !important;
+  }
+  
+  /* Désactiver les filtres */
+  * {
+    filter: none !important;
+    backdrop-filter: none !important;
+  }
+  
+  /* ========== ACCESSIBILITÉ MOBILE ========== */
+  
+  /* Zone de touch plus grande */
+  button, a, input, select, textarea {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  /* Éviter le zoom automatique iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+  
+  /* ========== SCROLLBAR MOBILE ========== */
+  
+  ::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+  }
+  
+  /* ========== SUPPRESSION EFFETS HOVER SUR MOBILE ========== */
+  
+  @media (hover: none) {
+    *:hover {
+      transform: none !important;
+      box-shadow: inherit !important;
+    }
+  }
+}
+
+/* ===== TABLETTES (768px - 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .tech-logos-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  .sidebar {
+    width: 200px !important;
+  }
+  
+  .main-content {
+    margin-left: 200px !important;
+  }
+}

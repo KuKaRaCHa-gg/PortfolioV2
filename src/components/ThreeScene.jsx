@@ -5,7 +5,12 @@ export default function ThreeScene(){
   const mountRef = useRef(null)
 
   useEffect(()=>{
+    // Désactiver sur mobile pour performances
+    const isMobile = window.innerWidth <= 768
+    if (isMobile) return
+    
     const mount = mountRef.current
+    if (!mount) return
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(75, mount.clientWidth / mount.clientHeight, 0.1, 1000)
     const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true})
