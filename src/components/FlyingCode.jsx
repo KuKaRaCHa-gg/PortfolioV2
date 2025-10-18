@@ -113,7 +113,7 @@ INSERT INTO Etudiant (id) VALUES (1);`,
 
 export default function FlyingCode() {
   useEffect(() => {
-    // Désactiver sur mobile pour performances
+    // Désactiver sur mobile pour performances et lisibilité
     const isMobile = window.innerWidth <= 768
     if (isMobile) return
     
@@ -122,8 +122,12 @@ export default function FlyingCode() {
 
     function createCode() {
       const span = document.createElement('span')
-      const isBig = Math.random() > 0.7
-      const snippetIndex = Math.floor(Math.random() * codeSnippets.length)
+      // Beaucoup moins de gros blocs (10% au lieu de 30%)
+      const isBig = Math.random() > 0.9
+      // Favoriser les petits snippets (premiers du tableau)
+      const snippetIndex = Math.random() > 0.7 
+        ? Math.floor(Math.random() * codeSnippets.length)
+        : Math.floor(Math.random() * 20) // 20 premiers = petits snippets
 
       span.textContent = codeSnippets[snippetIndex]
       span.className = 'flying-code-snippet' + (isBig ? ' big-code' : '')
@@ -131,14 +135,17 @@ export default function FlyingCode() {
       // Positionnement horizontal aléatoire
       span.style.left = `${Math.random() * 100}vw`
 
-      // Durée d'animation aléatoire entre 3s et 9s
-      const duration = isBig ? Math.random() * 6 + 3 : Math.random() * 5 + 3
+      // Animation plus lente et douce (6s - 12s au lieu de 3s - 9s)
+      const duration = isBig ? Math.random() * 8 + 6 : Math.random() * 6 + 6
       span.style.animationDuration = `${duration}s`
 
-      // Taille de police variable pour les gros snippets
+      // Taille de police plus petite pour les gros snippets
       if (isBig) {
-        span.style.fontSize = `${Math.random() * 0.4 + 0.8}em`
+        span.style.fontSize = `${Math.random() * 0.3 + 0.6}em`
       }
+      
+      // Opacité réduite pour être plus discret (0.3 - 0.5 au lieu de plein)
+      span.style.opacity = `${Math.random() * 0.2 + 0.3}`
 
       container.appendChild(span)
 
@@ -150,8 +157,9 @@ export default function FlyingCode() {
       }, duration * 1000)
     }
 
-    // Créer un nouveau morceau de code toutes les 300ms
-    const interval = setInterval(createCode, 300)
+    // Créer un nouveau morceau de code toutes les 800ms (au lieu de 300ms)
+    // = Beaucoup moins de code à l'écran simultanément
+    const interval = setInterval(createCode, 800)
 
     return () => {
       clearInterval(interval)

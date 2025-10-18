@@ -37,30 +37,52 @@
   
   /* ========== IMAGES FIXES ========== */
   
-  /* Logo et avatar carrés, pas d'oval */
+  /* Logo et avatar EN CERCLE sur mobile */
   .logo-container img,
   .avatar-container img,
-  .profile-avatar,
-  img {
-    border-radius: 8px !important;
+  .profile-avatar {
+    border-radius: 50% !important;
     object-fit: cover !important;
-    width: 100% !important;
-    height: auto !important;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
   
-  /* Logos tech en grille simple */
+  /* Images projet/blog carrées et réduites */
+  .project-card img,
+  .article-card img,
+  .project-image,
+  .blog-image {
+    border-radius: 8px !important;
+    object-fit: cover !important;
+    max-width: 100% !important;
+    max-height: 150px !important;
+  }
+  
+  /* Logos tech en grille simple RÉDUITS */
   .tech-logos-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
-    padding: 1rem !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem !important;
   }
   
   .tech-logo-card {
-    padding: 1rem !important;
+    padding: 0.5rem !important;
     min-height: auto !important;
     transform: none !important;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.3) !important;
+  }
+  
+  .tech-logo-card img {
+    max-width: 40px !important;
+    max-height: 40px !important;
+  }
+  
+  .tech-logo-card .logo-name {
+    font-size: 0.7rem !important;
+    margin-top: 0.3rem !important;
   }
   
   .tech-logo-card:hover,
@@ -72,25 +94,33 @@
   /* ========== HEADER SIMPLIFIÉ ========== */
   
   .header-content {
-    padding: 1rem !important;
+    padding: 0.5rem !important;
     flex-direction: column !important;
     align-items: center !important;
+    min-height: auto !important;
   }
   
   .profile-info {
     text-align: center !important;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
   }
   
   .profile-info h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 0.5rem !important;
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.3rem !important;
   }
   
-  .profile-info .subtitle {
-    font-size: 0.9rem !important;
-    line-height: 1.4 !important;
+  .profile-info .subtitle,
+  .profile-info .title {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.3rem !important;
+  }
+  
+  .profile-info p {
+    font-size: 0.8rem !important;
+    margin: 0.3rem 0 !important;
   }
   
   /* ========== NAVIGATION SIMPLIFIÉE ========== */
@@ -119,17 +149,21 @@
   
   .nav-link {
     flex: 1 !important;
-    padding: 0.75rem 0.5rem !important;
+    padding: 0.5rem 0.3rem !important;
     text-align: center !important;
-    font-size: 0.75rem !important;
+    font-size: 0.65rem !important;
     border: none !important;
     margin: 0 !important;
   }
   
   .nav-link .icon {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     display: block !important;
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  
+  .nav-link.active {
+    background: rgba(0, 255, 0, 0.2) !important;
   }
   
   /* ========== CONTENU PRINCIPAL ========== */
@@ -150,14 +184,18 @@
   .projects-section,
   .blog-section,
   .contact-section {
-    padding: 1rem !important;
-    margin-bottom: 1.5rem !important;
+    padding: 0.75rem !important;
+    margin-bottom: 1rem !important;
   }
   
   .section-title {
-    font-size: 1.3rem !important;
-    margin-bottom: 1rem !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
     text-align: center !important;
+  }
+  
+  .section-title .icon {
+    font-size: 1rem !important;
   }
   
   /* ========== CARDS ========== */
@@ -167,10 +205,24 @@
   .article-card,
   .experience-card,
   .education-card {
-    padding: 1rem !important;
-    margin-bottom: 1rem !important;
+    padding: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
     transform: none !important;
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.3) !important;
+  }
+  
+  .card h3,
+  .project-card h3,
+  .article-card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .card p,
+  .project-card p,
+  .article-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
   }
   
   .card:hover,
@@ -191,17 +243,31 @@
     gap: 1rem !important;
   }
   
-  /* Jeux en 2 colonnes max */
+  /* Jeux en 2 colonnes max RÉDUITS */
   .games-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.5rem !important;
+    gap: 0.4rem !important;
   }
   
   .game-tag {
-    padding: 0.5rem !important;
-    font-size: 0.75rem !important;
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.7rem !important;
     text-align: center !important;
+  }
+  
+  .games-section h2 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .steam-profile-link {
+    margin: 0.75rem 0 !important;
+  }
+  
+  .steam-profile-link a {
+    font-size: 0.8rem !important;
+    padding: 0.5rem !important;
   }
   
   /* ========== BOUTONS ========== */
@@ -210,20 +276,27 @@
   .btn,
   button {
     width: 100% !important;
-    padding: 0.75rem !important;
-    font-size: 0.9rem !important;
-    margin-bottom: 0.5rem !important;
+    padding: 0.6rem !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 0.4rem !important;
   }
   
   .social-links {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0.5rem !important;
+    gap: 0.4rem !important;
   }
   
   .social-btn {
     width: 100% !important;
     justify-content: center !important;
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .social-btn .icon {
+    font-size: 1rem !important;
+    margin-right: 0.5rem !important;
   }
   
   /* ========== FORMULAIRE ========== */
@@ -241,13 +314,19 @@
   /* ========== CV VIDEO ========== */
   
   .cv-video-section {
-    padding: 1rem !important;
+    padding: 0.75rem !important;
+  }
+  
+  .cv-video-section h2 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
   }
   
   .video-container {
     padding-bottom: 56.25% !important;
     height: 0 !important;
     position: relative !important;
+    max-height: 200px !important;
   }
   
   .cv-video-iframe {
@@ -256,12 +335,45 @@
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
+    max-height: 200px !important;
+  }
+  
+  /* ========== ACTIVITÉS ========== */
+  
+  .activities-grid,
+  .interests-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .activity-card,
+  .interest-card {
+    padding: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .activity-card h3,
+  .interest-card h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  
+  .activity-card p,
+  .interest-card p {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .activity-icon,
+  .interest-icon {
+    font-size: 1.2rem !important;
   }
   
   /* ========== LINKEDIN BADGE ========== */
   
   .linkedin-section {
-    padding: 1rem !important;
+    padding: 0.75rem !important;
   }
   
   .linkedin-embed-container {
@@ -270,27 +382,45 @@
   }
   
   .badge-base {
-    transform: scale(0.9) !important;
+    transform: scale(0.85) !important;
     transform-origin: center !important;
+  }
+  
+  .terminal-text {
+    font-size: 0.8rem !important;
   }
   
   /* ========== SKILLS SHOWCASE ========== */
   
   .skills-showcase {
-    padding: 1rem !important;
+    padding: 0.5rem !important;
   }
   
   .skill-category {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .skill-category h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
   }
   
   .skill-item {
-    padding: 0.75rem !important;
-    font-size: 0.85rem !important;
+    padding: 0.5rem !important;
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .skill-name {
+    font-size: 0.75rem !important;
   }
   
   .progress-bar {
-    height: 6px !important;
+    height: 4px !important;
+  }
+  
+  .progress-fill {
+    height: 4px !important;
   }
   
   /* ========== STATS ========== */
@@ -298,68 +428,137 @@
   .stats-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem !important;
+    gap: 0.5rem !important;
   }
   
   .stat-item {
-    padding: 0.75rem !important;
+    padding: 0.5rem !important;
     text-align: center !important;
   }
   
   .stat-value {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
   
   .stat-label {
-    font-size: 0.75rem !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .stat-icon {
+    font-size: 1rem !important;
   }
   
   /* ========== HOME PAGE ========== */
   
   .home-hero {
-    padding: 2rem 1rem !important;
+    padding: 1rem 0.5rem !important;
     text-align: center !important;
+    min-height: auto !important;
   }
   
   .hero-logo img {
-    max-width: 150px !important;
-    height: auto !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0.5rem auto !important;
+  }
+  
+  .hero-content {
+    padding: 0.5rem !important;
   }
   
   .hero-content h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
+    margin: 0.5rem 0 !important;
   }
   
-  .hero-content .tagline {
-    font-size: 0.9rem !important;
+  .hero-content .tagline,
+  .hero-content p {
+    font-size: 0.8rem !important;
+    margin: 0.3rem 0 !important;
+    line-height: 1.4 !important;
   }
   
-  /* ========== DÉSACTIVER 3D/PARTICLES ========== */
+  .cta-buttons {
+    margin-top: 1rem !important;
+  }
   
+  /* ========== DÉSACTIVER 3D/PARTICLES/CODE VOLANT ========== */
+  
+  /* MASQUER COMPLÈTEMENT le code volant sur mobile */
+  #flying-code,
   .flying-code,
+  .flying-code-snippet,
   .three-background,
   .particles,
   canvas {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Empêcher création d'éléments de code volant */
+  #flying-code * {
     display: none !important;
   }
   
   /* ========== TEXTES LISIBLES ========== */
   
   p, li, span, div {
-    font-size: 0.9rem !important;
-    line-height: 1.6 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
   }
   
-  /* Titres proportionnels */
-  h1 { font-size: 1.5rem !important; }
-  h2 { font-size: 1.3rem !important; }
-  h3 { font-size: 1.1rem !important; }
-  h4, h5, h6 { font-size: 1rem !important; }
+  /* Titres proportionnels RÉDUITS */
+  h1 { font-size: 1.2rem !important; }
+  h2 { font-size: 1.1rem !important; }
+  h3 { font-size: 1rem !important; }
+  h4, h5, h6 { font-size: 0.9rem !important; }
+  
+  /* ========== EXPÉRIENCES & ÉDUCATION ========== */
+  
+  .experience-card,
+  .education-card {
+    padding: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .experience-card h3,
+  .education-card h3 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+  
+  .experience-role,
+  .education-degree {
+    font-size: 0.85rem !important;
+  }
+  
+  .experience-company,
+  .education-school {
+    font-size: 0.75rem !important;
+  }
+  
+  .experience-date,
+  .education-date {
+    font-size: 0.7rem !important;
+  }
+  
+  .experience-details li,
+  .education-details li {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.3rem !important;
+  }
   
   /* ========== ESPACEMENTS COHÉRENTS ========== */
   
   .container {
-    padding: 1rem !important;
+    padding: 0.5rem !important;
     margin: 0 !important;
     max-width: 100% !important;
   }

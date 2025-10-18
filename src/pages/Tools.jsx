@@ -45,6 +45,8 @@ const Tools = () => {
 
   const ActiveComponent = tools.find(t => t.id === activeTool)?.component;
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div className="tools-page">
       <AdvancedThreeScene />
@@ -57,6 +59,26 @@ const Tools = () => {
           <p className="terminal-text">
             Collection d'algorithmes, visualisations et jeux rétro-terminaux
           </p>
+          
+          {isMobile && (
+            <div className="mobile-warning" style={{
+              margin: '1rem 0',
+              padding: '0.75rem',
+              background: 'rgba(255, 0, 0, 0.1)',
+              border: '2px solid #ff0000',
+              borderRadius: '4px',
+              textAlign: 'center'
+            }}>
+              <span style={{ fontSize: '1.5rem' }}>⚠️</span>
+              <p style={{ color: '#ff0000', margin: '0.5rem 0', fontSize: '0.9rem', fontWeight: 'bold' }}>
+                ATTENTION : Jeux non optimisés pour mobile
+              </p>
+              <p style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
+                Ces jeux nécessitent un clavier pour fonctionner correctement.
+                Utilisez un ordinateur pour une meilleure expérience.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="tools-nav">

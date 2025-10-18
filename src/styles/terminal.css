@@ -532,23 +532,34 @@ h3::before{content:"SYS> "}
 
 /* === FLYING CODE (conteneur) === */
 #flying-code{
-  position:fixed;inset:0;pointer-events:none;z-index:9997;
+  position:fixed;inset:0;pointer-events:none;z-index:1; /* Z-index très bas pour être DERRIÈRE tout */
+  overflow: hidden; /* Empêcher débordement */
 }
 .flying-code-snippet{
-  position:absolute;color:rgba(0,255,0,0.8);
-  font-family:var(--font);white-space:pre;font-size:0.8em;
-  text-shadow:0 0 5px rgba(0,255,0,0.4);
+  position:absolute;
+  color:rgba(0,255,0,0.15); /* BEAUCOUP plus transparent (0.15 au lieu de 0.8) */
+  font-family:var(--font);
+  white-space:pre;
+  font-size:0.7em; /* Plus petit (0.7 au lieu de 0.8) */
+  text-shadow:0 0 3px rgba(0,255,0,0.1); /* Glow très réduit */
   animation:flyAcross linear forwards;
+  pointer-events:none; /* Ne jamais interférer avec les clics */
+  user-select:none; /* Ne jamais être sélectionnable */
 }
 .flying-code-snippet.big-code{
-  white-space:pre-wrap;line-height:1.2;padding:10px;
-  background:rgba(0,20,0,0.15);border:var(--border-dashed);max-width:300px;
+  white-space:pre-wrap;
+  line-height:1.2;
+  padding:8px;
+  background:rgba(0,20,0,0.05); /* Background quasi invisible (0.05 au lieu de 0.15) */
+  border:1px dashed rgba(0,255,0,0.1); /* Border très discrète */
+  max-width:250px; /* Plus petit (250 au lieu de 300) */
+  font-size:0.6em; /* Très petit pour les gros blocs */
 }
 @keyframes flyAcross{
-  0%{transform:translateY(100vh);opacity:0.1}
-  20%{opacity:0.3}
-  80%{opacity:0.3}
-  100%{transform:translateY(-100vh);opacity:0.1}
+  0%{transform:translateY(100vh);opacity:0}
+  10%{opacity:0.2} /* Fade in plus lent */
+  90%{opacity:0.2} /* Fade out plus lent */
+  100%{transform:translateY(-100vh);opacity:0}
 }
 
 /* === CUSTOM CURSOR === */
