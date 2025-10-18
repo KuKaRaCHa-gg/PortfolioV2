@@ -5,6 +5,7 @@ import '../styles/about.css'
 
 export default function About() {
   const [profile, setProfile] = useState(null)
+  const [techLogosOpen, setTechLogosOpen] = useState(false) // État pour accordéon mobile
 
   useEffect(()=>{
     fetch('/profile.json')
@@ -89,8 +90,14 @@ export default function About() {
 
         {/* Section Technologies Favorites */}
         <div className="favorite-techs-section">
-          <h2 className="section-title neon-text">⚡ TECHNOLOGIES FAVORITES</h2>
-          <div className="favorite-techs-grid">
+          <h2 
+            className="section-title neon-text tech-section-header"
+            onClick={() => setTechLogosOpen(!techLogosOpen)}
+          >
+            ⚡ TECHNOLOGIES FAVORITES 
+            <span className="accordion-icon">{techLogosOpen ? '▼' : '▶'}</span>
+          </h2>
+          <div className={`favorite-techs-grid ${techLogosOpen ? 'open' : 'closed'}`}>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
               <img src="/images/JS.png" alt="JavaScript" className="tech-logo" />
               <h3 className="tech-name">JavaScript</h3>
