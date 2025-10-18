@@ -113,6 +113,10 @@ INSERT INTO Etudiant (id) VALUES (1);`,
 
 export default function FlyingCode() {
   useEffect(() => {
+    // Désactiver sur mobile pour performances
+    const isMobile = window.innerWidth <= 768
+    if (isMobile) return
+    
     const container = document.getElementById('flying-code')
     if (!container) return
 

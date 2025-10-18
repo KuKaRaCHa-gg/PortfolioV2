@@ -54,6 +54,13 @@ export function initCustomCursor() {
 
 // Initialiser tous les effets
 export function initEffects() {
+  // Désactiver les effets sur mobile pour performances
+  const isMobile = window.innerWidth <= 768
+  if (isMobile) {
+    console.log('Mobile detected - effects disabled for performance')
+    return
+  }
+  
   initGlitchEffect()
   initCustomCursor()
 }
