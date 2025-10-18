@@ -49,7 +49,9 @@ const Tools = () => {
 
   return (
     <div className="tools-page">
-      <AdvancedThreeScene />
+      <div className="three-scene-container mobile-hide">
+        <AdvancedThreeScene />
+      </div>
       
       <div className="tools-content">
         <div className="tools-header terminal-card">

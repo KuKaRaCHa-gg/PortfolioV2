@@ -28,7 +28,7 @@ export default function Projects() {
         <h2>Projets Portfolio</h2>
         
         {/* Scène 3D avancée avec particules et interactions */}
-        <div style={{marginBottom:30}}>
+        <div className="three-scene-container mobile-hide" style={{marginBottom:30}}>
           <h3>Visualisation 3D Interactive</h3>
           <AdvancedThreeScene />
           <p style={{fontSize:'0.8em', opacity:0.7, marginTop:10, textAlign:'center'}}>
@@ -37,7 +37,7 @@ export default function Projects() {
         </div>
 
         {/* Filtres de technologies */}
-        <div className="project-filters" style={{margin:'2rem 0', width:'100%', maxWidth:'100%', overflow:'hidden'}}>
+        <div className="project-filters mobile-hide" style={{margin:'2rem 0', width:'100%', maxWidth:'100%', overflow:'hidden'}}>
           <div className="command-prompt" style={{marginBottom:'1rem'}}>
             {'>'} Filtrer par technologie:
           </div>

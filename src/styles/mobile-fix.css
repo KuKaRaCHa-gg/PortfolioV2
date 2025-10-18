@@ -543,15 +543,12 @@
     margin-top: 1rem !important;
   }
   
-  /* ========== DÉSACTIVER 3D/PARTICLES/CODE VOLANT ========== */
+  /* ========== DÉSACTIVER 3D/PARTICLES/CODE VOLANT/FILTRES ========== */
   
   /* MASQUER COMPLÈTEMENT le code volant sur mobile */
   #flying-code,
   .flying-code,
-  .flying-code-snippet,
-  .three-background,
-  .particles,
-  canvas {
+  .flying-code-snippet {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
@@ -561,6 +558,33 @@
   /* Empêcher création d'éléments de code volant */
   #flying-code * {
     display: none !important;
+  }
+  
+  /* MASQUER COMPLÈTEMENT les scènes 3D (Three.js) sur mobile */
+  .mobile-hide,
+  .three-scene-container,
+  .three-background,
+  .particles,
+  canvas,
+  .webgl,
+  .three-canvas {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Masquer les filtres de projets sur mobile */
+  .project-filters {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* ========== TEXTES LISIBLES ========== */
@@ -704,6 +728,22 @@
 
 /* ===== TABLETTES & DESKTOP (> 768px) ===== */
 @media (min-width: 769px) {
+  
+  /* Sur PC/Tablette: Réafficher les éléments cachés sur mobile */
+  .mobile-hide,
+  .three-scene-container,
+  .project-filters {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  canvas {
+    display: block !important;
+    visibility: visible !important;
+  }
   
   /* Sur PC/Tablette: PAS d'accordéon, toujours visible */
   .accordion-icon {
