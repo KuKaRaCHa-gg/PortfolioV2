@@ -132,8 +132,8 @@ export default function FlyingCode() {
       // Positionnement horizontal aléatoire
       span.style.left = `${Math.random() * 100}vw`
 
-      // RESTAURÉ: Durée d'animation originale (3s - 9s)
-      const duration = isBig ? Math.random() * 6 + 3 : Math.random() * 5 + 3
+      // Plus long pour un effet plus doux et moins agressif
+      const duration = isBig ? Math.random() * 10 + 12 : Math.random() * 8 + 10
       span.style.animationDuration = `${duration}s`
 
       // RESTAURÉ: Taille de police originale pour les gros snippets
@@ -151,8 +151,8 @@ export default function FlyingCode() {
       }, duration * 1000)
     }
 
-    // RESTAURÉ: Créer un nouveau morceau de code toutes les 300ms (comme avant)
-    const interval = setInterval(createCode, 300)
+    // Rythme légèrement ralenti pour limiter la fatigue visuelle
+    const interval = setInterval(createCode, 500)
 
     return () => {
       clearInterval(interval)

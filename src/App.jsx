@@ -5,6 +5,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Tools from './pages/Tools'
 import Blog from './pages/Blog'
+import Graph3D from './pages/Graph3D'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
@@ -45,6 +46,7 @@ export default function App() {
       {route === 'contact' && <Contact />}
       {route === 'tools' && <Tools />}
       {route === 'blog' && <Blog />}
+      {route === 'graph3d' && <Graph3D onNavigate={handleNavigation} />}
       
       <Footer />
       

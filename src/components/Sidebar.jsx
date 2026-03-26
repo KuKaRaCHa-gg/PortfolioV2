@@ -11,7 +11,8 @@ export default function Sidebar({ currentRoute, onNavigate }) {
     { id: 'projects', icon: 'CODE', label: 'Projets' },
     { id: 'tools', icon: 'GAME', label: 'Outils & Jeux' },
     { id: 'blog', icon: 'FILE', label: 'Blog' },
-    { id: 'contact', icon: 'MAIL', label: 'Contact' }
+    { id: 'contact', icon: 'MAIL', label: 'Contact' },
+    { id: 'graph3d', icon: '◈', label: 'Graph 3D' }
   ]
 
   return (
