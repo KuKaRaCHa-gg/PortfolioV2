@@ -112,11 +112,11 @@ export default function ProjectCard({ project, index }) {
               className="project-btn project-btn-primary"
               onClick={() => window.open(project.github, '_blank')}
             >
-              <span className="btn-icon">🔗</span> GitHub
+              <span className="btn-icon">[LINK]</span> GitHub
             </button>
           )}
           <button className="project-btn project-btn-secondary">
-            <span className="btn-icon">�</span> Détails
+            <span className="btn-icon"></span> Détails
           </button>
         </div>
       </div>

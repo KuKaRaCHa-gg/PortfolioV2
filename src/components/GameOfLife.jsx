@@ -270,7 +270,7 @@ const GameOfLife = () => {
           onClick={() => setIsRunning(!isRunning)}
           className="terminal-button primary"
         >
-          {isRunning ? '⏸ PAUSE' : '▶ DÉMARRER'}
+          {isRunning ? '[PAUSE] PAUSE' : '[PLAY] DÉMARRER'}
         </button>
         <button
           onClick={randomizeGrid}
@@ -328,7 +328,7 @@ const GameOfLife = () => {
             disabled={isRunning}
             className="pattern-button"
           >
-            <span className="pattern-icon">🔫</span>
+            <span className="pattern-icon">[FPS]</span>
             <span>Glider Gun</span>
           </button>
           <button
@@ -351,7 +351,7 @@ const GameOfLife = () => {
       </div>
 
       <div className="gameoflife-instructions terminal-card">
-        <h3>📖 RÈGLES DE CONWAY</h3>
+        <h3>[READ] RÈGLES DE CONWAY</h3>
         <ul>
           <li>🟢 Une cellule vivante avec 2-3 voisins survit</li>
           <li>💀 Une cellule vivante avec &lt;2 ou &gt;3 voisins meurt</li>

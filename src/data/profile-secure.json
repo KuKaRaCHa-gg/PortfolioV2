@@ -89,12 +89,12 @@
   ],
   "activities": [
     {
-      "icon": "🎮",
+      "icon": "[GAME]",
       "title": "Game Development",
       "description": "Création de jeux en Java, JavaScript et C++. Exploration de Game of Life, Snake, et algorithmes de pathfinding"
     },
     {
-      "icon": "💻",
+      "icon": "[CODE]",
       "title": "Open Source",
       "description": "Contribution aux projets open source. Plus de 30 repositories publics sur GitHub"
     },
@@ -109,7 +109,7 @@
       "description": "Entraînement régulier pour maintenir un équilibre physique et mental"
     },
     {
-      "icon": "🎬",
+      "icon": "[VIDEO]",
       "title": "Anime & Manga",
       "description": "Passionné de culture japonaise, animation et storytelling"
     },
@@ -124,7 +124,7 @@
       "description": "Création d'interfaces rétro-terminal, style cyberpunk et animations Matrix"
     },
     {
-      "icon": "📊",
+      "icon": "[STATS]",
       "title": "Data Management",
       "description": "Organisation de connaissances avec Obsidian. Systèmes de gestion de bases de données"
     }

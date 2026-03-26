@@ -100,7 +100,7 @@
 }
 
 .sidebar-item.active::after {
-  content: '◀';
+  content: '[BACK]';
   position: absolute;
   right: 1rem;
   animation: slideIn 0.5s ease;

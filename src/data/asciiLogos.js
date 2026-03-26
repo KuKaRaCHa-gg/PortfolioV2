@@ -138,15 +138,15 @@ export const compactLogos = {
   bash: '$ BASH',
   mysql: '🐬 MySQL',
   linux: '🐧 Linux',
-  vscode: '📝 VSCode'
+  vscode: '[NOTE] VSCode'
 }
 
 // Emojis gaming pour personnalisation
 export const gamingEmojis = {
-  ultrakill: '💀🔫',
+  ultrakill: '💀[FPS]',
   doom: '😈🔥',
   apex: '🎯👑',
-  fps: '🎮🔫',
+  fps: '[GAME][FPS]',
   survival: '🏕️⚔️',
   strategy: '🧠♟️'
 }

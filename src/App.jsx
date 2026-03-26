@@ -59,7 +59,7 @@ export default function App() {
         onClick={toggleSound}
         title={soundEnabled ? "Désactiver les sons" : "Activer les sons"}
       >
-        {soundEnabled ? '🔊 SON' : '🔇 SON'}
+        {soundEnabled ? '[SOUND-ON] SON' : '[SOUND-OFF] SON'}
       </button>
     </div>
   )

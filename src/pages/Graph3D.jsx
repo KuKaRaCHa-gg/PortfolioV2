@@ -16,7 +16,7 @@ export default function Graph3D({ onNavigate }) {
     <div className="terminal-screen graph3d-screen">
       <div className="terminal-frame graph3d-frame">
         <div className="graph3d-header">
-          <h2>◈ GRAPH - Navigation Visuelle</h2>
+          <h2>[GRAPH] GRAPH - Navigation Visuelle</h2>
           <p>
             Cliquer sur un noeud pour naviguer · Glisser pour tourner · Molette pour zoomer
           </p>

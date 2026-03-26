@@ -32,7 +32,7 @@ export default function Projects() {
           <h3>Visualisation 3D Interactive</h3>
           <AdvancedThreeScene />
           <p style={{fontSize:'0.8em', opacity:0.7, marginTop:10, textAlign:'center'}}>
-            💡 Déplacez votre souris et cliquez sur les objets 3D pour interagir
+            [TIP] Déplacez votre souris et cliquez sur les objets 3D pour interagir
           </p>
         </div>
 

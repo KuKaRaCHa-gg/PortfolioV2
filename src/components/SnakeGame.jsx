@@ -243,7 +243,7 @@ const SnakeGame = () => {
                 <p className="new-record">🏆 NOUVEAU RECORD! 🏆</p>
               )}
               <button onClick={resetGame} className="terminal-button primary">
-                ▶ REJOUER
+                [PLAY] REJOUER
               </button>
             </div>
           </div>
@@ -252,7 +252,7 @@ const SnakeGame = () => {
         {isPaused && !gameOver && (
           <div className="game-overlay">
             <div className="pause-box">
-              <h2 className="neon-text">⏸ PAUSE</h2>
+              <h2 className="neon-text">[PAUSE] PAUSE</h2>
               <p className="terminal-text">Appuyez sur ESPACE pour continuer</p>
             </div>
           </div>
@@ -272,7 +272,7 @@ const SnakeGame = () => {
             disabled={gameOver}
             className="terminal-button"
           >
-            {isPaused ? '▶ REPRENDRE' : '⏸ PAUSE'}
+            {isPaused ? '[PLAY] REPRENDRE' : '[PAUSE] PAUSE'}
           </button>
         </div>
 
@@ -288,20 +288,20 @@ const SnakeGame = () => {
               onClick={() => direction !== 'RIGHT' && setDirection('LEFT')}
               className="mobile-btn"
             >
-              ◀
+              [BACK]
             </button>
             <button 
               onClick={() => direction !== 'LEFT' && setDirection('RIGHT')}
               className="mobile-btn"
             >
-              ▶
+              [PLAY]
             </button>
           </div>
           <button 
             onClick={() => direction !== 'UP' && setDirection('DOWN')}
             className="mobile-btn"
           >
-            ▼
+            [DOWN]
           </button>
         </div>
       </div>
@@ -312,7 +312,7 @@ const SnakeGame = () => {
           <li>⬆️⬇️⬅️➡️ Flèches directionnelles pour se déplacer</li>
           <li>ESPACE pour mettre en pause</li>
           <li>🍎 Mangez les pommes pour grandir</li>
-          <li>⚠️ Évitez les murs et votre propre corps</li>
+          <li>[WARN]️ Évitez les murs et votre propre corps</li>
           <li>🏆 Plus vous mangez, plus c'est rapide!</li>
         </ul>
       </div>

@@ -34,18 +34,18 @@ export default function About() {
           
           <div className="social-links">
             <a href={profile.contact.github} target="_blank" rel="noopener noreferrer" className="social-btn">
-              <span className="icon">💻</span> GitHub
+              <span className="icon">[CODE]</span> GitHub
             </a>
             <a href={profile.contact.links} target="_blank" rel="noopener noreferrer" className="social-btn">
-              <span className="icon">🔗</span> Liens
+              <span className="icon">[LINK]</span> Liens
             </a>
             {profile.cvVideo && (
               <a href={profile.cvVideo} target="_blank" rel="noopener noreferrer" className="social-btn cv-video-btn">
-                <span className="icon">🎬</span> CV Vidéo
+                <span className="icon">[VIDEO]</span> CV Vidéo
               </a>
             )}
             <span className="location-badge">
-              <span className="icon">📍</span> {profile.contact.location}
+              <span className="icon">[LOC]</span> {profile.contact.location}
             </span>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function About() {
         {/* Section CV Vidéo intégré */}
         {profile.cvVideo && (
           <div className="cv-video-section">
-            <h2 className="section-title neon-text">🎬 MON CV EN VIDÉO</h2>
+            <h2 className="section-title neon-text">[VIDEO] MON CV EN VIDÉO</h2>
             <div className="video-container">
               <iframe
                 width="100%"
@@ -95,7 +95,7 @@ export default function About() {
             onClick={() => setTechLogosOpen(!techLogosOpen)}
           >
             ⚡ TECHNOLOGIES FAVORITES 
-            <span className="accordion-icon">{techLogosOpen ? '▼' : '▶'}</span>
+            <span className="accordion-icon">{techLogosOpen ? '[DOWN]' : '[PLAY]'}</span>
           </h2>
           <div className={`favorite-techs-grid ${techLogosOpen ? 'open' : 'closed'}`}>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
@@ -181,10 +181,10 @@ export default function About() {
         {/* Section Jeux Steam */}
         {profile.games && (
           <div className="games-section">
-            <h2 className="section-title neon-text">🎮 MES JEUX</h2>
+            <h2 className="section-title neon-text">[GAME] MES JEUX</h2>
             <div className="steam-profile-link">
               <a href={profile.steamProfile} target="_blank" rel="noopener noreferrer" className="social-btn">
-                <span className="icon">🎮</span> Voir mon profil Steam complet
+                <span className="icon">[GAME]</span> Voir mon profil Steam complet
               </a>
             </div>
             <div className="games-grid">
@@ -200,7 +200,7 @@ export default function About() {
         {/* Stats GitHub */}
         {profile.stats && (
           <div className="github-stats">
-            <h3 className="section-title">📊 STATISTIQUES</h3>
+            <h3 className="section-title">[STATS] STATISTIQUES</h3>
             <div className="stats-grid">
               <div className="stat-box">
                 <div className="stat-value">{profile.stats.repositories}</div>

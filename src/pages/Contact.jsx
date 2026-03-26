@@ -48,7 +48,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="contact-form terminal-card">
             <div className="form-group">
               <label htmlFor="name" className="form-label">
-                <span className="icon">👤</span> Nom *
+                <span className="icon">[USER]</span> Nom *
               </label>
               <input
                 type="text"
@@ -64,7 +64,7 @@ export default function Contact() {
 
             <div className="form-group">
               <label htmlFor="email" className="form-label">
-                <span className="icon">📧</span> Email *
+                <span className="icon">[MAIL]</span> Email *
               </label>
               <input
                 type="email"
@@ -80,7 +80,7 @@ export default function Contact() {
 
             <div className="form-group">
               <label htmlFor="subject" className="form-label">
-                <span className="icon">📝</span> Sujet *
+                <span className="icon">[NOTE]</span> Sujet *
               </label>
               <input
                 type="text"
@@ -96,7 +96,7 @@ export default function Contact() {
 
             <div className="form-group">
               <label htmlFor="message" className="form-label">
-                <span className="icon">💬</span> Message *
+                <span className="icon">[MSG]</span> Message *
               </label>
               <textarea
                 id="message"
@@ -115,19 +115,19 @@ export default function Contact() {
               className="terminal-button primary submit-btn"
               disabled={sending}
             >
-              {sending ? '⏳ Envoi...' : '✉️ Envoyer le message'}
+              {sending ? '[WAIT] Envoi...' : '[SEND] Envoyer le message'}
             </button>
           </form>
         ) : (
           <div className="success-message terminal-card">
-            <div className="success-icon">✅</div>
+            <div className="success-icon">[OK]</div>
             <h2 className="neon-text">Message envoyé avec succès !</h2>
             <p>Je vous répondrai dans les plus brefs délais.</p>
             <button 
               onClick={() => setSent(false)} 
               className="terminal-button"
             >
-              📩 Envoyer un autre message
+              [MAIL] Envoyer un autre message
             </button>
           </div>
         )}
@@ -136,16 +136,16 @@ export default function Contact() {
           <h3 className="section-title neon-text">AUTRES MOYENS DE CONTACT</h3>
           <div className="contact-links">
             <a href="mailto:contact@daniilminevich.com" className="contact-link">
-              <span className="icon">✉️</span> contact@daniilminevich.com
+              <span className="icon">[SEND]</span> contact@daniilminevich.com
             </a>
             <a href="https://github.com/KuKaRaCHa-gg" target="_blank" rel="noopener noreferrer" className="contact-link">
-              <span className="icon">💻</span> GitHub
+              <span className="icon">[CODE]</span> GitHub
             </a>
             <a href="https://linkedin.com/in/daniil-minevich" target="_blank" rel="noopener noreferrer" className="contact-link">
               <span className="icon">💼</span> LinkedIn
             </a>
             <a href="https://many.link/minevich" target="_blank" rel="noopener noreferrer" className="contact-link">
-              <span className="icon">🔗</span> Tous mes liens
+              <span className="icon">[LINK]</span> Tous mes liens
             </a>
           </div>
         </div>

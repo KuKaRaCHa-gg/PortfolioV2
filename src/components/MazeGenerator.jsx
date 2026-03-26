@@ -454,7 +454,7 @@ const MazeGenerator = () => {
           disabled={solving}
           className="terminal-button primary"
         >
-          {solving ? '⏳ Résolution...' : '▶ Résoudre'}
+          {solving ? '[WAIT] Résolution...' : '[PLAY] Résoudre'}
         </button>
       </div>
 
@@ -464,7 +464,7 @@ const MazeGenerator = () => {
 
       {stats && (
         <div className="maze-stats terminal-card">
-          <h3 className="neon-text">📊 STATISTIQUES</h3>
+          <h3 className="neon-text">[STATS] STATISTIQUES</h3>
           <div className="stats-grid">
             <div className="stat-item">
               <span className="stat-label">Algorithme:</span>

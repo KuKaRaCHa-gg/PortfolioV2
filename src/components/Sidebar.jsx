@@ -12,7 +12,7 @@ export default function Sidebar({ currentRoute, onNavigate }) {
     { id: 'tools', icon: 'GAME', label: 'Outils & Jeux' },
     { id: 'blog', icon: 'FILE', label: 'Blog' },
     { id: 'contact', icon: 'MAIL', label: 'Contact' },
-    { id: 'graph3d', icon: '◈', label: 'Graph 3D' }
+    { id: 'graph3d', icon: '[GRAPH]', label: 'Graph 3D' }
   ]
 
   return (
@@ -47,7 +47,7 @@ export default function Sidebar({ currentRoute, onNavigate }) {
       <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <span className="logo-icon">▶</span>
+            <span className="logo-icon">[PLAY]</span>
             <span className="logo-text">MENU</span>
           </div>
         </div>

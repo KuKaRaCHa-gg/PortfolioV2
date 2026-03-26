@@ -322,7 +322,7 @@
 }
 
 .experience-details li::before {
-  content: '▶';
+  content: '[PLAY]';
   position: absolute;
   left: 0;
   color: #00ff00;

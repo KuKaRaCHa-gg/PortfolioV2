@@ -109,7 +109,7 @@ Effets de bord et cycle de vie...
             </div>
           </div>
           <p className="terminal-text" style={{textAlign: 'center', margin: '2rem 0'}}>
-            📊 <strong>Mes dernières activités :</strong> Postes partagés, articles et actualités professionnelles
+            [STATS] <strong>Mes dernières activités :</strong> Postes partagés, articles et actualités professionnelles
           </p>
           <a 
             href="https://linkedin.com/in/daniil-minevich" 
@@ -117,7 +117,7 @@ Effets de bord et cycle de vie...
             rel="noopener noreferrer"
             className="terminal-button primary linkedin-btn"
           >
-            📎 Voir mon profil LinkedIn complet
+            [LINK] Voir mon profil LinkedIn complet
           </a>
         </div>
 
@@ -129,7 +129,7 @@ Effets de bord et cycle de vie...
                   <div className="article-category">{article.category}</div>
                   <h2 className="article-title">{article.title}</h2>
                   <div className="article-meta">
-                    <span className="article-date">📅 {article.date}</span>
+                    <span className="article-date">[DATE] {article.date}</span>
                   </div>
                   <p className="article-summary">{article.summary}</p>
                   <div className="article-tags">
@@ -141,7 +141,7 @@ Effets de bord et cycle de vie...
                     className="terminal-button primary"
                     onClick={() => setSelectedArticle(article)}
                   >
-                    📖 Lire l'article
+                    [READ] Lire l'article
                   </button>
                 </article>
               ))}
@@ -153,7 +153,7 @@ Effets de bord et cycle de vie...
               className="terminal-button"
               onClick={() => setSelectedArticle(null)}
             >
-              ◀ Retour aux articles
+              [BACK] Retour aux articles
             </button>
             
             <article className="article-content terminal-card">
@@ -161,7 +161,7 @@ Effets de bord et cycle de vie...
                 <span className="article-category">{selectedArticle.category}</span>
                 <h1>{selectedArticle.title}</h1>
                 <div className="article-meta">
-                  <span>📅 {selectedArticle.date}</span>
+                  <span>[DATE] {selectedArticle.date}</span>
                 </div>
                 <div className="article-tags">
                   {selectedArticle.tags.map((tag, i) => (

@@ -71,7 +71,7 @@ const Tools = () => {
               borderRadius: '4px',
               textAlign: 'center'
             }}>
-              <span style={{ fontSize: '1.5rem' }}>⚠️</span>
+              <span style={{ fontSize: '1.5rem' }}>[WARN]️</span>
               <p style={{ color: '#ff0000', margin: '0.5rem 0', fontSize: '0.9rem', fontWeight: 'bold' }}>
                 ATTENTION : Jeux non optimisés pour mobile
               </p>

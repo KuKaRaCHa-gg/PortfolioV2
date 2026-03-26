@@ -77,11 +77,11 @@ Voir `public/projects-with-images-example.json` pour un exemple complet.
 ## Effets appliqués aux images
 
 Les images des projets ont automatiquement :
-- ✅ Filtre vert Matrix au survol
-- ✅ Effet de zoom smooth
-- ✅ Scanlines CRT rétro
-- ✅ Overlay interactif
-- ✅ Badge "NOUVEAU" pour les 2 premiers projets
-- ✅ Effet parallax 3D au hover
+- [OK] Filtre vert Matrix au survol
+- [OK] Effet de zoom smooth
+- [OK] Scanlines CRT rétro
+- [OK] Overlay interactif
+- [OK] Badge "NOUVEAU" pour les 2 premiers projets
+- [OK] Effet parallax 3D au hover
 
 Pas besoin de modifier le CSS, tout est automatique ! 🚀

@@ -395,7 +395,7 @@ export default function TetrisGame() {
 
           {isPaused && !gameOver && (
             <div className="tetris-overlay">
-              <div className="pause-text">⏸️ PAUSE</div>
+              <div className="pause-text">[PAUSE]️ PAUSE</div>
             </div>
           )}
         </div>
@@ -466,7 +466,7 @@ export default function TetrisGame() {
               <button onClick={moveDown} className="control-btn">↓</button>
               <button onClick={drop} className="control-btn">⬇</button>
               <button onClick={() => setIsPaused(!isPaused)} className="control-btn">
-                {isPaused ? '▶' : '⏸'}
+                {isPaused ? '[PLAY]' : '[PAUSE]'}
               </button>
             </div>
           </div>

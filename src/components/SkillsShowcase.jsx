@@ -34,7 +34,7 @@ export default function SkillsShowcase() {
 
   return (
     <div className="skills-showcase">
-      <h2 className="section-title neon-text">💻 COMPÉTENCES TECHNIQUES</h2>
+      <h2 className="section-title neon-text">[CODE] COMPÉTENCES TECHNIQUES</h2>
       
       {/* Grille de badges SANS pourcentages */}
       <div className="skills-grid-badges">
