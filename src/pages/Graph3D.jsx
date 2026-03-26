@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ObsidianGraph3D from '../components/ObsidianGraph3D'
+import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/graph3d.css'
 
 export default function Graph3D({ onNavigate }) {
+  const [isPlaying, setIsPlaying] = useState(true)
+
   const quickNodes = [
     { label: 'Portfolio', route: 'home' },
     { label: 'A Propos', route: 'about' },
@@ -14,9 +17,9 @@ export default function Graph3D({ onNavigate }) {
 
   return (
     <div className="terminal-screen graph3d-screen">
-      <div className="terminal-frame graph3d-frame">
+      <ExplorerWindow title="Graph 3D" path="C:\\Portfolio\\Graph3D" status="3D map connected" className="terminal-frame graph3d-frame">
         <div className="graph3d-header">
-          <h2>[GRAPH] GRAPH - Navigation Visuelle</h2>
+          <h2>Graph - Navigation visuelle</h2>
           <p>
             Cliquer sur un noeud pour naviguer · Glisser pour tourner · Molette pour zoomer
           </p>
@@ -31,6 +34,12 @@ export default function Graph3D({ onNavigate }) {
         </div>
 
         <div className="graph3d-quick-links">
+          <button className={`graph3d-control-btn play ${isPlaying ? 'playing' : ''}`} onClick={() => setIsPlaying((prev) => !prev)}>
+            {isPlaying ? 'Pause animation' : 'Lancer animation'}
+          </button>
+          <button className="graph3d-control-btn back" onClick={() => onNavigate('home')}>
+            Retour accueil
+          </button>
           {quickNodes.map((node) => (
             <button key={node.route} className="graph3d-quick-link" onClick={() => onNavigate(node.route)}>
               {node.label}
@@ -38,12 +47,12 @@ export default function Graph3D({ onNavigate }) {
           ))}
         </div>
 
-        <ObsidianGraph3D onNavigate={onNavigate} />
+        <ObsidianGraph3D onNavigate={onNavigate} isPaused={!isPlaying} />
 
         <div className="graph3d-help">
           <span>Les branches restent visibles pour montrer que toutes les pages sont connectees.</span>
         </div>
-      </div>
+      </ExplorerWindow>
     </div>
   )
 }

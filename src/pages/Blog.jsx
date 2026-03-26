@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/blog.css'
 
 export default function Blog() {
@@ -93,7 +94,7 @@ Effets de bord et cycle de vie...
 
   return (
     <div className="terminal-screen blog-page">
-      <div className="terminal-frame">
+      <ExplorerWindow title="Blog" path="C:\\Portfolio\\Blog" status="Articles available" className="terminal-frame">
         <div className="blog-header">
           <h1 className="glitch-text" data-text="BLOG & ACTUALITÉS">BLOG & ACTUALITÉS</h1>
           <p className="terminal-text">Articles techniques et actualités professionnelles</p>
@@ -101,7 +102,7 @@ Effets de bord et cycle de vie...
 
         {/* Section LinkedIn Feed */}
         <div className="linkedin-section">
-          <h2 className="section-title neon-text">💼 MES ACTUALITÉS LINKEDIN</h2>
+          <h2 className="section-title neon-text">[SOCIAL] MES ACTUALITÉS LINKEDIN</h2>
           <div className="linkedin-embed-container">
             {/* Badge LinkedIn Profile */}
             <div className="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="daniil-minevich" data-version="v1">
@@ -176,7 +177,7 @@ Effets de bord et cycle de vie...
             </article>
           </div>
         )}
-      </div>
+      </ExplorerWindow>
     </div>
   )
 }

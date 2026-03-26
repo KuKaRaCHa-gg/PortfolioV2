@@ -47,7 +47,6 @@ export default function Sidebar({ currentRoute, onNavigate }) {
       <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <span className="logo-icon">[PLAY]</span>
             <span className="logo-text">MENU</span>
           </div>
         </div>

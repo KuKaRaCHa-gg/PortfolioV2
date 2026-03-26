@@ -40,7 +40,7 @@ export default function App() {
       <Header />
       <Sidebar currentRoute={route} onNavigate={handleNavigation} />
       
-      {route === 'home' && <Home onEnter={() => handleNavigation('projects')} />}
+      {route === 'home' && <Home onEnter={() => handleNavigation('about')} />}
       {route === 'about' && <About />}
       {route === 'projects' && <Projects />}
       {route === 'contact' && <Contact />}

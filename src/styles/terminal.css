@@ -2,15 +2,15 @@
 
 :root{
   --bg:#000;
-  --text:#00FF00;
+  --text:#00ff00;
   --accent:#00BBFF;
   --hover-bg:#002800;
-  --semi-trans:rgba(0,40,0,0.2);
+  --semi-trans:rgba(0, 255, 0,0.2);
   --border:2px solid var(--text);
   --border-dashed:2px dashed var(--text);
   --font:'Share Tech Mono','Courier New',monospace;
   --trans:0.3s ease;
-  --glow:rgba(0,255,0,0.3);
+  --glow:rgba(0, 255, 0,0.3);
 }
 
 /* === CUSTOM CURSOR === */
@@ -91,7 +91,7 @@ body{
   animation:bg-pulse 2s infinite alternate;
   padding:0; /* Supprimé le padding pour fullscreen */
 }
-@keyframes bg-pulse{0%{box-shadow:inset 0 0 50px var(--glow)}100%{box-shadow:inset 0 0 70px rgba(0,255,0,0.4)}}
+@keyframes bg-pulse{0%{box-shadow:inset 0 0 50px var(--glow)}100%{box-shadow:inset 0 0 70px rgba(0, 255, 0,0.4)}}
 
 ::selection{background:var(--text);color:var(--bg)}
 a{color:var(--text);text-decoration:none;transition:0.15s ease}
@@ -111,7 +111,7 @@ h3::before{content:"SYS> "}
 @keyframes text-flicker{0%,100%{opacity:1}50%{opacity:0.7}}
 @keyframes blink{50%{opacity:0}}
 @keyframes neon-glow{0%{box-shadow:0 0 5px var(--text)}100%{box-shadow:0 0 20px var(--text)}}
-@keyframes neon-pulse{0%{box-shadow:0 0 10px var(--glow)}100%{box-shadow:0 0 25px rgba(0,255,0,0.7)}}
+@keyframes neon-pulse{0%{box-shadow:0 0 10px var(--glow)}100%{box-shadow:0 0 25px rgba(0, 255, 0,0.7)}}
 @keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 @keyframes glitch{
   0%{transform:translate(0,0);filter:hue-rotate(0deg)}
@@ -536,25 +536,25 @@ h3::before{content:"SYS> "}
 }
 .flying-code-snippet{
   position:absolute;
-  color:rgba(0,255,0,0.55);
+  color:rgba(0, 255, 0,0.6);
   font-family:var(--font);
   white-space:pre;
   font-size:0.8em; /* RESTAURÉ: Taille originale */
-  text-shadow:0 0 3px rgba(0,255,0,0.22);
+  text-shadow:0 0 4px rgba(0, 255, 0,0.24);
   animation:flyAcross linear forwards;
 }
 .flying-code-snippet.big-code{
   white-space:pre-wrap;
   line-height:1.2;
   padding:10px; /* RESTAURÉ: Padding original */
-  background:rgba(0,20,0,0.08);
+  background:rgba(0,20,0,0.1);
   border:var(--border-dashed); /* RESTAURÉ: Border originale */
   max-width:300px; /* RESTAURÉ: Largeur originale */
 }
 @keyframes flyAcross{
   0%{transform:translateY(100vh);opacity:0.05}
-  20%{opacity:0.2}
-  80%{opacity:0.2}
+  20%{opacity:0.26}
+  80%{opacity:0.26}
   100%{transform:translateY(-100vh);opacity:0.05}
 }
 
@@ -567,7 +567,7 @@ h3::before{content:"SYS> "}
 }
 .cursor-trail{
   position:absolute;width:5px;height:5px;
-  background:rgba(0,255,0,0.5);border-radius:50%;
+  background:rgba(0, 255, 0,0.5);border-radius:50%;
   pointer-events:none;transform:translate(-50%,-50%);
   z-index:9998;animation:fadeTrail 0.3s ease-out forwards;
 }
@@ -639,7 +639,7 @@ h3::before{content:"SYS> "}
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0,255,0,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0,0.3), transparent);
   transition: left 0.5s;
 }
 
@@ -1278,7 +1278,7 @@ h3::before{content:"SYS> "}
   position: absolute;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(0,255,0,0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 255, 0,0.3) 0%, transparent 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: all 0.1s;
@@ -1528,4 +1528,92 @@ h3::before{content:"SYS> "}
   .header-date {
     display: none; /* Caché sur très petit écran */
   }
+}
+
+/* === 2026 SITE POLISH === */
+body {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(38, 125, 70, 0.12), transparent 42%),
+    radial-gradient(circle at 90% 88%, rgba(16, 80, 45, 0.16), transparent 38%),
+    #030603;
+}
+
+.terminal-frame {
+  border-radius: 10px;
+  border-width: 1px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(0, 255, 0, 0.1);
+}
+
+.terminal-card,
+.project-card,
+.tool-card,
+.article-card {
+  border-radius: 0;
+  border: 2px solid #ecf1f6;
+  border-right-color: #34393f;
+  border-bottom-color: #34393f;
+  background: linear-gradient(180deg, #bec3c9 0%, #b4b9bf 100%);
+  box-shadow: 2px 2px 0 rgba(10, 10, 10, 0.9);
+  color: #12161b;
+}
+
+.terminal-card h1,
+.terminal-card h2,
+.terminal-card h3,
+.terminal-card p,
+.terminal-card li,
+.terminal-card span,
+.terminal-card strong,
+.terminal-card a,
+.project-card h1,
+.project-card h2,
+.project-card h3,
+.project-card p,
+.project-card li,
+.project-card span,
+.project-card strong,
+.project-card a,
+.tool-card h1,
+.tool-card h2,
+.tool-card h3,
+.tool-card p,
+.tool-card li,
+.tool-card span,
+.tool-card strong,
+.tool-card a,
+.article-card h1,
+.article-card h2,
+.article-card h3,
+.article-card p,
+.article-card li,
+.article-card span,
+.article-card strong,
+.article-card a {
+  color: #12161b;
+}
+
+.terminal-button,
+.enter-btn,
+.neon-button,
+.sound-control {
+  border-radius: 8px;
+  border: 1px solid #6fffa7;
+  background: linear-gradient(180deg, #123620 0%, #0b2214 100%);
+  color: #d9ffe9;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.terminal-button:hover,
+.enter-btn:hover,
+.neon-button:hover,
+.sound-control:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 2px rgba(111, 255, 167, 0.2), 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.02em;
 }

@@ -243,7 +243,7 @@ const SnakeGame = () => {
                 <p className="new-record">🏆 NOUVEAU RECORD! 🏆</p>
               )}
               <button onClick={resetGame} className="terminal-button primary">
-                [PLAY] REJOUER
+                REJOUER
               </button>
             </div>
           </div>
@@ -272,7 +272,7 @@ const SnakeGame = () => {
             disabled={gameOver}
             className="terminal-button"
           >
-            {isPaused ? '[PLAY] REPRENDRE' : '[PAUSE] PAUSE'}
+            {isPaused ? 'REPRENDRE' : 'PAUSE'}
           </button>
         </div>
 
@@ -294,7 +294,7 @@ const SnakeGame = () => {
               onClick={() => direction !== 'LEFT' && setDirection('RIGHT')}
               className="mobile-btn"
             >
-              [PLAY]
+              START
             </button>
           </div>
           <button 

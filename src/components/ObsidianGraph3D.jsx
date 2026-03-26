@@ -92,7 +92,7 @@ function createLabelSprite(label) {
   return sprite
 }
 
-export default function ObsidianGraph3D({ onNavigate }) {
+export default function ObsidianGraph3D({ onNavigate, isPaused = false }) {
   const mountRef = useRef(null)
 
   useEffect(() => {
@@ -100,7 +100,7 @@ export default function ObsidianGraph3D({ onNavigate }) {
     if (!mount) return
 
     const scene = new THREE.Scene()
-    scene.background = new THREE.Color(0x030711)
+    scene.background = new THREE.Color(0x1c4f86)
 
     const camera = new THREE.PerspectiveCamera(58, mount.clientWidth / mount.clientHeight, 0.1, 200)
     camera.position.set(0, 4, 26)
@@ -140,7 +140,7 @@ export default function ObsidianGraph3D({ onNavigate }) {
       starPositions[i + 2] = (Math.random() - 0.5) * 120
     }
     starsGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
-    const starsMaterial = new THREE.PointsMaterial({ color: 0x2aa756, size: 0.13, transparent: true, opacity: 0.45 })
+    const starsMaterial = new THREE.PointsMaterial({ color: 0xaed6ff, size: 0.13, transparent: true, opacity: 0.45 })
     const stars = new THREE.Points(starsGeometry, starsMaterial)
     scene.add(stars)
 
@@ -254,45 +254,47 @@ export default function ObsidianGraph3D({ onNavigate }) {
     const animate = () => {
       const t = clock.getElapsedTime()
 
-      NODES.forEach((node, i) => {
-        const mesh = nodeMeshes[node.id]
-        if (node.hub) {
-          mesh.position.set(
-            Math.cos(t * 0.2) * 0.5,
-            Math.sin(t * 0.26) * 0.26,
-            Math.sin(t * 0.21) * 0.48
-          )
-        } else {
-          const angle = t * 0.1 + (i / NODES.length) * Math.PI * 2
-          const orbitalRadius = 10.8 + Math.sin(t * 0.26 + i * 0.8) * 1.2
+      if (!isPaused) {
+        NODES.forEach((node, i) => {
+          const mesh = nodeMeshes[node.id]
+          if (node.hub) {
+            mesh.position.set(
+              Math.cos(t * 0.2) * 0.5,
+              Math.sin(t * 0.26) * 0.26,
+              Math.sin(t * 0.21) * 0.48
+            )
+          } else {
+            const angle = t * 0.1 + (i / NODES.length) * Math.PI * 2
+            const orbitalRadius = 10.8 + Math.sin(t * 0.26 + i * 0.8) * 1.2
+
+            mesh.position.set(
+              Math.cos(angle) * orbitalRadius,
+              Math.sin(t * 0.34 + i * 0.5) * 3.1,
+              Math.sin(angle) * (orbitalRadius * 0.7)
+            )
+          }
+
+          mesh.rotation.x += 0.003 + i * 0.0005
+          mesh.rotation.y += 0.0036 + i * 0.0006
+        })
+
+        SUB_NODES.forEach((node, idx) => {
+          const mesh = subNodeMeshes[node.id]
+          const parent = nodeMeshes[node.parent]
+          const phase = idx % 2 === 0 ? 0 : Math.PI
+          const ringRadius = 2.5 + (idx % 3) * 0.5
+          const angle = t * 0.22 + idx * 0.9 + phase
 
           mesh.position.set(
-            Math.cos(angle) * orbitalRadius,
-            Math.sin(t * 0.34 + i * 0.5) * 3.1,
-            Math.sin(angle) * (orbitalRadius * 0.7)
+            parent.position.x + Math.cos(angle) * ringRadius,
+            parent.position.y + Math.sin(angle * 1.4) * 0.7,
+            parent.position.z + Math.sin(angle) * ringRadius * 0.75
           )
-        }
 
-        mesh.rotation.x += 0.003 + i * 0.0005
-        mesh.rotation.y += 0.0036 + i * 0.0006
-      })
-
-      SUB_NODES.forEach((node, idx) => {
-        const mesh = subNodeMeshes[node.id]
-        const parent = nodeMeshes[node.parent]
-        const phase = idx % 2 === 0 ? 0 : Math.PI
-        const ringRadius = 2.5 + (idx % 3) * 0.5
-        const angle = t * 0.22 + idx * 0.9 + phase
-
-        mesh.position.set(
-          parent.position.x + Math.cos(angle) * ringRadius,
-          parent.position.y + Math.sin(angle * 1.4) * 0.7,
-          parent.position.z + Math.sin(angle) * ringRadius * 0.75
-        )
-
-        mesh.rotation.x += 0.01
-        mesh.rotation.y += 0.01
-      })
+          mesh.rotation.x += 0.01
+          mesh.rotation.y += 0.01
+        })
+      }
 
       const positions = edgeMainGeometry.attributes.position.array
       LINKS.forEach(([from, to], edgeIndex) => {
@@ -343,9 +345,11 @@ export default function ObsidianGraph3D({ onNavigate }) {
         mesh.material.emissiveIntensity = isHovered ? 1.05 : node.hub ? 0.78 : 0.45
       })
 
-      group.rotation.y = Math.sin(t * 0.1) * 0.24
-      stars.rotation.y += 0.00015
-      stars.rotation.x += 0.00005
+      if (!isPaused) {
+        group.rotation.y = Math.sin(t * 0.1) * 0.24
+        stars.rotation.y += 0.00015
+        stars.rotation.x += 0.00005
+      }
 
       controls.update()
 
@@ -402,7 +406,7 @@ export default function ObsidianGraph3D({ onNavigate }) {
         mount.removeChild(renderer.domElement)
       }
     }
-  }, [onNavigate])
+  }, [onNavigate, isPaused])
 
   return <div className="graph3d-canvas" ref={mountRef} />
 }

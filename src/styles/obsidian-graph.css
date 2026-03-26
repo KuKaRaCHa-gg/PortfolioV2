@@ -1,0 +1,209 @@
+.obsidian-graph {
+  border: 2px solid #00ff00;
+  background: linear-gradient(180deg, #001808 0%, #000f05 100%);
+  box-shadow: inset 1px 1px 0 #0b4518, inset -1px -1px 0 #02250b, 0 8px 20px rgba(0, 25, 0, 0.35);
+}
+
+.obsidian-graph.floating {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: min(380px, calc(100vw - 1.5rem));
+  z-index: 1600;
+}
+
+.obsidian-graph.full-page {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: 1rem auto 0;
+}
+
+.graph-titlebar {
+  background: linear-gradient(90deg, #007f2f 0%, #00ff00 75%, #66ff99 100%);
+  color: #ffffff;
+  border-bottom: 1px solid #005f24;
+  padding: 0.45rem 0.7rem;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.graph-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0.35rem;
+}
+
+.graph-edge {
+  stroke: #5c7fa9;
+  stroke-width: 2.2;
+  opacity: 0.62;
+}
+
+.graph-edge.active {
+  stroke: #00ff00;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 3px rgba(0, 255, 0, 0.55));
+}
+
+.graph-node {
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.graph-node:hover {
+  transform: scale(1.06);
+}
+
+.graph-node-shape {
+  fill: #06210f;
+  stroke: #00ff00;
+  stroke-width: 3;
+  transition: fill 0.25s ease, filter 0.25s ease;
+}
+
+.graph-node:hover .graph-node-shape,
+.graph-node.active .graph-node-shape,
+.graph-node-shape.active {
+  fill: #0b3417;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 0, 0.55));
+}
+
+.graph-node-label {
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  font-size: 24px;
+  fill: #00aa00;
+  font-weight: 700;
+}
+
+.floating-nav-shapes {
+  position: fixed;
+  top: 72px;
+  right: 0.7rem;
+  z-index: 1550;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(108px, 1fr));
+  gap: 0.55rem;
+  width: min(230px, calc(100vw - 1rem));
+}
+
+.shape-chip {
+  border: 2px solid #00ff00;
+  background: linear-gradient(180deg, #001808 0%, #0a2a12 100%);
+  color: #00aa00;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  font-size: 0.78rem;
+  min-height: 52px;
+  box-shadow: inset 1px 1px 0 #0b4518, inset -1px -1px 0 #02250b, 1px 2px 0 rgba(0, 40, 0, 0.45);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  animation: floatShape 8s ease-in-out infinite;
+}
+
+.shape-chip span {
+  display: inline-block;
+  pointer-events: none;
+}
+
+.shape-chip:hover,
+.shape-chip.active {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: inset 1px 1px 0 #0b4518, inset -1px -1px 0 #02250b, 0 0 0 2px rgba(0, 255, 0, 0.3);
+}
+
+.shape-chip.circle {
+  border-radius: 999px;
+}
+
+.shape-chip.square,
+.shape-chip.cube {
+  border-radius: 6px;
+}
+
+.shape-chip.triangle {
+  clip-path: polygon(50% 4%, 100% 100%, 0 100%);
+  min-height: 56px;
+  padding-top: 0.6rem;
+}
+
+.shape-chip.triangle span {
+  transform: translateY(0.65rem);
+}
+
+.shape-chip.diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
+}
+
+.shape-chip.pyramid {
+  clip-path: polygon(50% 0%, 100% 100%, 0 100%);
+}
+
+.graph-page-frame {
+  padding-bottom: 1.2rem;
+}
+
+.graph-page-subtitle {
+  margin-top: 0.35rem;
+  color: #00aa00;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+}
+
+.graph-legend {
+  margin: 0.9rem auto 0;
+  max-width: 980px;
+  list-style: square;
+  color: #00aa00;
+  padding-left: 1.2rem;
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+}
+
+.graph-legend li {
+  margin: 0.35rem 0;
+}
+
+@keyframes floatShape {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .floating-nav-shapes {
+    top: auto;
+    bottom: 250px;
+  }
+
+  .obsidian-graph.floating {
+    width: min(330px, calc(100vw - 1rem));
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-nav-shapes {
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    width: calc(100vw - 1rem);
+    right: 0.5rem;
+    bottom: 220px;
+  }
+
+  .shape-chip {
+    min-height: 42px;
+    font-size: 0.68rem;
+  }
+
+  .shape-chip.triangle,
+  .shape-chip.pyramid {
+    min-height: 46px;
+  }
+
+  .obsidian-graph.floating {
+    right: 0.5rem;
+    left: 0.5rem;
+    width: auto;
+    bottom: 0.5rem;
+  }
+}

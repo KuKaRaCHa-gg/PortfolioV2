@@ -5,6 +5,7 @@ import SnakeGame from '../components/SnakeGame';
 import GameOfLife from '../components/GameOfLife';
 import Pong from './games/Pong';
 import TetrisGame from '../components/TetrisGame';
+import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/tools.css';
 
 const Tools = () => {
@@ -48,12 +49,9 @@ const Tools = () => {
   const isMobile = window.innerWidth <= 768;
 
   return (
-    <div className="tools-page">
-      <div className="three-scene-container mobile-hide">
+    <div className="tools-page terminal-screen">
+      <ExplorerWindow title="Tools" path="C:\\Portfolio\\Tools" status="Interactive tools online" className="tools-content terminal-frame">
         <AdvancedThreeScene />
-      </div>
-      
-      <div className="tools-content">
         <div className="tools-header terminal-card">
           <h1 className="glitch-text" data-text="OUTILS & JEUX INTERACTIFS">
             OUTILS & JEUX INTERACTIFS
@@ -113,7 +111,7 @@ const Tools = () => {
         <div className="tool-display">
           {ActiveComponent && <ActiveComponent />}
         </div>
-      </div>
+      </ExplorerWindow>
     </div>
   );
 };

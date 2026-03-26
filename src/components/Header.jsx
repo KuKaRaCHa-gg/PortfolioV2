@@ -39,7 +39,6 @@ export default function Header(){
     <header className="terminal-header-enhanced">
       <div className="header-section header-left">
         <img src="/images/PP&logo/LogoRond.png" alt="Logo" className="header-logo" />
-        <span className="header-icon">[PLAY]</span>
         <span className="header-brand glitch-text" data-text="DANIIL.DEV">DANIIL.DEV</span>
         <span className="header-badge">v2.0</span>
       </div>
@@ -55,7 +54,6 @@ export default function Header(){
         <span className="header-time">{formatTime(time)}</span>
         <span className="header-date">{formatDate(time)}</span>
         <span className="header-battery" title={`Batterie: ${battery}%`}>
-          <span className="battery-icon">🔋</span>
           <span className="battery-level">{battery}%</span>
         </span>
       </div>

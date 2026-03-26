@@ -454,7 +454,7 @@ const MazeGenerator = () => {
           disabled={solving}
           className="terminal-button primary"
         >
-          {solving ? '[WAIT] Résolution...' : '[PLAY] Résoudre'}
+          {solving ? 'Resolution...' : 'Resoudre'}
         </button>
       </div>
 

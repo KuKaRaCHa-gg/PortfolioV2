@@ -49,7 +49,7 @@ export default function SkillsShowcase() {
             onMouseEnter={() => soundManager.playHover()}
             title={`Cliquez pour voir le logo ASCII ${skill.name.toUpperCase()}`}
           >
-            <span className="skill-icon">{compactLogos[skill.name] || '⚡'}</span>
+            <span className="skill-icon">{compactLogos[skill.name] || '[SKILL]'}</span>
             <span className="skill-name">{skill.name.toUpperCase()}</span>
           </div>
         ))}

@@ -270,7 +270,7 @@ const GameOfLife = () => {
           onClick={() => setIsRunning(!isRunning)}
           className="terminal-button primary"
         >
-          {isRunning ? '[PAUSE] PAUSE' : '[PLAY] DÉMARRER'}
+          {isRunning ? 'PAUSE' : 'DEMARRER'}
         </button>
         <button
           onClick={randomizeGrid}
@@ -336,7 +336,7 @@ const GameOfLife = () => {
             disabled={isRunning}
             className="pattern-button"
           >
-            <span className="pattern-icon">⚡</span>
+            <span className="pattern-icon">[PAT]</span>
             <span>Pentadecathlon</span>
           </button>
           <button

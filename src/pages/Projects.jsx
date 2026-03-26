@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import soundManager from '../utils/soundManager'
 import AdvancedThreeScene from '../components/AdvancedThreeScene'
 import ProjectCard from '../components/ProjectCard'
+import ExplorerWindow from '../components/ExplorerWindow'
 
 export default function Projects() {
   const [projects, setProjects] = useState([])
@@ -24,7 +25,7 @@ export default function Projects() {
 
   return (
     <div className="terminal-screen">
-      <div className="terminal-frame projects">
+      <ExplorerWindow title="Projects" path="C:\\Portfolio\\Projects" status="Project index ready" className="terminal-frame projects">
         <h2>Projets Portfolio</h2>
         
         {/* Scène 3D avancée avec particules et interactions */}
@@ -118,7 +119,7 @@ export default function Projects() {
             </div>
           )}
         </div>
-      </div>
+      </ExplorerWindow>
     </div>
   )
 }

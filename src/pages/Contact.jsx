@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/terminal.css'
 
 export default function Contact() {
@@ -38,7 +39,7 @@ export default function Contact() {
 
   return (
     <div className="terminal-screen">
-      <div className="terminal-frame contact-page">
+      <ExplorerWindow title="Contact" path="C:\\Portfolio\\Contact" status="Mail endpoint ready" className="terminal-frame contact-page">
         <div className="contact-header">
           <h1 className="glitch-text" data-text="CONTACT">CONTACT</h1>
           <p className="terminal-text">Envoyez-moi un message, je vous répondrai rapidement !</p>
@@ -142,14 +143,14 @@ export default function Contact() {
               <span className="icon">[CODE]</span> GitHub
             </a>
             <a href="https://linkedin.com/in/daniil-minevich" target="_blank" rel="noopener noreferrer" className="contact-link">
-              <span className="icon">💼</span> LinkedIn
+              <span className="icon">[SOCIAL]</span> LinkedIn
             </a>
             <a href="https://many.link/minevich" target="_blank" rel="noopener noreferrer" className="contact-link">
               <span className="icon">[LINK]</span> Tous mes liens
             </a>
           </div>
         </div>
-      </div>
+      </ExplorerWindow>
     </div>
   )
 }

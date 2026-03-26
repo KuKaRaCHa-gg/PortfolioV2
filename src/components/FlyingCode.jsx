@@ -132,8 +132,8 @@ export default function FlyingCode() {
       // Positionnement horizontal aléatoire
       span.style.left = `${Math.random() * 100}vw`
 
-      // Plus long pour un effet plus doux et moins agressif
-      const duration = isBig ? Math.random() * 10 + 12 : Math.random() * 8 + 10
+      // Plus lent pour un effet plus doux en fond
+      const duration = isBig ? Math.random() * 14 + 16 : Math.random() * 12 + 14
       span.style.animationDuration = `${duration}s`
 
       // RESTAURÉ: Taille de police originale pour les gros snippets
@@ -151,8 +151,8 @@ export default function FlyingCode() {
       }, duration * 1000)
     }
 
-    // Rythme légèrement ralenti pour limiter la fatigue visuelle
-    const interval = setInterval(createCode, 500)
+    // Rythme ralenti pour moins de bruit visuel
+    const interval = setInterval(createCode, 650)
 
     return () => {
       clearInterval(interval)

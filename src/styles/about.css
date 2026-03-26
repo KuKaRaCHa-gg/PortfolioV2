@@ -10,10 +10,12 @@
   text-align: center;
   margin-bottom: 3rem;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #00ff00;
-  border-radius: 8px;
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+  background: #b8bcc2;
+  border: 2px solid #edf2f7;
+  border-right-color: #3b3f44;
+  border-bottom-color: #3b3f44;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #101010;
 }
 
 .profile-avatar {
@@ -54,10 +56,12 @@
 .cv-video-section {
   margin: 3rem 0;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #00ff00;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  background: #b8bcc2;
+  border: 2px solid #edf2f7;
+  border-right-color: #3b3f44;
+  border-bottom-color: #3b3f44;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #101010;
 }
 
 .video-container {
@@ -93,15 +97,15 @@
 
 .about-subtitle {
   font-size: 1.5rem;
-  color: #00ff00;
+  color: #101317;
   margin-bottom: 1rem;
-  font-family: 'Courier New', monospace;
-  text-shadow: 0 0 10px #00ff00;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  text-shadow: none;
 }
 
 .about-summary {
   font-size: 1.1rem;
-  color: #00aa00;
+  color: #20262c;
   max-width: 800px;
   margin: 0 auto 2rem;
   line-height: 1.6;
@@ -322,7 +326,7 @@
 }
 
 .experience-details li::before {
-  content: '[PLAY]';
+  content: '-';
   position: absolute;
   left: 0;
   color: #00ff00;
@@ -436,6 +440,42 @@
   .stat-value {
     font-size: 2rem;
   }
+}
+
+.about-page .neon-text,
+.about-page .section-title,
+.about-page .activity-title,
+.about-page .activity-description,
+.about-page .experience-role,
+.about-page .experience-company,
+.about-page .experience-year,
+.about-page .experience-details li,
+.about-page .education-card strong,
+.about-page .education-status,
+.about-page .education-note,
+.about-page .stat-value,
+.about-page .stat-label,
+.about-page .social-btn,
+.about-page .location-badge,
+.about-page .favorite-techs-section,
+.about-page .favorite-techs-section p,
+.about-page .tech-logo-card,
+.about-page .tech-logo-card p,
+.about-page .tech-logo-card h3 {
+  color: #12161b;
+  text-shadow: none;
+}
+
+.about-page .social-btn,
+.about-page .location-badge,
+.about-page .experience-year,
+.about-page .education-note {
+  background: #d0d4d9;
+  border-color: #7a7f86;
+}
+
+.about-page .experience-details li::before {
+  color: #2b3137;
 }
 
 /* Favorite Technologies Section */

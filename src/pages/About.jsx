@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import soundManager from '../utils/soundManager'
 import SkillsShowcase from '../components/SkillsShowcase'
+import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/about.css'
 
 export default function About() {
@@ -21,7 +22,7 @@ export default function About() {
 
   return (
     <div className="terminal-screen about-page">
-      <div className="terminal-frame">
+      <ExplorerWindow title="About" path="C:\\Portfolio\\About" status="Profile loaded" className="terminal-frame">
         <div className="about-header">
           {profile.avatar && (
             <div className="profile-avatar">
@@ -94,8 +95,8 @@ export default function About() {
             className="section-title neon-text tech-section-header"
             onClick={() => setTechLogosOpen(!techLogosOpen)}
           >
-            ⚡ TECHNOLOGIES FAVORITES 
-            <span className="accordion-icon">{techLogosOpen ? '[DOWN]' : '[PLAY]'}</span>
+            [TECH] TECHNOLOGIES FAVORITES 
+            <span className="accordion-icon">{techLogosOpen ? 'v' : '>'}</span>
           </h2>
           <div className={`favorite-techs-grid ${techLogosOpen ? 'open' : 'closed'}`}>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
@@ -221,7 +222,7 @@ export default function About() {
             </div>
           </div>
         )}
-      </div>
+      </ExplorerWindow>
     </div>
   )
 }
