@@ -5,6 +5,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Tools from './pages/Tools'
 import Blog from './pages/Blog'
+import Competences from './pages/Competences'
 import Graph3D from './pages/Graph3D'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
@@ -46,6 +47,7 @@ export default function App() {
       {route === 'contact' && <Contact />}
       {route === 'tools' && <Tools />}
       {route === 'blog' && <Blog />}
+      {route === 'competences' && <Competences />}
       {route === 'graph3d' && <Graph3D onNavigate={handleNavigation} />}
       
       <Footer />

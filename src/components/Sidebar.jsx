@@ -11,6 +11,7 @@ export default function Sidebar({ currentRoute, onNavigate }) {
     { id: 'projects', icon: 'CODE', label: 'Projets' },
     { id: 'tools', icon: 'GAME', label: 'Outils & Jeux' },
     { id: 'blog', icon: 'FILE', label: 'Blog' },
+    { id: 'competences', icon: '[COMP]', label: 'Compétences' },
     { id: 'contact', icon: 'MAIL', label: 'Contact' },
     { id: 'graph3d', icon: '[GRAPH]', label: 'Graph 3D' }
   ]
@@ -25,7 +26,9 @@ export default function Sidebar({ currentRoute, onNavigate }) {
           soundManager.playClick()
         }}
         onMouseEnter={() => soundManager.playHover()}
-        aria-label="Toggle menu"
+        aria-label={isOpen ? "Fermer le menu de navigation" : "Ouvrir le menu de navigation"}
+        aria-expanded={isOpen}
+        aria-controls="sidebar-nav"
       >
         <span></span>
         <span></span>
@@ -40,11 +43,16 @@ export default function Sidebar({ currentRoute, onNavigate }) {
             setIsOpen(false)
             soundManager.playClose()
           }}
+          role="presentation"
         />
       )}
 
       {/* Sidebar */}
-      <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <nav 
+        className={`sidebar ${isOpen ? 'open' : ''}`}
+        aria-label="Navigation principale"
+        id="sidebar-nav"
+      >
         <div className="sidebar-header">
           <div className="sidebar-logo">
             <span className="logo-text">MENU</span>

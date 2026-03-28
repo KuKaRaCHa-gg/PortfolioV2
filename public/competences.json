@@ -1,0 +1,211 @@
+{
+  "competences": [
+    {
+      "id": 1,
+      "title": "Compétence 1: Élaboration et Implémentation des Spécifications",
+      "description": "Maîtriser l'analyse des exigences et la rédaction de spécifications fonctionnelles et non-fonctionnelles",
+      "acs": [
+        {
+          "id": "AC1-1",
+          "title": "Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ne sait pas identifier les exigences fonctionnelles",
+              "🚫 Aucun travail réalisé sur les spécifications non fonctionnelles",
+              "🛑 Incapable de produire une documentation claire",
+              "❓ Les besoins utilisateurs ne sont pas pris en compte",
+              "T_T L'orthographe (Vérification et correction nécessaire)"
+            ],
+            "enCours": [
+              "🟡 Comprend partiellement les besoins du client",
+              "⚠️ Produit des spécifications, mais elles manquent de précision",
+              "🛠️ Utilise un modèle de documentation de base",
+              "🔧 Identifie quelques exigences fonctionnelles sans les formaliser complètement"
+            ],
+            "acquis": [
+              "✅ Rédige des spécifications fonctionnelles claires et complètes",
+              "🔗 Maîtrise la documentation des exigences non fonctionnelles",
+              "🏗️ Crée une documentation structurée et exhaustive",
+              "🚀 Formalise parfaitement les besoins des utilisateurs et du client"
+            ]
+          }
+        },
+        {
+          "id": "AC1-2",
+          "title": "Appliquer des principes d'accessibilité et d'ergonomie",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ne prend pas en compte les principes d'accessibilité",
+              "🚫 Ignore les règles d'ergonomie de base",
+              "🛑 Interface utilisateur non utilisable par tous",
+              "❓ Absence de tests pour évaluer l'accessibilité"
+            ],
+            "enCours": [
+              "🟡 Applique quelques règles d'accessibilité sans les maîtriser",
+              "⚠️ Développe une ergonomie partiellement fonctionnelle",
+              "🛠️ Identifie les besoins d'accessibilité, mais avec des lacunes",
+              "🔧 Intègre des corrections après retour utilisateur"
+            ],
+            "acquis": [
+              "✅ Respecte les normes d'accessibilité (WCAG)",
+              "🎯 Crée une interface ergonomique et intuitive",
+              "🏗️ Intègre des tests d'accessibilité réguliers",
+              "🚀 Améliore l'expérience utilisateur en respectant tous les profils"
+            ]
+          }
+        },
+        {
+          "id": "AC1-3",
+          "title": "Adopter de bonnes pratiques de conception et de programmation",
+          "levels": {
+            "nonAcquis": [
+              "❌ Utilise des noms de variables peu explicites",
+              "🚫 Le code manque de structure claire",
+              "🛑 Aucun effort d'optimisation du code",
+              "❓ Néglige l'importance de la lisibilité"
+            ],
+            "enCours": [
+              "🟡 Ajoute des commentaires généraux dans le code",
+              "⚠️ Réorganise certaines parties du projet",
+              "🛠️ Utilise des outils d'analyse de code avec hésitation",
+              "🔧 Suit partiellement des recommandations de programmation"
+            ],
+            "acquis": [
+              "✅ Produit un code clair avec des conventions de qualité",
+              "🎯 Réalise une documentation technique exhaustive",
+              "🏗️ Applique des principes solides pour l'optimisation",
+              "🚀 Utilise des outils de vérification pour assurer la qualité du code"
+            ]
+          }
+        },
+        {
+          "id": "AC1-4",
+          "title": "Vérifier et valider la qualité de l'application par les tests",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ne connaît pas les types de tests existants",
+              "🚫 N'utilise aucun outil de test",
+              "🛑 Aucune méthode pour vérifier le bon fonctionnement de l'application",
+              "❓ Les erreurs dans le programme ne sont pas identifiées"
+            ],
+            "enCours": [
+              "🟡 Effectue des tests manuels basiques",
+              "⚠️ Utilise partiellement un outil de test avec des difficultés",
+              "🛠️ Vérifie certaines fonctionnalités, mais manque de méthodologie",
+              "🔧 Identifie quelques erreurs sans suivi de leur correction"
+            ],
+            "acquis": [
+              "✅ Réalise des tests automatisés et structurés",
+              "🎯 Valide la conformité de l'application avec un plan de test précis",
+              "🏗️ Maîtrise les outils professionnels pour les tests de qualité",
+              "🚀 Corrige efficacement toutes les erreurs détectées"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Compétence 2: Structures de Données, Algorithmes & Sécurité",
+      "description": "Maîtriser les structures complexes, algorithmes avancés, sécurité et durabilité",
+      "acs": [
+        {
+          "id": "AC2-1",
+          "title": "Choisir des structures de données complexes adaptées au problème",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ne connaît pas les structures de données complexes",
+              "🚫 Utilise uniquement des tableaux ou listes simples",
+              "🛑 Ignore l'impact des choix de structures sur la performance",
+              "❓ Ne sait pas analyser les besoins pour sélectionner une structure adaptée"
+            ],
+            "enCours": [
+              "🟡 Expérimente des structures comme les arbres ou les graphes",
+              "⚠️ Fait des choix de structures sans justifications solides",
+              "🛠️ Utilise des structures complexes, mais rencontre des difficultés",
+              "🔧 Commence à analyser des problèmes simples pour choisir une structure"
+            ],
+            "acquis": [
+              "✅ Sélectionne des structures de données complexes adaptées au problème",
+              "🎯 Optimise la performance grâce à des structures avancées (arbres, graphes)",
+              "🏗️ Justifie ses choix en fonction des besoins et contraintes",
+              "🚀 Applique des structures adaptées dans des contextes professionnels variés"
+            ]
+          }
+        },
+        {
+          "id": "AC2-2",
+          "title": "Utiliser des techniques algorithmiques adaptées pour des problèmes complexes",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ne connaît pas les techniques algorithmiques avancées",
+              "🚫 Ignore les méthodes arborescentes et d'optimisation",
+              "🛑 Aucun recours aux concepts de recherche opérationnelle",
+              "❓ N'applique aucune stratégie pour résoudre des problèmes complexes"
+            ],
+            "enCours": [
+              "🟡 Expérimente des algorithmes simples pour résoudre des problèmes",
+              "⚠️ Utilise des techniques d'optimisation de manière approximative",
+              "🛠️ Découvre les méthodes arborescentes sans les maîtriser",
+              "🔧 Met en place des algorithmes partiels pour certains cas d'étude"
+            ],
+            "acquis": [
+              "✅ Applique des algorithmes avancés pour résoudre des problèmes complexes",
+              "🎯 Maîtrise les techniques d'optimisation globale et arborescente",
+              "🧠 Implémente des solutions basées sur l'intelligence artificielle",
+              "🚀 Utilise des concepts de recherche opérationnelle pour maximiser l'efficacité"
+            ]
+          }
+        },
+        {
+          "id": "AC2-3",
+          "title": "Comprendre les enjeux et moyens de sécurisation des données et du code",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ignore les principes de sécurité des systèmes",
+              "🚫 Laisse les mots de passe visibles dans le code",
+              "🛑 Ne prend pas en compte les accès non autorisés",
+              "❓ Les données stockées ne sont pas protégées"
+            ],
+            "enCours": [
+              "🟡 Expérimente des outils pour sécuriser les fichiers",
+              "⚠️ Applique des vérifications simples sur les accès utilisateur",
+              "🛠️ Réalise des sauvegardes sans procédure claire",
+              "🔧 Chiffre certaines données avec des méthodes limitées"
+            ],
+            "acquis": [
+              "✅ Met en œuvre des politiques de sécurité efficaces",
+              "🔐 Applique des techniques de chiffrement avancé",
+              "🛡️ Protège les fichiers sensibles avec des protocoles standards",
+              "🚀 Audite régulièrement les failles potentielles de sécurité"
+            ]
+          }
+        },
+        {
+          "id": "AC2-4",
+          "title": "Évaluer l'impact environnemental et sociétal des solutions proposées",
+          "levels": {
+            "nonAcquis": [
+              "❌ Ne tient pas compte de la consommation énergétique des solutions",
+              "🚫 Ignore les conséquences sociétales des choix techniques",
+              "🛑 N'évalue pas l'impact des ressources matérielles utilisées",
+              "❓ Les solutions développées ne respectent aucune démarche durable"
+            ],
+            "enCours": [
+              "🟡 Réfléchit à l'impact énergétique sans action concrète",
+              "⚠️ Commence à sensibiliser sur les enjeux sociétaux des projets",
+              "🛠️ Compare quelques alternatives pour réduire la consommation",
+              "🔧 Identifie des pistes pour limiter les ressources matérielles"
+            ],
+            "acquis": [
+              "✅ Propose des solutions à faible consommation énergétique",
+              "🌍 Intègre les principes de développement durable dans les projets",
+              "🏗️ Prend en compte les impacts sociétaux pour chaque choix technique",
+              "🚀 Favorise l'utilisation responsable des ressources informatiques"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

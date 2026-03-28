@@ -39,8 +39,8 @@ export default function Home({ onEnter }) {
       <ExplorerWindow title="Home" path="C:\\Portfolio\\Home" status="Session ready" className="terminal-frame home-hero-window">
         <div className="ultra-home-layout">
           <div className="ultra-home-left">
-            <h1 className="ultra-title">Daniil Minevich</h1>
-            <p className="ultra-subtitle">Portfolio personnel - Developpeur Full Stack</p>
+            <h1 className="ultra-title">Daniil Minevich - Portfolio Terminal</h1>
+            <p className="ultra-subtitle">Développeur Full Stack - Interface Rétro Terminal</p>
 
             <div className="boot-sequence">
               <p>[OK] PROFILE INITIALIZED</p>
@@ -50,11 +50,35 @@ export default function Home({ onEnter }) {
             </div>
 
             {bootComplete ? (
-              <div className="ultra-menu">
-                <button className="ultra-menu-btn primary" onClick={handleEnter}>ENTER</button>
-                <button className="ultra-menu-btn" type="button">PROJECTS</button>
-                <button className="ultra-menu-btn" type="button">TOOLS</button>
-                <button className="ultra-menu-btn" type="button">CONTACT</button>
+              <div className="ultra-menu" role="navigation" aria-label="Menu principal du portfolio">
+                <button 
+                  className="ultra-menu-btn primary" 
+                  onClick={handleEnter}
+                  aria-label="Entrer dans le portfolio - Accès au contenu principal"
+                >
+                  ENTER
+                </button>
+                <button 
+                  className="ultra-menu-btn" 
+                  type="button"
+                  aria-label="Voir mes projets"
+                >
+                  PROJECTS
+                </button>
+                <button 
+                  className="ultra-menu-btn" 
+                  type="button"
+                  aria-label="Accès aux jeux et outils interactifs"
+                >
+                  TOOLS
+                </button>
+                <button 
+                  className="ultra-menu-btn" 
+                  type="button"
+                  aria-label="Formulaire de contact"
+                >
+                  CONTACT
+                </button>
               </div>
             ) : (
               <Typewriter
