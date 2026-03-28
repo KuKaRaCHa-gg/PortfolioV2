@@ -1,0 +1,113 @@
+.pro-page {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: rgba(5, 10, 8, 0.82);
+}
+
+.pro-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pro-content h2 {
+  margin: 0;
+  color: #85ffad;
+}
+
+.pro-legend {
+  border: 1px solid #365f52;
+  background: rgba(16, 29, 27, 0.95);
+  padding: 0.8rem;
+}
+
+.pro-legend h3 {
+  margin: 0 0 0.45rem 0;
+  color: #87ffe0;
+}
+
+.pro-legend li {
+  color: #d9fff7;
+}
+
+.muted {
+  color: #b8d8ff;
+}
+
+.pro-block {
+  border: 1px solid #355f35;
+  background: rgba(18, 26, 18, 0.95);
+  padding: 0.8rem;
+}
+
+.pro-block h3 {
+  margin: 0 0 0.6rem 0;
+  color: #9effbb;
+}
+
+.pro-block p,
+.pro-block li {
+  color: #dcffdc;
+}
+
+.pro-block a {
+  color: #8fd2ff;
+  text-decoration: underline;
+}
+
+.pro-table-wrap {
+  overflow-x: auto;
+}
+
+.pro-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.pro-table th,
+.pro-table td {
+  border: 1px solid #2f4f2f;
+  padding: 0.55rem;
+  vertical-align: top;
+}
+
+.pro-table th {
+  background: #193319;
+  color: #baffc7;
+}
+
+.pro-table td {
+  background: rgba(15, 21, 15, 0.96);
+}
+
+.fit-badge {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.fit-high {
+  background: rgba(30, 160, 70, 0.25);
+  color: #a8ffbf;
+  border: 1px solid #35c26c;
+}
+
+.fit-mid {
+  background: rgba(150, 120, 20, 0.22);
+  color: #ffe9aa;
+  border: 1px solid #d1a440;
+}
+
+@media (max-width: 900px) {
+  .pro-page {
+    padding: 0.8rem;
+  }
+
+  .pro-content {
+    padding: 0.6rem;
+  }
+}

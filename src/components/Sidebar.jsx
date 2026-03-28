@@ -2,19 +2,26 @@ import React, { useState } from 'react'
 import soundManager from '../utils/soundManager'
 import '../styles/sidebar.css'
 
-export default function Sidebar({ currentRoute, onNavigate }) {
+export default function Sidebar({ currentRoute, onNavigate, showSecretPages = false }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const menuItems = [
+  const baseItems = [
     { id: 'home', icon: 'HOME', label: 'Accueil' },
     { id: 'about', icon: 'USER', label: 'À propos' },
     { id: 'projects', icon: 'CODE', label: 'Projets' },
     { id: 'tools', icon: 'GAME', label: 'Outils & Jeux' },
     { id: 'blog', icon: 'FILE', label: 'Blog' },
-    { id: 'competences', icon: '[COMP]', label: 'Compétences' },
     { id: 'contact', icon: 'MAIL', label: 'Contact' },
     { id: 'graph3d', icon: '[GRAPH]', label: 'Graph 3D' }
   ]
+
+  const secretItems = [
+    { id: 'competences', icon: '[COMP]', label: 'Compétences' },
+    { id: 'entreprise', icon: '[BIZ]', label: 'Entreprise' },
+    { id: 'recrutement', icon: '[JOB]', label: 'Recrutement' }
+  ]
+
+  const menuItems = showSecretPages ? [...baseItems, ...secretItems] : baseItems
 
   return (
     <>

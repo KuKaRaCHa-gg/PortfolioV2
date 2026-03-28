@@ -122,8 +122,8 @@ export default function FlyingCode() {
 
     function createCode() {
       const span = document.createElement('span')
-      // RESTAURÉ: 30% de gros blocs (comme avant)
-      const isBig = Math.random() > 0.7
+      // Diminuer les gros blocs pour alleger l'effet visuel
+      const isBig = Math.random() > 0.86
       const snippetIndex = Math.floor(Math.random() * codeSnippets.length)
 
       span.textContent = codeSnippets[snippetIndex]
@@ -132,13 +132,13 @@ export default function FlyingCode() {
       // Positionnement horizontal aléatoire
       span.style.left = `${Math.random() * 100}vw`
 
-      // Plus lent pour un effet plus doux en fond
-      const duration = isBig ? Math.random() * 14 + 16 : Math.random() * 12 + 14
+      // Plus lent pour un effet de fond discret
+      const duration = isBig ? Math.random() * 16 + 24 : Math.random() * 14 + 20
       span.style.animationDuration = `${duration}s`
 
-      // RESTAURÉ: Taille de police originale pour les gros snippets
+      // Taille reduite pour les gros snippets afin de limiter l'impact visuel
       if (isBig) {
-        span.style.fontSize = `${Math.random() * 0.4 + 0.8}em`
+        span.style.fontSize = `${Math.random() * 0.28 + 0.72}em`
       }
 
       container.appendChild(span)
@@ -151,8 +151,8 @@ export default function FlyingCode() {
       }, duration * 1000)
     }
 
-    // Rythme ralenti pour moins de bruit visuel
-    const interval = setInterval(createCode, 650)
+    // Rythme encore plus lent pour un fond moins charge
+    const interval = setInterval(createCode, 1100)
 
     return () => {
       clearInterval(interval)

@@ -1,209 +1,1274 @@
 {
-  "competences": [
+  "years": [
     {
-      "id": 1,
-      "title": "Compétence 1: Élaboration et Implémentation des Spécifications",
-      "description": "Maîtriser l'analyse des exigences et la rédaction de spécifications fonctionnelles et non-fonctionnelles",
-      "acs": [
+      "id": "annee1",
+      "label": "Année 1",
+      "competences": [
         {
-          "id": "AC1-1",
-          "title": "Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ne sait pas identifier les exigences fonctionnelles",
-              "🚫 Aucun travail réalisé sur les spécifications non fonctionnelles",
-              "🛑 Incapable de produire une documentation claire",
-              "❓ Les besoins utilisateurs ne sont pas pris en compte",
-              "T_T L'orthographe (Vérification et correction nécessaire)"
-            ],
-            "enCours": [
-              "🟡 Comprend partiellement les besoins du client",
-              "⚠️ Produit des spécifications, mais elles manquent de précision",
-              "🛠️ Utilise un modèle de documentation de base",
-              "🔧 Identifie quelques exigences fonctionnelles sans les formaliser complètement"
-            ],
-            "acquis": [
-              "✅ Rédige des spécifications fonctionnelles claires et complètes",
-              "🔗 Maîtrise la documentation des exigences non fonctionnelles",
-              "🏗️ Crée une documentation structurée et exhaustive",
-              "🚀 Formalise parfaitement les besoins des utilisateurs et du client"
-            ]
-          }
+          "id": 1,
+          "title": "Compétence 1 : Réaliser un développement d'application",
+          "description": "Vous êtes sur la page 1/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Implémenter des conceptions simples",
+              "levels": {
+                "nonAcquis": [
+                  "Fautes orth-gram",
+                  "Absence de commentaires",
+                  "Ne sait pas se servir d'un IDE",
+                  "Incapable de développer des programmes simples dans n'importe quel langage"
+                ],
+                "enCours": [
+                  "A encore du mal avec les spécifications de certains IDE",
+                  "Ne sait se servir que d'un seul IDE",
+                  "Maîtrise une partie des langages étudiés",
+                  "Capacité à développer de courts programmes"
+                ],
+                "acquis": [
+                  "Respecte les conventions de structure",
+                  "Respecte les conventions de nommage",
+                  "Peut utiliser plusieurs IDE",
+                  "Sait développer une application avec différents langages étudiés"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Élaborer des conceptions simples",
+              "levels": {
+                "nonAcquis": [
+                  "Non-compréhension des notions de logique algorithmique",
+                  "Algorithmique comportant des erreurs de logique",
+                  "Utilisation faible ou non conforme d'UML/algorithmique papier"
+                ],
+                "enCours": [
+                  "Sait conceptualiser des structures de classes orientées objet simples",
+                  "Comprend les types de base INT/FLOAT/BOOL/STRING",
+                  "Sait utiliser IF/ELSE/SWITCH et FOR/WHILE"
+                ],
+                "acquis": [
+                  "Utilise les outils UML (classes, cas d'utilisation, fonctionnalités)",
+                  "Programmation orientée objet cohérente",
+                  "Conceptualise une structure graphique et algorithmique complète"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Faire des essais et évaluer leurs résultats en regard des spécifications",
+              "levels": {
+                "nonAcquis": [
+                  "Tests hors sujet",
+                  "Absence complète de tests",
+                  "Absence de conclusion"
+                ],
+                "enCours": [
+                  "Tests approximatifs pour le sujet",
+                  "Conclusion confuse par rapport au sujet"
+                ],
+                "acquis": [
+                  "Tests appropriés au sujet",
+                  "Conclusion pertinente par rapport au sujet"
+                ]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Développer des interfaces utilisateur",
+              "levels": {
+                "nonAcquis": [
+                  "Erreurs de syntaxe majeures",
+                  "Non compréhension de la structure et de l'utilité des IHM",
+                  "Non compréhension des langages HTML/CSS"
+                ],
+                "enCours": [
+                  "Erreurs de syntaxe mineures",
+                  "Mauvaise utilisation de certaines balises",
+                  "Mauvaise utilisation de la structure HTML/CSS"
+                ],
+                "acquis": [
+                  "Charte graphique respectée",
+                  "Ergonomie des interfaces",
+                  "Appropriation des structures et balises HTML/CSS"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture_decran_2024-05-31_082034.png",
+            "INTERFACE MORPION - Capture d'écran 2024-05-10 103903.png",
+            "INTERFACE Bibliothèque jeu - Capture d'écran 2024-05-19 150927.png"
+          ]
         },
         {
-          "id": "AC1-2",
-          "title": "Appliquer des principes d'accessibilité et d'ergonomie",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ne prend pas en compte les principes d'accessibilité",
-              "🚫 Ignore les règles d'ergonomie de base",
-              "🛑 Interface utilisateur non utilisable par tous",
-              "❓ Absence de tests pour évaluer l'accessibilité"
-            ],
-            "enCours": [
-              "🟡 Applique quelques règles d'accessibilité sans les maîtriser",
-              "⚠️ Développe une ergonomie partiellement fonctionnelle",
-              "🛠️ Identifie les besoins d'accessibilité, mais avec des lacunes",
-              "🔧 Intègre des corrections après retour utilisateur"
-            ],
-            "acquis": [
-              "✅ Respecte les normes d'accessibilité (WCAG)",
-              "🎯 Crée une interface ergonomique et intuitive",
-              "🏗️ Intègre des tests d'accessibilité réguliers",
-              "🚀 Améliore l'expérience utilisateur en respectant tous les profils"
-            ]
-          }
+          "id": 2,
+          "title": "Compétence 2 : Optimiser des applications",
+          "description": "Vous êtes sur la page 2/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Analyser un problème avec méthode",
+              "levels": {
+                "nonAcquis": [
+                  "Absence de commentaires",
+                  "Incompréhension des algorithmes",
+                  "Binaire/hexadécimal: calculs difficiles et résultats incorrects"
+                ],
+                "enCours": [
+                  "Compréhension partielle des algorithmes",
+                  "Résultats corrects de façon aléatoire",
+                  "Commentaires confus ou peu utiles"
+                ],
+                "acquis": [
+                  "Commentaires efficients et utiles",
+                  "Compréhension complète des algorithmes",
+                  "Binaire/hexadécimal: calculs aisés et résultats corrects"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Comparer des algorithmes pour des problèmes classiques",
+              "levels": {
+                "nonAcquis": [
+                  "Incompréhension de la complexité",
+                  "Incapacité de lire/écrire en C",
+                  "Analyse temps/mémoire incorrecte"
+                ],
+                "enCours": [
+                  "Calcul de complexité confus",
+                  "Lecture/écriture C partiellement maîtrisées",
+                  "Analyse temps/mémoire correcte de façon aléatoire"
+                ],
+                "acquis": [
+                  "Sait calculer la complexité d'un algorithme",
+                  "Algorithmes de tri fonctionnels",
+                  "Analyse temps/mémoire correcte de façon fréquente"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Formaliser et mettre en œuvre des outils mathématiques",
+              "levels": {
+                "nonAcquis": [
+                  "Erreurs en conversion binaire/hexadécimal",
+                  "Matrices à revoir",
+                  "Graphes mal conçus et mal interprétés"
+                ],
+                "enCours": [
+                  "Conversions confuses",
+                  "Lecture/calcul matrice partiels",
+                  "Conception de graphes avec erreurs fréquentes"
+                ],
+                "acquis": [
+                  "Conversion binaire/hexadécimal correcte",
+                  "Compréhension des matrices acquise",
+                  "Création et lecture des graphes efficaces"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture_decran_2024-05-31_082747.png.1"
+          ]
         },
         {
-          "id": "AC1-3",
-          "title": "Adopter de bonnes pratiques de conception et de programmation",
-          "levels": {
-            "nonAcquis": [
-              "❌ Utilise des noms de variables peu explicites",
-              "🚫 Le code manque de structure claire",
-              "🛑 Aucun effort d'optimisation du code",
-              "❓ Néglige l'importance de la lisibilité"
-            ],
-            "enCours": [
-              "🟡 Ajoute des commentaires généraux dans le code",
-              "⚠️ Réorganise certaines parties du projet",
-              "🛠️ Utilise des outils d'analyse de code avec hésitation",
-              "🔧 Suit partiellement des recommandations de programmation"
-            ],
-            "acquis": [
-              "✅ Produit un code clair avec des conventions de qualité",
-              "🎯 Réalise une documentation technique exhaustive",
-              "🏗️ Applique des principes solides pour l'optimisation",
-              "🚀 Utilise des outils de vérification pour assurer la qualité du code"
-            ]
-          }
+          "id": 3,
+          "title": "Compétence 3 : Administrer des systèmes informatiques communicants complexes",
+          "description": "Vous êtes sur la page 3/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Identifier les différents composants d'un système numérique",
+              "levels": {
+                "nonAcquis": [
+                  "Ne sait pas ce qu'est un système numérique",
+                  "Vocabulaire technique insuffisant"
+                ],
+                "enCours": [
+                  "Peut expliquer oralement un projet en anglais avec hésitations"
+                ],
+                "acquis": [
+                  "Connaissance du vocabulaire en anglais",
+                  "Ressources et sites connus complets"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Utiliser les fonctionnalités de base d'un système multitâches/multiutilisateurs",
+              "levels": {
+                "nonAcquis": [
+                  "Connaît aucune commande Linux"
+                ],
+                "enCours": [
+                  "Aide fréquente du cours pour faire les exercices"
+                ],
+                "acquis": [
+                  "Connaît les principales commandes Linux",
+                  "Aucune aide du cours pour faire les exercices"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Installer et configurer un OS et des outils de développement",
+              "levels": {
+                "nonAcquis": [
+                  "Connaît uniquement les noms des commandes",
+                  "Mauvaise organisation des données"
+                ],
+                "enCours": [
+                  "Sait chercher les bonnes informations"
+                ],
+                "acquis": [
+                  "Utilise la commande et ses options",
+                  "Logiciels utilisés fonctionnels",
+                  "Mise en place d'une machine virtuelle sans problème"
+                ]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Configurer un poste de travail dans un réseau d'entreprise",
+              "levels": {
+                "nonAcquis": [
+                  "Logiciels vitaux manquants"
+                ],
+                "enCours": [
+                  "Besoins de l'entreprise partiellement compris",
+                  "Poste de travail configuré avec l'aide du cours",
+                  "Guide confus sur certaines parties"
+                ],
+                "acquis": [
+                  "Guide de conception et d'installation clair, net et complet"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Guide d'installation VM - Capture d'écran 2024-06-04 174144.png",
+            "Lien Canva guide VM",
+            "Lien cahier des charges complet du site BDE"
+          ]
         },
         {
-          "id": "AC1-4",
-          "title": "Vérifier et valider la qualité de l'application par les tests",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ne connaît pas les types de tests existants",
-              "🚫 N'utilise aucun outil de test",
-              "🛑 Aucune méthode pour vérifier le bon fonctionnement de l'application",
-              "❓ Les erreurs dans le programme ne sont pas identifiées"
-            ],
-            "enCours": [
-              "🟡 Effectue des tests manuels basiques",
-              "⚠️ Utilise partiellement un outil de test avec des difficultés",
-              "🛠️ Vérifie certaines fonctionnalités, mais manque de méthodologie",
-              "🔧 Identifie quelques erreurs sans suivi de leur correction"
-            ],
-            "acquis": [
-              "✅ Réalise des tests automatisés et structurés",
-              "🎯 Valide la conformité de l'application avec un plan de test précis",
-              "🏗️ Maîtrise les outils professionnels pour les tests de qualité",
-              "🚀 Corrige efficacement toutes les erreurs détectées"
-            ]
-          }
+          "id": 4,
+          "title": "Compétence 4 : Gérer des données de l'information",
+          "description": "Vous êtes sur la page 4/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Mettre à jour et interroger une base relationnelle",
+              "levels": {
+                "nonAcquis": [
+                  "Ne connaît pas la syntaxe SQL",
+                  "Incapable d'utiliser les outils d'interface BDD",
+                  "Ne comprend pas les relations entre tables"
+                ],
+                "enCours": [
+                  "Comprend SELECT/UPDATE/DELETE",
+                  "Utilise les outils avec aide",
+                  "Comprend clés primaires/étrangères"
+                ],
+                "acquis": [
+                  "Maîtrise les requêtes complexes (JOIN, sous-requêtes)",
+                  "Utilise les outils de manière autonome"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Visualiser des données",
+              "levels": {
+                "nonAcquis": [
+                  "Ne sait interpréter DD/DF/GDF/MCD/MLD"
+                ],
+                "enCours": [
+                  "Commence à interpréter DD/DF/GDF/MCD/MLD"
+                ],
+                "acquis": [
+                  "Sait interpréter DD/DF/GDF/MCD/MLD"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Concevoir une BDD relationnelle à partir d'un cahier des charges",
+              "levels": {
+                "nonAcquis": [
+                  "Ne sait pas faire dictionnaire de données, DF, GDF, MCD, MLD"
+                ],
+                "enCours": [
+                  "Réalise ces éléments avec erreurs"
+                ],
+                "acquis": [
+                  "Connaît les règles de normalisation",
+                  "Produit DD, DF, GDF, MCD, MLD corrects"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Graphe GDF - Capture d'écran 2024-06-04 174842.png",
+            "SAE BASE DE DONNEES - lien Drive"
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Compétence 5 : Conduire un projet",
+          "description": "Vous êtes sur la page 5/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Appréhender les besoins du client et de l'utilisateur",
+              "levels": {
+                "nonAcquis": [
+                  "Ne prend pas en compte les besoins client/utilisateur",
+                  "Ne communique pas avec le client",
+                  "Incapable d'énumérer les besoins"
+                ],
+                "enCours": [
+                  "Prend en compte les besoins sans approfondir",
+                  "Montre l'avancement à la demande",
+                  "Expression des besoins imprécise"
+                ],
+                "acquis": [
+                  "Communique avec le client pendant le projet",
+                  "Montre l'avancement tout au long du projet",
+                  "Énumère et trie les besoins",
+                  "S'adapte aux nouvelles idées du client"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Mettre en place les outils de gestion de projet",
+              "levels": {
+                "nonAcquis": [
+                  "Absence de planification des tâches",
+                  "N'utilise pas les outils à disposition"
+                ],
+                "enCours": [
+                  "Outils rarement mis à jour",
+                  "Connaît une quantité limitée d'outils"
+                ],
+                "acquis": [
+                  "Met à jour les outils de gestion pendant le projet",
+                  "Utilise bien les outils disponibles",
+                  "Connaît une grande quantité d'outils"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Identifier les acteurs et les phases du cycle de développement",
+              "levels": {
+                "nonAcquis": [
+                  "Ne respecte pas les règles juridiques",
+                  "Difficultés à identifier les acteurs et phases",
+                  "Nombreux retards"
+                ],
+                "enCours": [
+                  "Prend en compte certaines règles juridiques",
+                  "Identification des acteurs confuse",
+                  "Difficultés à démarrer et maintenir un projet"
+                ],
+                "acquis": [
+                  "Respecte règles juridiques et normes",
+                  "Communique efficacement avec les acteurs",
+                  "Gestion éthique et durable",
+                  "Pilote les projets et rend compte des phases"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Compétence 6 : Collaborer au sein d'une équipe informatique",
+          "description": "Vous êtes sur la page 6/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Appréhender l'écosystème numérique",
+              "levels": {
+                "nonAcquis": [
+                  "Organisation des répertoires inexistante",
+                  "Navigation web et dactylographie difficiles"
+                ],
+                "enCours": [
+                  "Utilise les périphériques sans raccourci",
+                  "Manque d'autonomie dans certains logiciels",
+                  "Résout des problèmes techniques simples"
+                ],
+                "acquis": [
+                  "Crée/modifie/supprime des documents partagés",
+                  "Organise son espace de travail",
+                  "Trouve la documentation en ligne en autonomie"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Découvrir les aptitudes selon les secteurs informatiques",
+              "levels": {
+                "nonAcquis": [
+                  "Travail pour soi",
+                  "Communication limitée au début du projet"
+                ],
+                "enCours": [
+                  "Répartition des tâches inéquitable"
+                ],
+                "acquis": [
+                  "Communique en toute circonstance",
+                  "Répartit les tâches selon les compétences"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Identifier les statuts, fonctions et rôles de l'équipe",
+              "levels": {
+                "nonAcquis": [
+                  "Rôle mécompris",
+                  "Erreurs fréquentes dans les tâches"
+                ],
+                "enCours": [
+                  "Rôle partiellement compris"
+                ],
+                "acquis": [
+                  "Comprend son rôle",
+                  "Crée un groupe en fonction des compétences"
+                ]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Acquérir les compétences interpersonnelles pour travailler en équipe",
+              "levels": {
+                "nonAcquis": [
+                  "Entretient de mauvaises relations avec ses collaborateurs"
+                ],
+                "enCours": [
+                  "En progression relationnelle"
+                ],
+                "acquis": [
+                  "Entretient de bonnes relations avec ses collaborateurs"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Compétence 7 : Culture et expression",
+          "description": "Vous êtes sur la page 7/7 - Année 1",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Compétences rédactionnelles",
+              "levels": {
+                "nonAcquis": [
+                  "Incompréhension sur conjugaison, points de vue, effets de style",
+                  "Vocabulaire limité",
+                  "Absence d'organisation des textes"
+                ],
+                "enCours": [
+                  "Conjugaison et orthographe confuses",
+                  "Expression des points de vue partielle",
+                  "Organisation confuse des textes"
+                ],
+                "acquis": [
+                  "Maîtrise conjugaison, orthographe et articulation",
+                  "Choisit ses mots au moment approprié",
+                  "Organise ses textes et enchaîne les phrases"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Culturel - Cultiver l'esprit et la connaissance",
+              "levels": {
+                "nonAcquis": [
+                  "Ne regarde pas de vidéos éducatives",
+                  "Connaît peu ou pas de langues étrangères",
+                  "Ne crée pas de vidéos pour s'entraîner"
+                ],
+                "enCours": [
+                  "Regarde des vidéos éducatives de temps en temps",
+                  "Connaît quelques bases de langues étrangères",
+                  "Crée des vidéos de temps en temps"
+                ],
+                "acquis": [
+                  "Regarde régulièrement des vidéos éducatives diversifiées",
+                  "Connaît plusieurs langues et les pratique",
+                  "Crée régulièrement des vidéos pour s'améliorer"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Développer des méthodes de travail efficaces",
+              "levels": {
+                "nonAcquis": [
+                  "Ne regarde pas de tutoriels",
+                  "Ne suit pas les conseils",
+                  "Ne fait pas corriger ses devoirs"
+                ],
+                "enCours": [
+                  "Regarde des tutoriels de temps en temps",
+                  "Suit des conseils de temps en temps",
+                  "Diversifie partiellement ses sources"
+                ],
+                "acquis": [
+                  "Utilise régulièrement des tutoriels",
+                  "Applique systématiquement les conseils",
+                  "Utilise des méthodologies adaptées"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Montmartre - IMG_20230718_154347.jpg",
+            "Parc Botanique Anger - IMG_20240526_140800.jpg",
+            "Voyage Paris - lien Drive",
+            "rive DROITE - 9782253243663-001-T.jpeg",
+            "METRO CITE - 9782253243700-001-T.jpeg",
+            "Livre Metro Rive Gauche - 9782253107040-001-T.jpeg"
+          ]
         }
       ]
     },
     {
-      "id": 2,
-      "title": "Compétence 2: Structures de Données, Algorithmes & Sécurité",
-      "description": "Maîtriser les structures complexes, algorithmes avancés, sécurité et durabilité",
-      "acs": [
+      "id": "annee2",
+      "label": "Année 2",
+      "competences": [
         {
-          "id": "AC2-1",
-          "title": "Choisir des structures de données complexes adaptées au problème",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ne connaît pas les structures de données complexes",
-              "🚫 Utilise uniquement des tableaux ou listes simples",
-              "🛑 Ignore l'impact des choix de structures sur la performance",
-              "❓ Ne sait pas analyser les besoins pour sélectionner une structure adaptée"
-            ],
-            "enCours": [
-              "🟡 Expérimente des structures comme les arbres ou les graphes",
-              "⚠️ Fait des choix de structures sans justifications solides",
-              "🛠️ Utilise des structures complexes, mais rencontre des difficultés",
-              "🔧 Commence à analyser des problèmes simples pour choisir une structure"
-            ],
-            "acquis": [
-              "✅ Sélectionne des structures de données complexes adaptées au problème",
-              "🎯 Optimise la performance grâce à des structures avancées (arbres, graphes)",
-              "🏗️ Justifie ses choix en fonction des besoins et contraintes",
-              "🚀 Applique des structures adaptées dans des contextes professionnels variés"
-            ]
-          }
+          "id": 1,
+          "title": "Compétence 1",
+          "description": "Vous êtes sur la page 1/7 - Année 2",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
+              "levels": {
+                "nonAcquis": [
+                  "Ne sait pas identifier les exigences fonctionnelles",
+                  "Aucun travail réalisé sur les spécifications non fonctionnelles",
+                  "Incapable de produire une documentation claire",
+                  "Les besoins utilisateurs ne sont pas pris en compte"
+                ],
+                "enCours": [
+                  "Comprend partiellement les besoins du client",
+                  "Produit des spécifications, mais elles manquent de précision",
+                  "Utilise un modèle de documentation de base",
+                  "Identifie quelques exigences fonctionnelles sans les formaliser complètement"
+                ],
+                "acquis": [
+                  "Rédige des spécifications fonctionnelles claires et complètes",
+                  "Maîtrise la documentation des exigences non fonctionnelles",
+                  "Crée une documentation structurée et exhaustive",
+                  "Formalise parfaitement les besoins des utilisateurs et du client"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Appliquer des principes d'accessibilité et d'ergonomie",
+              "levels": {
+                "nonAcquis": [
+                  "Ne prend pas en compte les principes d'accessibilité",
+                  "Ignore les règles d'ergonomie de base",
+                  "Interface utilisateur non utilisable par tous",
+                  "Absence de tests pour évaluer l'accessibilité"
+                ],
+                "enCours": [
+                  "Applique quelques règles d'accessibilité sans les maîtriser",
+                  "Développe une ergonomie partiellement fonctionnelle",
+                  "Identifie les besoins d'accessibilité, mais avec des lacunes",
+                  "Intègre des corrections après retour utilisateur"
+                ],
+                "acquis": [
+                  "Respecte les normes d'accessibilité (WCAG)",
+                  "Crée une interface ergonomique et intuitive",
+                  "Intègre des tests d'accessibilité réguliers",
+                  "Améliore l'expérience utilisateur en respectant tous les profils"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Adopter de bonnes pratiques de conception et de programmation",
+              "levels": {
+                "nonAcquis": [
+                  "Utilise des noms de variables peu explicites",
+                  "Le code manque de structure claire",
+                  "Aucun effort d'optimisation du code",
+                  "Néglige l'importance de la lisibilité"
+                ],
+                "enCours": [
+                  "Ajoute des commentaires généraux dans le code",
+                  "Réorganise certaines parties du projet",
+                  "Utilise des outils d'analyse de code avec hésitation",
+                  "Suit partiellement des recommandations de programmation"
+                ],
+                "acquis": [
+                  "Produit un code clair avec des conventions de qualité",
+                  "Réalise une documentation technique exhaustive",
+                  "Applique des principes solides pour l'optimisation",
+                  "Utilise des outils de vérification pour assurer la qualité du code"
+                ]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Vérifier et valider la qualité de l'application par les tests",
+              "levels": {
+                "nonAcquis": [
+                  "Ne connaît pas les types de tests existants",
+                  "N'utilise aucun outil de test",
+                  "Aucune méthode pour vérifier le bon fonctionnement de l'application",
+                  "Les erreurs dans le programme ne sont pas identifiées"
+                ],
+                "enCours": [
+                  "Effectue des tests manuels basiques",
+                  "Utilise partiellement un outil de test avec des difficultés",
+                  "Vérifie certaines fonctionnalités, mais manque de méthodologie",
+                  "Identifie quelques erreurs sans suivi de leur correction"
+                ],
+                "acquis": [
+                  "Réalise des tests automatisés et structurés",
+                  "Valide la conformité avec un plan de test précis",
+                  "Maîtrise les outils professionnels pour les tests de qualité",
+                  "Corrige efficacement les erreurs détectées"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture d'écran 2024-12-15 134052.png",
+            "Capture d'écran 2024-12-07 112448.png",
+            "Capture d'écran 2024-12-07 153544.png",
+            "Capture d'écran 2024-12-07 142447.png"
+          ]
         },
         {
-          "id": "AC2-2",
-          "title": "Utiliser des techniques algorithmiques adaptées pour des problèmes complexes",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ne connaît pas les techniques algorithmiques avancées",
-              "🚫 Ignore les méthodes arborescentes et d'optimisation",
-              "🛑 Aucun recours aux concepts de recherche opérationnelle",
-              "❓ N'applique aucune stratégie pour résoudre des problèmes complexes"
-            ],
-            "enCours": [
-              "🟡 Expérimente des algorithmes simples pour résoudre des problèmes",
-              "⚠️ Utilise des techniques d'optimisation de manière approximative",
-              "🛠️ Découvre les méthodes arborescentes sans les maîtriser",
-              "🔧 Met en place des algorithmes partiels pour certains cas d'étude"
-            ],
-            "acquis": [
-              "✅ Applique des algorithmes avancés pour résoudre des problèmes complexes",
-              "🎯 Maîtrise les techniques d'optimisation globale et arborescente",
-              "🧠 Implémente des solutions basées sur l'intelligence artificielle",
-              "🚀 Utilise des concepts de recherche opérationnelle pour maximiser l'efficacité"
-            ]
-          }
+          "id": 2,
+          "title": "Compétence 2",
+          "description": "Vous êtes sur la page 2/7 - Année 2",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Choisir des structures de données complexes adaptées au problème",
+              "levels": {
+                "nonAcquis": [
+                  "Ne connaît pas les structures de données complexes",
+                  "Utilise uniquement des tableaux ou listes simples",
+                  "Ignore l'impact des choix sur la performance",
+                  "Ne sait pas analyser les besoins"
+                ],
+                "enCours": [
+                  "Expérimente des structures comme arbres/graphes",
+                  "Choix sans justifications solides",
+                  "Utilise des structures complexes avec difficultés",
+                  "Analyse des problèmes simples"
+                ],
+                "acquis": [
+                  "Sélectionne des structures adaptées",
+                  "Optimise la performance",
+                  "Justifie ses choix",
+                  "Applique dans des contextes variés"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Utiliser des techniques algorithmiques adaptées",
+              "levels": {
+                "nonAcquis": [
+                  "Ne connaît pas les techniques avancées",
+                  "Ignore méthodes arborescentes et optimisation",
+                  "Aucun recours à la recherche opérationnelle",
+                  "N'applique aucune stratégie"
+                ],
+                "enCours": [
+                  "Expérimente des algorithmes simples",
+                  "Optimisation approximative",
+                  "Découvre les méthodes arborescentes",
+                  "Algorithmes partiels"
+                ],
+                "acquis": [
+                  "Applique des algorithmes avancés",
+                  "Maîtrise optimisation globale et arborescente",
+                  "Implémente des solutions IA",
+                  "Utilise la recherche opérationnelle"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Comprendre les enjeux de sécurisation des données et du code",
+              "levels": {
+                "nonAcquis": [
+                  "Ignore les principes de sécurité",
+                  "Laisse des mots de passe visibles",
+                  "Ne prend pas en compte les accès non autorisés",
+                  "Données non protégées"
+                ],
+                "enCours": [
+                  "Expérimente des outils de sécurité",
+                  "Applique des vérifications simples",
+                  "Sauvegardes sans procédure claire",
+                  "Chiffrement limité"
+                ],
+                "acquis": [
+                  "Met en œuvre des politiques efficaces",
+                  "Applique des techniques de chiffrement avancé",
+                  "Protège les fichiers sensibles",
+                  "Audite les failles potentielles"
+                ]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Évaluer l'impact environnemental et sociétal",
+              "levels": {
+                "nonAcquis": [
+                  "Ne tient pas compte de la consommation énergétique",
+                  "Ignore conséquences sociétales",
+                  "N'évalue pas les ressources matérielles",
+                  "Aucune démarche durable"
+                ],
+                "enCours": [
+                  "Réfléchit à l'impact énergétique sans action",
+                  "Sensibilise partiellement",
+                  "Compare quelques alternatives",
+                  "Identifie des pistes de réduction"
+                ],
+                "acquis": [
+                  "Propose des solutions basse consommation",
+                  "Intègre le développement durable",
+                  "Prend en compte les impacts sociétaux",
+                  "Favorise l'usage responsable des ressources"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture d'écran 2024-12-15 142746.png",
+            "Cryptographie - Capture d'écran 2024-12-18 142112.png",
+            "MVC - Capture d'écran 2024-12-18 142211.png"
+          ]
         },
         {
-          "id": "AC2-3",
-          "title": "Comprendre les enjeux et moyens de sécurisation des données et du code",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ignore les principes de sécurité des systèmes",
-              "🚫 Laisse les mots de passe visibles dans le code",
-              "🛑 Ne prend pas en compte les accès non autorisés",
-              "❓ Les données stockées ne sont pas protégées"
-            ],
-            "enCours": [
-              "🟡 Expérimente des outils pour sécuriser les fichiers",
-              "⚠️ Applique des vérifications simples sur les accès utilisateur",
-              "🛠️ Réalise des sauvegardes sans procédure claire",
-              "🔧 Chiffre certaines données avec des méthodes limitées"
-            ],
-            "acquis": [
-              "✅ Met en œuvre des politiques de sécurité efficaces",
-              "🔐 Applique des techniques de chiffrement avancé",
-              "🛡️ Protège les fichiers sensibles avec des protocoles standards",
-              "🚀 Audite régulièrement les failles potentielles de sécurité"
-            ]
-          }
+          "id": 3,
+          "title": "Compétence 3",
+          "description": "Vous êtes sur la page 3/7 - Année 2",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Concevoir et développer des applications communicantes",
+              "levels": {
+                "nonAcquis": [
+                  "Ne sait pas établir de communication entre applications",
+                  "Protocoles réseau non compris",
+                  "Aucune gestion requêtes/réponses",
+                  "Ne maîtrise pas les outils"
+                ],
+                "enCours": [
+                  "Configure des connexions simples",
+                  "Utilise des protocoles de base avec erreurs",
+                  "Expérimente la gestion des requêtes",
+                  "Échanges partiellement fonctionnels"
+                ],
+                "acquis": [
+                  "Conçoit des applications communicantes",
+                  "Maîtrise les protocoles avancés",
+                  "Automatise requêtes/réponses",
+                  "Développe des solutions robustes"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Utiliser des serveurs et services réseaux virtualisés",
+              "levels": {
+                "nonAcquis": [
+                  "Ne comprend pas le fonctionnement des serveurs virtualisés",
+                  "Ne sait pas déployer des services réseau",
+                  "Ignore les outils de virtualisation",
+                  "Aucun test virtualisé"
+                ],
+                "enCours": [
+                  "Explore les machines virtuelles",
+                  "Déploie des services simples",
+                  "Configure partiellement des environnements",
+                  "Expérimente les outils de gestion serveur"
+                ],
+                "acquis": [
+                  "Utilise efficacement des serveurs virtualisés",
+                  "Maîtrise Docker/VMware",
+                  "Déploie et configure des services complets",
+                  "Optimise les performances"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Sécuriser les services et données d'un système",
+              "levels": {
+                "nonAcquis": [
+                  "Aucun chiffrement des données",
+                  "Absence de gestion des vulnérabilités",
+                  "Accès non sécurisés",
+                  "Aucun contrôle des permissions"
+                ],
+                "enCours": [
+                  "Expérimente des protocoles simples",
+                  "Pare-feu de base",
+                  "Authentification faible",
+                  "Détecte certaines failles"
+                ],
+                "acquis": [
+                  "Chiffrement avancé (AES, RSA)",
+                  "Authentification robuste MFA",
+                  "Audits réguliers",
+                  "Politiques strictes sur permissions et accès"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture d'écran 2024-12-15 144014.png",
+            "Semaphores - Capture d'écran 2024-12-18 142616.png"
+          ]
         },
         {
-          "id": "AC2-4",
-          "title": "Évaluer l'impact environnemental et sociétal des solutions proposées",
-          "levels": {
-            "nonAcquis": [
-              "❌ Ne tient pas compte de la consommation énergétique des solutions",
-              "🚫 Ignore les conséquences sociétales des choix techniques",
-              "🛑 N'évalue pas l'impact des ressources matérielles utilisées",
-              "❓ Les solutions développées ne respectent aucune démarche durable"
-            ],
-            "enCours": [
-              "🟡 Réfléchit à l'impact énergétique sans action concrète",
-              "⚠️ Commence à sensibiliser sur les enjeux sociétaux des projets",
-              "🛠️ Compare quelques alternatives pour réduire la consommation",
-              "🔧 Identifie des pistes pour limiter les ressources matérielles"
-            ],
-            "acquis": [
-              "✅ Propose des solutions à faible consommation énergétique",
-              "🌍 Intègre les principes de développement durable dans les projets",
-              "🏗️ Prend en compte les impacts sociétaux pour chaque choix technique",
-              "🚀 Favorise l'utilisation responsable des ressources informatiques"
-            ]
-          }
+          "id": 4,
+          "title": "Compétence 4",
+          "description": "Vous êtes sur la page 4/7 - Année 2",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Optimiser les modèles de données de l'entreprise",
+              "levels": {
+                "nonAcquis": ["Normalisation non maîtrisée", "Relations mal définies", "Aucun modèle produit", "Perf non prises en compte"],
+                "enCours": ["Normalisation partielle", "Clés avec erreurs", "Modélisation basique", "Optimisation limitée"],
+                "acquis": ["Normalisation avancée", "Modèles optimisés", "Relations complexes maîtrisées", "Requêtes optimisées"]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Assurer la confidentialité des données",
+              "levels": {
+                "nonAcquis": ["Données sensibles en clair", "Aucune politique d'accès", "Sauvegardes non vérifiées", "Intégrité non contrôlée"],
+                "enCours": ["Chiffrement basique", "Contrôles d'accès simples", "Sauvegardes régulières", "Surveillance partielle"],
+                "acquis": ["Chiffrement avancé", "Gestion rigoureuse des droits", "Intégrité assurée", "Sauvegardes chiffrées et contrôlées"]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Organiser la restitution de données",
+              "levels": {
+                "nonAcquis": ["Données illisibles", "Aucun outil de visualisation", "Code désorganisé", "Besoins utilisateurs ignorés"],
+                "enCours": ["Graphiques basiques", "Extraction non optimisée", "Expérimente des outils", "Visuels partiels"],
+                "acquis": ["Bibliothèques avancées", "Graphiques clairs", "Code organisé", "Visualisations adaptées"]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Manipuler des données hétérogènes",
+              "levels": {
+                "nonAcquis": ["Formats non identifiés", "Intégration échouée", "Aucun outil", "Erreurs non corrigées"],
+                "enCours": ["JSON/CSV simples", "Fusion partielle", "Outils basiques", "Erreurs de conversion"],
+                "acquis": ["JSON/XML/CSV maîtrisés", "Fusion efficace", "Outils avancés", "Fiabilité et cohérence assurées"]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture d'écran 2024-12-17 204231.png",
+            "CSV-GENERATOR - Capture d'écran 2024-12-18 142855.png.1"
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Compétence 5",
+          "description": "Vous êtes sur la page 5/7 - Année 2",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Identifier les processus d'une organisation",
+              "levels": {
+                "nonAcquis": ["Ne distingue pas les processus", "Pas d'analyse métier", "Ignore les interactions SI", "Ne repère pas les flux"],
+                "enCours": ["Analyse incomplète", "Besoins métier partiels", "Cartographie partielle", "Outils basiques UML"],
+                "acquis": ["Processus identifiés précisément", "Flux cartographiés", "Besoins analysés", "Améliorations concrètes proposées"]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Formaliser les besoins client/utilisateur",
+              "levels": {
+                "nonAcquis": ["Attentes non recueillies", "Aucune documentation", "Spécifications ignorées", "Parties prenantes non consultées"],
+                "enCours": ["Besoins partiels", "Specs imprécises", "Outils basiques", "Formalisation incomplète"],
+                "acquis": ["Besoins clairement formalisés", "Specs détaillées", "Exigences structurées", "Retours intégrés"]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Identifier la faisabilité d'un projet informatique",
+              "levels": {
+                "nonAcquis": ["Contraintes ignorées", "Ressources humaines ignorées", "Coûts/délais non évalués", "Aucune analyse des risques"],
+                "enCours": ["Faisabilité partielle", "Contraintes temps/budget partielles", "Estimation simple des ressources", "Risques majeurs identifiés"],
+                "acquis": ["Faisabilité complète", "Coûts/délais précis", "Ressources planifiées", "Analyse de risques mise en place"]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Définir une démarche de suivi de projet",
+              "levels": {
+                "nonAcquis": ["Aucun outil de suivi", "Tâches non suivies", "Risques/retards non identifiés", "Aucune documentation"],
+                "enCours": ["Outils simples Kanban/Gantt", "Suivi partiel", "Collecte sans analyse", "Rapports irréguliers"],
+                "acquis": ["Outils avancés", "Suivi rigoureux", "Anticipation via indicateurs", "Rapports réguliers et détaillés"]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture d'écran 2024-12-17 205039.png",
+            "KBAN - Capture d'écran 2024-12-18 143123.png",
+            "Backlog - Capture d'écran 2024-12-18 143226.png"
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Compétence 6",
+          "description": "Vous êtes sur la page 6/7 - Année 2",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Comprendre la structure de l'informatique dans une organisation",
+              "levels": {
+                "nonAcquis": ["Rôles des services non distingués", "Structure DSI/ESN ignorée", "Missions IT inconnues", "Interactions non comprises"],
+                "enCours": ["Acteurs principaux identifiés", "Rôles partiellement compris", "Missions IT approximatives", "Interactions partiellement prises en compte"],
+                "acquis": ["Structure et rôles maîtrisés", "Missions et responsabilités comprises", "Interactions analysées", "Place stratégique identifiée"]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Intégrer une équipe informatique dans une organisation",
+              "levels": {
+                "nonAcquis": ["Rôles non compris", "Pas de participation", "Pas d'adaptation", "Outils collaboratifs ignorés"],
+                "enCours": ["Rôles partiellement identifiés", "Participation faible", "Expérimente Git/Trello", "Adaptation partielle"],
+                "acquis": ["Intégration efficace", "Collaboration active", "Outils adaptés utilisés", "Adaptation rapide"]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Mobiliser les compétences interpersonnelles",
+              "levels": {
+                "nonAcquis": ["Ne communique pas", "Travail isolé", "Retours ignorés", "Évite les réunions"],
+                "enCours": ["Échanges ponctuels", "Participation peu efficace", "Retours partiellement appliqués", "Difficultés d'organisation"],
+                "acquis": ["Communication claire", "Collaboration active", "Retours pris en compte", "Environnement positif favorisé"]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Rendre compte de son activité professionnelle",
+              "levels": {
+                "nonAcquis": ["Aucun compte rendu", "Informations mal structurées", "Délais non respectés", "Aucun support adapté"],
+                "enCours": ["Comptes rendus simples", "Informations peu hiérarchisées", "Supports basiques", "Partage irrégulier"],
+                "acquis": ["Rapports détaillés", "Informations claires", "Supports adaptés", "Rendu régulier et dans les délais"]
+              }
+            }
+          ],
+          "evidences": [
+            "Capture d'écran 2024-12-17 205949.png",
+            "SI - Capture d'écran 2024-12-18 143814.png"
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Compétence 7",
+          "description": "Vous êtes sur la page 7/7 - Année 2 - Culture générale",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Rendre compte de son activité et améliorer l'expression",
+              "levels": {
+                "nonAcquis": ["N'arrive pas à formuler son activité", "Comptes rendus non structurés", "Difficultés non mentionnées", "Pas d'indicateurs"],
+                "enCours": ["Comptes rendus limités", "Progrès mentionnés sans analyse", "Outils basiques", "Partage irrégulier"],
+                "acquis": ["Rapports détaillés et structurés", "Indicateurs pertinents", "Présentations claires", "Analyse critique complète"]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Cultiver l'esprit et la connaissance",
+              "levels": {
+                "nonAcquis": ["Ne regarde pas de vidéos éducatives", "Connaît peu de langues", "Ne crée pas de vidéos"],
+                "enCours": ["Regarde des vidéos parfois", "Connaît quelques bases de langues", "Crée des vidéos parfois"],
+                "acquis": ["Vidéos éducatives régulières", "Plusieurs langues pratiquées", "Vidéos d'entraînement régulières"]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Développer des méthodes de travail efficaces",
+              "levels": {
+                "nonAcquis": ["Pas de tutoriels", "Conseils non suivis", "Devoirs non corrigés"],
+                "enCours": ["Tutoriels parfois", "Conseils parfois suivis", "Sources partiellement diversifiées"],
+                "acquis": ["Tutoriels réguliers", "Conseils appliqués systématiquement", "Sources variées", "Entraînement régulier"]
+              }
+            },
+            {
+              "id": "AC4",
+              "title": "Activités de lecture et écriture",
+              "levels": {
+                "nonAcquis": ["Ne lit pas", "N'entraîne pas son écriture", "N'écrit pas régulièrement"],
+                "enCours": ["Lit parfois", "Écriture travaillée parfois", "Écrit parfois"],
+                "acquis": ["Lit régulièrement", "Améliore activement son écriture", "Écrit régulièrement", "Écoute des livres audio"]
+              }
+            }
+          ],
+          "evidences": [
+            "Ecrit+ - Capture d'écran 2024-12-17 222545.png",
+            "Alternance - progression professionnelle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "annee3",
+      "label": "Année 3",
+      "competences": [
+        {
+          "id": 1,
+          "title": "Compétence 1 : Réaliser un développement d'application",
+          "description": "Vous êtes sur la page 1/3 - Année 3 (S5-S6)",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Concevoir et développer des fonctionnalités applicatives avancées",
+              "levels": {
+                "nonAcquis": [
+                  "Le besoin métier est compris partiellement",
+                  "Les fonctionnalités clés de la SAE ne sont pas finalisées",
+                  "Le code n'est pas suffisamment structuré"
+                ],
+                "enCours": [
+                  "Les fonctionnalités principales de S5.A.01 sont développées mais encore incomplètes",
+                  "L'application est fonctionnelle sur des cas simples",
+                  "La structure est en amélioration continue"
+                ],
+                "acquis": [
+                  "Les fonctionnalités S5/S6 sont implémentées de bout en bout",
+                  "Le développement est robuste, testé et maintenable",
+                  "Le produit répond de manière fiable aux attentes de la spécialité"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Intégrer la qualité, la maintenance et l'évolution d'une application",
+              "levels": {
+                "nonAcquis": [
+                  "Les correctifs sont ponctuels et non documentés",
+                  "La maintenance applicative est difficile",
+                  "La qualité de développement n'est pas mesurée"
+                ],
+                "enCours": [
+                  "Des pratiques de qualité sont appliquées de façon encore hétérogène",
+                  "Les évolutions de S6.A.01 sont intégrées progressivement",
+                  "La maintenance est possible mais reste coûteuse"
+                ],
+                "acquis": [
+                  "Le code est factorisé, documenté et facile à faire évoluer",
+                  "Les évolutions sont planifiées et livrées sans régression",
+                  "Les pratiques de qualité et de maintenance sont appliquées avec constance"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Piloter la livraison d'une solution en contexte professionnel",
+              "levels": {
+                "nonAcquis": [
+                  "Les jalons ne sont pas tenus",
+                  "Le suivi de production est absent",
+                  "Les résultats ne sont pas présentés de manière exploitable"
+                ],
+                "enCours": [
+                  "Le pilotage est assuré avec un suivi irrégulier",
+                  "Les livrables sont produits mais perfectibles",
+                  "La communication projet est claire mais encore inégale selon les contextes"
+                ],
+                "acquis": [
+                  "Le cycle de livraison est maîtrisé en SAE et en stage",
+                  "Les livrables sont clairs, mesurables et alignés avec les attentes",
+                  "Le portfolio P6.A.01 rend compte de la progression professionnelle"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "S5.A.01 Développement avancé",
+            "S6.A.01 Évolution d'une application",
+            "S6.A.St Stage",
+            "P6.A.01 Portfolio"
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Compétence 2 : Optimiser des applications informatiques",
+          "description": "Vous êtes sur la page 2/3 - Année 3 (S5-S6)",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Analyser les performances et anticiper les résultats",
+              "levels": {
+                "nonAcquis": [
+                  "Aucune mesure fiable de performance n'est menée",
+                  "Les métriques ne sont pas interprétées",
+                  "Les choix d'optimisation ne sont pas justifiés"
+                ],
+                "enCours": [
+                  "Des métriques sont relevées mais irrégulièrement",
+                  "Les analyses permettent des optimisations partielles",
+                  "Les gains sont visibles mais restent variables selon les scénarios"
+                ],
+                "acquis": [
+                  "Les performances sont mesurées de manière systématique",
+                  "Les optimisations sont argumentées par des indicateurs",
+                  "Les choix d'optimisation améliorent clairement l'efficacité globale"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Profiler et améliorer un code existant",
+              "levels": {
+                "nonAcquis": [
+                  "Le code existant est modifié sans diagnostic préalable",
+                  "Les points de lenteur ne sont pas identifiés",
+                  "Aucun protocole de comparaison avant/après"
+                ],
+                "enCours": [
+                  "Le profiling est réalisé sur des modules ciblés",
+                  "Les goulots d'étranglement sont partiellement traités",
+                  "Les améliorations sont présentes mais encore peu généralisées"
+                ],
+                "acquis": [
+                  "Le comportement du code est profilé et documenté",
+                  "Les corrections améliorent clairement temps et ressources",
+                  "Les décisions techniques sont justifiées par des preuves"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Choisir des méthodes et bibliothèques adaptées au contexte",
+              "levels": {
+                "nonAcquis": [
+                  "Les outils sont choisis sans critères techniques",
+                  "La solution est peu adaptée aux contraintes du projet",
+                  "La maintenabilité est faible"
+                ],
+                "enCours": [
+                  "Les bibliothèques sont pertinentes mais inégalement maîtrisées",
+                  "L'intégration est fonctionnelle avec quelques limites",
+                  "Le choix technologique est argumenté mais peut encore être consolidé"
+                ],
+                "acquis": [
+                  "Les bibliothèques/méthodes sont choisies avec des critères clairs",
+                  "L'intégration est stable, documentée et réutilisable",
+                  "Le choix final optimise performance, qualité et délai"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "R5.A.04 Qualité algorithmique",
+            "R5.A.11 Aide à la décision",
+            "R5.A.12 Modélisations mathématiques",
+            "R6.A.05 Développement avancé"
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Compétence 6 : Travailler dans une équipe informatique",
+          "description": "Vous êtes sur la page 3/3 - Année 3 (S5-S6)",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "S'intégrer durablement dans une équipe projet",
+              "levels": {
+                "nonAcquis": [
+                  "Le rôle dans l'équipe n'est pas clairement défini",
+                  "Les échanges restent ponctuels et peu utiles",
+                  "Les outils collaboratifs sont sous-utilisés"
+                ],
+                "enCours": [
+                  "Le rôle est compris mais pas toujours tenu",
+                  "La collaboration progresse sur les phases critiques",
+                  "Les outils de suivi sont utilisés avec une régularité encore perfectible"
+                ],
+                "acquis": [
+                  "L'intégration à l'équipe est fluide sur S5, S6 et stage",
+                  "La communication technique est régulière et pertinente",
+                  "Les outils collaboratifs structurent efficacement le travail"
+                ]
+              }
+            },
+            {
+              "id": "AC2",
+              "title": "Contribuer à la coordination et à la décision collective",
+              "levels": {
+                "nonAcquis": [
+                  "Les décisions sont prises sans partage d'information",
+                  "Les arbitrages techniques ne sont pas argumentés",
+                  "Le suivi d'avancement est insuffisant"
+                ],
+                "enCours": [
+                  "Les points d'équipe permettent un pilotage partiel",
+                  "Les propositions techniques sont argumentées mais incomplètes",
+                  "Les décisions sont appliquées avec quelques écarts de synchronisation"
+                ],
+                "acquis": [
+                  "Les décisions sont préparées avec des éléments factuels",
+                  "La coordination équipe/encadrant est efficace",
+                  "Le suivi permet d'anticiper les risques et retards"
+                ]
+              }
+            },
+            {
+              "id": "AC3",
+              "title": "Valoriser son activité professionnelle (stage et portfolio)",
+              "levels": {
+                "nonAcquis": [
+                  "Le bilan d'activité est incomplet ou non structuré",
+                  "Les réalisations ne sont pas reliées aux compétences",
+                  "Le portfolio ne montre pas la progression"
+                ],
+                "enCours": [
+                  "Le bilan de stage est rédigé avec des preuves partielles",
+                  "Le portfolio relie certaines missions aux AC",
+                  "La présentation est cohérente mais encore perfectible sur certains points"
+                ],
+                "acquis": [
+                  "Le retour d'expérience est structuré et argumenté",
+                  "Les preuves (projets, stage, ressources) sont clairement reliées aux AC",
+                  "Le portfolio démontre une progression cohérente sur l'année"
+                ]
+              }
+            }
+          ],
+          "evidences": [
+            "R5.01 Initiation au management",
+            "R6.01 Entrepreneuriat",
+            "R6.04 PPP",
+            "S6.A.St Stage",
+            "P6.A.01 Portfolio"
+          ]
         }
       ]
     }

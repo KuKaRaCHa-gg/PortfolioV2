@@ -536,26 +536,26 @@ h3::before{content:"SYS> "}
 }
 .flying-code-snippet{
   position:absolute;
-  color:rgba(0, 255, 0,0.6);
+  color:rgba(0, 255, 0,0.42);
   font-family:var(--font);
   white-space:pre;
   font-size:0.8em; /* RESTAURÉ: Taille originale */
-  text-shadow:0 0 4px rgba(0, 255, 0,0.24);
+  text-shadow:0 0 3px rgba(0, 255, 0,0.14);
   animation:flyAcross linear forwards;
 }
 .flying-code-snippet.big-code{
   white-space:pre-wrap;
   line-height:1.2;
   padding:10px; /* RESTAURÉ: Padding original */
-  background:rgba(0,20,0,0.1);
+  background:rgba(0,20,0,0.06);
   border:var(--border-dashed); /* RESTAURÉ: Border originale */
   max-width:300px; /* RESTAURÉ: Largeur originale */
 }
 @keyframes flyAcross{
-  0%{transform:translateY(100vh);opacity:0.05}
-  20%{opacity:0.26}
-  80%{opacity:0.26}
-  100%{transform:translateY(-100vh);opacity:0.05}
+  0%{transform:translateY(100vh);opacity:0.02}
+  20%{opacity:0.16}
+  80%{opacity:0.16}
+  100%{transform:translateY(-100vh);opacity:0.02}
 }
 
 /* === CUSTOM CURSOR === */

@@ -7,6 +7,8 @@ import Tools from './pages/Tools'
 import Blog from './pages/Blog'
 import Competences from './pages/Competences'
 import Graph3D from './pages/Graph3D'
+import Entreprise from './pages/Entreprise'
+import Recrutement from './pages/Recrutement'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
@@ -17,13 +19,32 @@ import soundManager from './utils/soundManager'
 export default function App() {
   const [route, setRoute] = useState('home')
   const [soundEnabled, setSoundEnabled] = useState(true)
+  const [secretUnlocked, setSecretUnlocked] = useState(false)
+
+  const secretRoutes = ['competences', 'entreprise', 'recrutement']
 
   // Initialiser les effets visuels au montage
   useEffect(() => {
     initEffects()
+
+    // Debloque les pages secretes via URL, ex: ?key=31MARS2026&page=competences
+    const params = new URLSearchParams(window.location.search)
+    const secretKey = params.get('key') || params.get('secret')
+    const page = params.get('page')
+
+    if (secretKey === '31MARS2026') {
+      setSecretUnlocked(true)
+      if (page && secretRoutes.includes(page)) {
+        setRoute(page)
+      }
+    }
   }, [])
 
   const handleNavigation = (newRoute) => {
+    if (!secretUnlocked && secretRoutes.includes(newRoute)) {
+      soundManager.playError()
+      return
+    }
     soundManager.playBeep(600, 0.08)
     setRoute(newRoute)
   }
@@ -39,7 +60,7 @@ export default function App() {
   return (
     <div className="terminal-root">
       <Header />
-      <Sidebar currentRoute={route} onNavigate={handleNavigation} />
+      <Sidebar currentRoute={route} onNavigate={handleNavigation} showSecretPages={secretUnlocked} />
       
       {route === 'home' && <Home onEnter={() => handleNavigation('about')} />}
       {route === 'about' && <About />}
@@ -47,7 +68,9 @@ export default function App() {
       {route === 'contact' && <Contact />}
       {route === 'tools' && <Tools />}
       {route === 'blog' && <Blog />}
-      {route === 'competences' && <Competences />}
+      {route === 'competences' && secretUnlocked && <Competences />}
+      {route === 'entreprise' && secretUnlocked && <Entreprise />}
+      {route === 'recrutement' && secretUnlocked && <Recrutement />}
       {route === 'graph3d' && <Graph3D onNavigate={handleNavigation} />}
       
       <Footer />
