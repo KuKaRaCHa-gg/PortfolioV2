@@ -178,12 +178,140 @@
   box-shadow: 0 0 12px rgba(70, 255, 130, 0.5);
 }
 
+.ac-navigator {
+  margin-top: 1rem;
+  border: 1px solid #365636;
+  background: #0f150f;
+  padding: 0.8rem;
+}
+
+.ac-navigator h3 {
+  margin: 0 0 0.8rem 0;
+  color: #9cffb9;
+  font-size: 1rem;
+}
+
+.ac-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.ac-card {
+  border: 1px solid #335633;
+  background: rgba(16, 26, 16, 0.9);
+  padding: 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ac-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.ac-card.status-na {
+  border-color: #5a3a3a;
+  background: rgba(40, 15, 15, 0.8);
+}
+
+.ac-card.status-na::before {
+  background: #cc5555;
+}
+
+.ac-card.status-eca {
+  border-color: #5a5a3a;
+  background: rgba(40, 35, 15, 0.8);
+}
+
+.ac-card.status-eca::before {
+  background: #ffcc66;
+}
+
+.ac-card.status-a {
+  border-color: #3a5a3a;
+  background: rgba(15, 40, 20, 0.8);
+}
+
+.ac-card.status-a::before {
+  background: #55cc77;
+}
+
+.ac-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 255, 130, 0.15);
+}
+
+.ac-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.ac-id {
+  font-weight: 700;
+  color: #7dff9d;
+  font-size: 0.85rem;
+}
+
+.ac-status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ac-status-badge.status-na {
+  background: rgba(204, 85, 85, 0.25);
+  color: #ffb8b8;
+  border: 1px solid #cc5555;
+}
+
+.ac-status-badge.status-eca {
+  background: rgba(255, 204, 102, 0.25);
+  color: #ffe9b0;
+  border: 1px solid #ffcc66;
+}
+
+.ac-status-badge.status-a {
+  background: rgba(85, 204, 119, 0.25);
+  color: #a8ffbf;
+  border: 1px solid #55cc77;
+}
+
+.ac-card-title {
+  margin: 0 0 0.35rem 0;
+  color: #d7ffd7;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.ac-card-desc {
+  margin: 0;
+  color: #c0ffc0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
 .in-progress-block {
   margin-top: 0.8rem;
   border: 1px solid #4f4a2c;
   background: rgba(34, 30, 14, 0.95);
   padding: 0.75rem;
 }
+
 
 .in-progress-block h3 {
   margin: 0 0 0.45rem;

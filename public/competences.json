@@ -31,7 +31,8 @@
                   "Peut utiliser plusieurs IDE",
                   "Sait développer une application avec différents langages étudiés"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -52,7 +53,8 @@
                   "Programmation orientée objet cohérente",
                   "Conceptualise une structure graphique et algorithmique complète"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -71,7 +73,8 @@
                   "Tests appropriés au sujet",
                   "Conclusion pertinente par rapport au sujet"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -92,7 +95,8 @@
                   "Ergonomie des interfaces",
                   "Appropriation des structures et balises HTML/CSS"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -126,7 +130,8 @@
                   "Compréhension complète des algorithmes",
                   "Binaire/hexadécimal: calculs aisés et résultats corrects"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -147,7 +152,8 @@
                   "Algorithmes de tri fonctionnels",
                   "Analyse temps/mémoire correcte de façon fréquente"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -168,7 +174,8 @@
                   "Compréhension des matrices acquise",
                   "Création et lecture des graphes efficaces"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -195,7 +202,8 @@
                   "Connaissance du vocabulaire en anglais",
                   "Ressources et sites connus complets"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -211,7 +219,8 @@
                   "Connaît les principales commandes Linux",
                   "Aucune aide du cours pour faire les exercices"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -229,7 +238,8 @@
                   "Logiciels utilisés fonctionnels",
                   "Mise en place d'une machine virtuelle sans problème"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -246,7 +256,8 @@
                 "acquis": [
                   "Guide de conception et d'installation clair, net et complet"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -279,7 +290,8 @@
                   "Maîtrise les requêtes complexes (JOIN, sous-requêtes)",
                   "Utilise les outils de manière autonome"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -294,7 +306,8 @@
                 "acquis": [
                   "Sait interpréter DD/DF/GDF/MCD/MLD"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -310,7 +323,8 @@
                   "Connaît les règles de normalisation",
                   "Produit DD, DF, GDF, MCD, MLD corrects"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -344,7 +358,8 @@
                   "Énumère et trie les besoins",
                   "S'adapte aux nouvelles idées du client"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -363,7 +378,8 @@
                   "Utilise bien les outils disponibles",
                   "Connaît une grande quantité d'outils"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -385,7 +401,8 @@
                   "Gestion éthique et durable",
                   "Pilote les projets et rend compte des phases"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -415,7 +432,8 @@
                   "Organise son espace de travail",
                   "Trouve la documentation en ligne en autonomie"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -432,7 +450,8 @@
                   "Communique en toute circonstance",
                   "Répartit les tâches selon les compétences"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -449,7 +468,8 @@
                   "Comprend son rôle",
                   "Crée un groupe en fonction des compétences"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -464,7 +484,8 @@
                 "acquis": [
                   "Entretient de bonnes relations avec ses collaborateurs"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -495,7 +516,8 @@
                   "Choisit ses mots au moment approprié",
                   "Organise ses textes et enchaîne les phrases"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -516,7 +538,8 @@
                   "Connaît plusieurs langues et les pratique",
                   "Crée régulièrement des vidéos pour s'améliorer"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -537,7 +560,8 @@
                   "Applique systématiquement les conseils",
                   "Utilise des méthodologies adaptées"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -581,7 +605,8 @@
                   "Crée une documentation structurée et exhaustive",
                   "Formalise parfaitement les besoins des utilisateurs et du client"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -605,7 +630,8 @@
                   "Intègre des tests d'accessibilité réguliers",
                   "Améliore l'expérience utilisateur en respectant tous les profils"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -629,7 +655,8 @@
                   "Applique des principes solides pour l'optimisation",
                   "Utilise des outils de vérification pour assurer la qualité du code"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -653,7 +680,8 @@
                   "Maîtrise les outils professionnels pour les tests de qualité",
                   "Corrige efficacement les erreurs détectées"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -690,7 +718,8 @@
                   "Justifie ses choix",
                   "Applique dans des contextes variés"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -714,7 +743,8 @@
                   "Implémente des solutions IA",
                   "Utilise la recherche opérationnelle"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -738,7 +768,8 @@
                   "Protège les fichiers sensibles",
                   "Audite les failles potentielles"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -762,7 +793,8 @@
                   "Prend en compte les impacts sociétaux",
                   "Favorise l'usage responsable des ressources"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -798,7 +830,8 @@
                   "Automatise requêtes/réponses",
                   "Développe des solutions robustes"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -822,7 +855,8 @@
                   "Déploie et configure des services complets",
                   "Optimise les performances"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -846,7 +880,8 @@
                   "Audits réguliers",
                   "Politiques strictes sur permissions et accès"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -881,7 +916,8 @@
                   "Relations complexes maîtrisées",
                   "Requêtes optimisées"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -905,7 +941,8 @@
                   "Intégrité assurée",
                   "Sauvegardes chiffrées et contrôlées"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -929,7 +966,8 @@
                   "Code organisé",
                   "Visualisations adaptées"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -953,7 +991,8 @@
                   "Outils avancés",
                   "Fiabilité et cohérence assurées"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -988,7 +1027,8 @@
                   "Besoins analysés",
                   "Améliorations concrètes proposées"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -1012,7 +1052,8 @@
                   "Exigences structurées",
                   "Retours intégrés"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -1036,7 +1077,8 @@
                   "Ressources planifiées",
                   "Analyse de risques mise en place"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -1060,7 +1102,8 @@
                   "Anticipation via indicateurs",
                   "Rapports réguliers et détaillés"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -1096,7 +1139,8 @@
                   "Interactions analysées",
                   "Place stratégique identifiée"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -1120,7 +1164,8 @@
                   "Outils adaptés utilisés",
                   "Adaptation rapide"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -1144,7 +1189,8 @@
                   "Retours pris en compte",
                   "Environnement positif favorisé"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -1168,7 +1214,8 @@
                   "Supports adaptés",
                   "Rendu régulier et dans les délais"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -1203,7 +1250,8 @@
                   "Présentations claires",
                   "Analyse critique complète"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -1224,7 +1272,8 @@
                   "Plusieurs langues pratiquées",
                   "Vidéos d'entraînement régulières"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -1246,7 +1295,8 @@
                   "Sources variées",
                   "Entraînement régulier"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             },
             {
               "id": "AC4",
@@ -1268,7 +1318,8 @@
                   "Écrit régulièrement",
                   "Écoute des livres audio"
                 ]
-              }
+              },
+              "shortDescription": "Assurer la qualité de l'application"
             }
           ],
           "evidences": [
@@ -1306,7 +1357,8 @@
                   "Le développement est robuste, testé et maintenable",
                   "Le produit répond de manière fiable aux attentes de la spécialité"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -1327,7 +1379,8 @@
                   "Les évolutions sont planifiées et livrées sans régression",
                   "Les pratiques de qualité et de maintenance sont appliquées avec constance"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -1348,7 +1401,8 @@
                   "Les livrables sont clairs, mesurables et alignés avec les attentes",
                   "Le portfolio P6.A.01 rend compte de la progression professionnelle"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -1382,7 +1436,8 @@
                   "Les optimisations sont argumentées par des indicateurs",
                   "Les choix d'optimisation améliorent clairement l'efficacité globale"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -1403,7 +1458,8 @@
                   "Les corrections améliorent clairement temps et ressources",
                   "Les décisions techniques sont justifiées par des preuves"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -1424,7 +1480,8 @@
                   "L'intégration est stable, documentée et réutilisable",
                   "Le choix final optimise performance, qualité et délai"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [
@@ -1458,7 +1515,8 @@
                   "La communication technique est régulière et pertinente",
                   "Les outils collaboratifs structurent efficacement le travail"
                 ]
-              }
+              },
+              "shortDescription": "Traduire un besoin en code fonctionnel et bien structuré"
             },
             {
               "id": "AC2",
@@ -1479,7 +1537,8 @@
                   "La coordination équipe/encadrant est efficace",
                   "Le suivi permet d'anticiper les risques et retards"
                 ]
-              }
+              },
+              "shortDescription": "Comparer et optimiser les choix algorithmiques"
             },
             {
               "id": "AC3",
@@ -1500,7 +1559,8 @@
                   "Les preuves (projets, stage, ressources) sont clairement reliées aux AC",
                   "Le portfolio démontre une progression cohérente sur l'année"
                 ]
-              }
+              },
+              "shortDescription": "Installer et configurer un système"
             }
           ],
           "evidences": [

@@ -221,6 +221,32 @@ export default function Competences() {
                     )}
                   </section>
 
+                  <section className="ac-navigator" aria-label="Vue d'ensemble des AC">
+                    <h3>Aperçu des AC</h3>
+                    <div className="ac-cards-grid">
+                      {currentCompetence.acs.map((ac) => {
+                        const currentStep = getCurrentStep(ac)
+                        const stepLabel =
+                          currentStep === 1 ? 'Non acquis' : currentStep === 2 ? 'En cours' : 'Acquis'
+                        const stepClass =
+                          currentStep === 1 ? 'status-na' : currentStep === 2 ? 'status-eca' : 'status-a'
+
+                        return (
+                          <div key={`card-${ac.id}`} className={`ac-card ${stepClass}`}>
+                            <div className="ac-card-header">
+                              <span className="ac-id">{ac.id}</span>
+                              <span className={`ac-status-badge ${stepClass}`}>{stepLabel}</span>
+                            </div>
+                            <h4 className="ac-card-title">{ac.title}</h4>
+                            {ac.shortDescription && (
+                              <p className="ac-card-desc">{ac.shortDescription}</p>
+                            )}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </section>
+
                   <div className="acs-list">
                     {currentCompetence.acs.map((ac) => {
                       const currentStep = getCurrentStep(ac)
