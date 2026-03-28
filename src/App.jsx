@@ -19,7 +19,7 @@ import soundManager from './utils/soundManager'
 export default function App() {
   const [route, setRoute] = useState('home')
   const [soundEnabled, setSoundEnabled] = useState(true)
-  const [secretUnlocked, setSecretUnlocked] = useState(false)
+  const [secretUnlocked, setSecretUnlocked] = useState(true)
 
   const secretRoutes = ['competences', 'entreprise', 'recrutement']
 
@@ -32,19 +32,16 @@ export default function App() {
     const secretKey = params.get('key') || params.get('secret')
     const page = params.get('page')
 
+    if (page && secretRoutes.includes(page)) {
+      setRoute(page)
+    }
+
     if (secretKey === '31MARS2026') {
       setSecretUnlocked(true)
-      if (page && secretRoutes.includes(page)) {
-        setRoute(page)
-      }
     }
   }, [])
 
   const handleNavigation = (newRoute) => {
-    if (!secretUnlocked && secretRoutes.includes(newRoute)) {
-      soundManager.playError()
-      return
-    }
     soundManager.playBeep(600, 0.08)
     setRoute(newRoute)
   }
@@ -60,7 +57,7 @@ export default function App() {
   return (
     <div className="terminal-root">
       <Header />
-      <Sidebar currentRoute={route} onNavigate={handleNavigation} showSecretPages={secretUnlocked} />
+      <Sidebar currentRoute={route} onNavigate={handleNavigation} showSecretPages />
       
       {route === 'home' && <Home onEnter={() => handleNavigation('about')} />}
       {route === 'about' && <About />}
@@ -68,9 +65,9 @@ export default function App() {
       {route === 'contact' && <Contact />}
       {route === 'tools' && <Tools />}
       {route === 'blog' && <Blog />}
-      {route === 'competences' && secretUnlocked && <Competences />}
-      {route === 'entreprise' && secretUnlocked && <Entreprise />}
-      {route === 'recrutement' && secretUnlocked && <Recrutement />}
+      {route === 'competences' && <Competences />}
+      {route === 'entreprise' && <Entreprise />}
+      {route === 'recrutement' && <Recrutement />}
       {route === 'graph3d' && <Graph3D onNavigate={handleNavigation} />}
       
       <Footer />

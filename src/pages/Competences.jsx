@@ -128,16 +128,50 @@ export default function Competences() {
     setSelectedCompetence(idx)
   }
 
-  const getCompetenceHeroImage = (comp) => {
-    if (!comp.evidences || comp.evidences.length === 0) return null
-    // Cherche Competance{id}.png dans les evidences
-    return comp.evidences.find((ev) => new RegExp(`Competance${comp.id}\\.png$`, 'i').test(ev))
+  const getEvidenceLabel = (path, idx) => {
+    if (!path) return `Preuve ${idx + 1}`
+    const raw = path.split('/').pop() || `Preuve ${idx + 1}`
+    return raw.replace(/\.[^.]+$/, '')
   }
 
-  const getOtherImages = (comp) => {
-    if (!comp.evidences || comp.evidences.length === 0) return []
-    const heroImage = getCompetenceHeroImage(comp)
-    return comp.evidences.filter((ev) => ev !== heroImage && /\.(png|jpg|jpeg|webp|gif)$/i.test(ev))
+  const getEvidenceDescription = (path, idx) => {
+    const label = getEvidenceLabel(path, idx)
+    return `Description: ${label.replace(/[_-]+/g, ' ')}`
+  }
+
+  const toDisplayPath = (path) => {
+    if (!path) return ''
+    if (/^https?:\/\//i.test(path)) return path
+    return encodeURI(path)
+  }
+
+  const getCompetenceDescription = (comp, year, pageIndex, total) => {
+    const baseById = {
+      1: 'Concevoir, coder, tester et livrer une application robuste orientee utilisateur.',
+      2: 'Analyser et optimiser les solutions pour ameliorer performance, qualite et maintenabilite.',
+      3: 'Installer, configurer et securiser les environnements systemes et reseaux.',
+      4: 'Structurer, exploiter et valoriser les donnees pour la decision et le pilotage.',
+      5: 'Planifier, coordonner et suivre un projet informatique avec une methode claire.',
+      6: 'Collaborer efficacement en equipe et valoriser sa contribution professionnelle.',
+      7: 'Communiquer avec clarte a l ecrit et a l oral selon le contexte professionnel.'
+    }
+    const id = Number(comp?.id)
+    const base = baseById[id] || comp?.description || ''
+    return `${year?.label || 'Annee'} - Page ${pageIndex + 1}/${total}. ${base}`
+  }
+
+  const getAcShortDescription = (ac) => {
+    const title = (ac?.title || '').toLowerCase()
+
+    if (title.includes('interface')) return 'Concevoir une interface lisible, fluide et adaptee a l utilisateur.'
+    if (title.includes('test') || title.includes('essai') || title.includes('valider')) return 'Definir des tests pertinents et conclure avec des resultats exploitables.'
+    if (title.includes('algorith') || title.includes('optimis') || title.includes('complexit')) return 'Comparer les approches et justifier la solution la plus efficace.'
+    if (title.includes('donnee') || title.includes('base de donnees')) return 'Modeliser et manipuler des donnees fiables, securisees et utiles.'
+    if (title.includes('systeme') || title.includes('reseau') || title.includes('configur') || title.includes('poste')) return 'Installer et configurer un environnement technique stable et securise.'
+    if (title.includes('projet') || title.includes('coordination') || title.includes('pilot')) return 'Organiser le travail d equipe et assurer un suivi clair de l avancement.'
+    if (title.includes('communication') || title.includes('ecrit') || title.includes('oral') || title.includes('expression')) return 'Produire une communication claire, structuree et adaptee au public cible.'
+
+    return ac?.shortDescription || 'Mettre en oeuvre la competence avec rigueur et justification technique.'
   }
 
   if (!years.length) {
@@ -184,22 +218,10 @@ export default function Competences() {
 
               {currentCompetence && (
                 <div className="competence-wrapper">
-                  {(() => {
-                    const heroImg = getCompetenceHeroImage(currentCompetence)
-                    if (heroImg) {
-                      return (
-                        <section className="competence-hero">
-                          <img src={heroImg} alt={currentCompetence.title} />
-                        </section>
-                      )
-                    }
-                    return null
-                  })()}
-
                   <div className="competence-page">
                     <div className="competence-page-head">
                       <h2>{currentCompetence.title}</h2>
-                      <p>{currentCompetence.description}</p>
+                      <p>{getCompetenceDescription(currentCompetence, currentYear, selectedCompetence, currentYear.competences.length)}</p>
                       <p className="page-counter">
                         Page {selectedCompetence + 1}/{currentYear.competences.length}
                       </p>
@@ -256,6 +278,7 @@ export default function Competences() {
                               : currentStep === 2
                                 ? 'status-eca'
                                 : 'status-a'
+                          const shortDesc = getAcShortDescription(ac)
 
                           return (
                             <div key={`card-${ac.id}`} className={`ac-card ${stepClass}`}>
@@ -264,8 +287,8 @@ export default function Competences() {
                                 <span className={`ac-status-badge ${stepClass}`}>{stepLabel}</span>
                               </div>
                               <h4 className="ac-card-title">{ac.title}</h4>
-                            {ac.shortDescription && (
-                              <p className="ac-card-desc">{ac.shortDescription}</p>
+                            {shortDesc && (
+                              <p className="ac-card-desc">{shortDesc}</p>
                             )}
                           </div>
                         )
@@ -334,48 +357,44 @@ export default function Competences() {
                   {currentCompetence.evidences && currentCompetence.evidences.length > 0 && (
                     <section className="evidences-block">
                       <h3>Preuves & Ressources</h3>
-                      
-                      {(() => {
-                        const otherImgs = getOtherImages(currentCompetence)
-                        const urlLinks = currentCompetence.evidences.filter((ev) => /^https?:\/\//i.test(ev))
-                        
-                        return (
-                          <>
-                            {otherImgs.length > 0 && (
-                              <div className="evidence-gallery">
-                                <div className="gallery-grid">
-                                  {otherImgs.map((imgPath, idx) => {
-                                    const label = (imgPath || '').split('/').pop() || `Image ${idx + 1}`
-                                    return (
-                                      <div key={`img-${idx}`} className="gallery-item">
-                                        <a href={imgPath} target="_blank" rel="noreferrer" className="gallery-link">
-                                          <img src={imgPath} alt={label} loading="lazy" />
-                                          <div className="gallery-label">{label}</div>
-                                        </a>
-                                      </div>
-                                    )
-                                  })}
-                                </div>
-                              </div>
-                            )}
-                            
-                            {urlLinks.length > 0 && (
-                              <div className="evidence-links">
-                                <h4>Ressources externes</h4>
-                                <ul>
-                                  {urlLinks.map((url, idx) => (
-                                    <li key={`link-${idx}`}>
-                                      <a href={url} target="_blank" rel="noreferrer">
-                                        🔗 {url.split('/').slice(2, 4).join(' - ')}
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                          </>
-                        )
-                      })()}
+
+                      <ul className="evidence-list">
+                        {currentCompetence.evidences.map((ev, idx) => {
+                          const isImage = /\.(png|jpe?g|webp|gif)(\?.*)?$/i.test(ev)
+                          const label = getEvidenceLabel(ev, idx)
+                          const displayPath = toDisplayPath(ev)
+
+                          if (isImage) {
+                            return (
+                              <li key={`evidence-${idx}`} className="evidence-item evidence-image-item">
+                                <a href={displayPath} target="_blank" rel="noreferrer">
+                                  <img
+                                    src={displayPath}
+                                    alt={label}
+                                    loading="lazy"
+                                    onError={(e) => {
+                                      e.currentTarget.style.display = 'none'
+                                      const fallback = e.currentTarget.parentElement?.querySelector('.img-fallback')
+                                      if (fallback) fallback.style.display = 'block'
+                                    }}
+                                  />
+                                  <span className="img-fallback" style={{ display: 'none' }}>
+                                    Image indisponible: {label}
+                                  </span>
+                                  <span className="evidence-desc">{getEvidenceDescription(ev, idx)}</span>
+                                </a>
+                              </li>
+                            )
+                          }
+
+                          return (
+                            <li key={`evidence-${idx}`} className="evidence-item">
+                              <a href={displayPath} target="_blank" rel="noreferrer">{ev}</a>
+                              <span className="evidence-desc">{getEvidenceDescription(ev, idx)}</span>
+                            </li>
+                          )
+                        })}
+                      </ul>
                     </section>
                   )}
 

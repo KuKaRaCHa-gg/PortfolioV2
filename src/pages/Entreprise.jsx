@@ -2,6 +2,11 @@ import React from 'react'
 import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/professional-pages.css'
 
+const entImages = [
+  '/images/CompetancesETC/ENT/Daniil MINEVICH CV qr code.png',
+  '/images/CompetancesETC/ENT/maquette site.png'
+]
+
 export default function Entreprise() {
   return (
     <div className="pro-page">
@@ -13,7 +18,7 @@ export default function Entreprise() {
       >
         <div className="pro-content">
           <h2>Entreprise</h2>
-          <p className="muted">Dossier pro: alternance, contexte entreprise, impact et preuves</p>
+          <p className="muted">Dossier entreprise: alternance, contexte, réalisations, impact et preuves</p>
 
           <section className="pro-legend" aria-label="Légende de lecture de la page entreprise">
             <h3>Légende</h3>
@@ -30,8 +35,19 @@ export default function Entreprise() {
             <ul>
               <li><a href="https://github.com/KuKaRaCHa-gg" target="_blank" rel="noreferrer">GitHub</a></li>
               <li><a href="https://many.link/daniil_minevich" target="_blank" rel="noreferrer">Manylink</a></li>
-              <li>QR code CV: Daniil MINEVICH CV.png</li>
+              <li>QR code accès plein info</li>
             </ul>
+            <div className="pro-image-grid">
+              {entImages.map((imgPath) => {
+                const label = imgPath.split('/').pop() || 'Image'
+                return (
+                  <a key={imgPath} href={encodeURI(imgPath)} target="_blank" rel="noreferrer" className="pro-image-card">
+                    <img src={encodeURI(imgPath)} alt={label} loading="lazy" />
+                    <span>{label}</span>
+                  </a>
+                )
+              })}
+            </div>
           </section>
 
           <section className="pro-block">
@@ -81,11 +97,31 @@ export default function Entreprise() {
           </section>
 
           <section className="pro-block">
+            <h3>Recherche de l alternance</h3>
+            <p>
+              J ai trouvé cette alternance grâce à mon tuteur IUT, qui m a orienté vers Séché Alliance
+              après un premier processus de candidature non retenu ailleurs. Cette mise en relation m a
+              permis de passer un entretien où mes compétences en développement et en automatisation ont
+              été déterminantes.
+            </p>
+          </section>
+
+          <section className="pro-block">
+            <h3>Déroulement de l alternance</h3>
+            <p>
+              Intégré à l équipe Workspace EUQ 1, je participe à la modernisation des outils internes,
+              au packaging d applications, et à l automatisation de workflows PowerShell. J ai aussi
+              progressé sur des outils comme Pytheas/CoreView et je développe un générateur CSV pour
+              simplifier les tests de workflows.
+            </p>
+          </section>
+
+          <section className="pro-block">
             <h3>Preuves / Emplacements</h3>
             <ul>
-              <li>Capture d'écran 2024-12-17 221347.png</li>
-              <li>Capture d'écran 2024-12-17 221721.png</li>
-              <li>seche_bleu_rvb-1.png</li>
+              <li>Seché.png</li>
+              <li>organisationsecheSI.png</li>
+              <li>workflow.png</li>
             </ul>
           </section>
         </div>

@@ -90,7 +90,7 @@ export default function Sidebar({ currentRoute, onNavigate, showSecretPages = fa
             <span className="status-dot"></span>
             <span className="status-text">ONLINE</span>
           </div>
-          <div className="sidebar-version">v2.0</div>
+          <div className="sidebar-version">v3.0</div>
         </div>
       </nav>
     </>

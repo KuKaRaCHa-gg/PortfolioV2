@@ -178,9 +178,7 @@
               "shortDescription": "Installer et configurer un système"
             }
           ],
-          "evidences": [
-            "/images/CompetancesETC/competance2.png"
-          ]
+          "evidences": "/images/CompetancesETC/Competance2.png"
         },
         {
           "id": 3,
@@ -405,9 +403,7 @@
               "shortDescription": "Installer et configurer un système"
             }
           ],
-          "evidences": [
-            "/images/CompetancesETC/Competance5.png"
-          ]
+          "evidences": "/images/CompetancesETC/Competance5.png"
         },
         {
           "id": 6,
@@ -488,9 +484,7 @@
               "shortDescription": "Assurer la qualité de l'application"
             }
           ],
-          "evidences": [
-            "/images/CompetancesETC/Competance6.png"
-          ]
+          "evidences": "/images/CompetancesETC/Competance6.png"
         },
         {
           "id": 7,
@@ -567,6 +561,8 @@
           "evidences": [
             "/images/CompetancesETC/An1/c7/ChatEmpecheReviser.jpg",
             "/images/CompetancesETC/An1/c7/ecrit plus preuves1.png",
+            "/images/CompetancesETC/An1/c7/Livre Metro cité.jpeg",
+            "/images/CompetancesETC/An1/c7/Livre Metro Rive droite.jpeg",
             "/images/CompetancesETC/An1/c7/Livre Metro Rive Gauche.jpeg",
             "/images/CompetancesETC/An1/c7/MontLartrejpg.jpg",
             "/images/CompetancesETC/An1/c7/ParcBotaniqueAnger.jpg"
@@ -685,10 +681,10 @@
             }
           ],
           "evidences": [
-            "Capture d'écran 2024-12-15 134052.png",
-            "Capture d'écran 2024-12-07 112448.png",
-            "Capture d'écran 2024-12-07 153544.png",
-            "Capture d'écran 2024-12-07 142447.png"
+            "/images/CompetancesETC/Competance1.png",
+            "/images/CompetancesETC/An2/c1/SiteNuitDeLinfo2025.png",
+            "/images/CompetancesETC/An2/c1/SiteNuitDeLinfo2025ParticipationGIT.png",
+            "/images/CompetancesETC/An2/c1/WordPressBlog.png"
           ]
         },
         {
@@ -798,9 +794,9 @@
             }
           ],
           "evidences": [
-            "Capture d'écran 2024-12-15 142746.png",
-            "Cryptographie - Capture d'écran 2024-12-18 142112.png",
-            "MVC - Capture d'écran 2024-12-18 142211.png"
+            "/images/CompetancesETC/Competance2.png",
+            "/images/CompetancesETC/An2/c2/CodeCryptographie.png",
+            "/images/CompetancesETC/An2/c2/MVC.png"
           ]
         },
         {
@@ -885,8 +881,8 @@
             }
           ],
           "evidences": [
-            "Capture d'écran 2024-12-15 144014.png",
-            "Semaphores - Capture d'écran 2024-12-18 142616.png"
+            "/images/CompetancesETC/Competance3.png",
+            "/images/CompetancesETC/An2/c3/Semaphores.png"
           ]
         },
         {
@@ -996,8 +992,8 @@
             }
           ],
           "evidences": [
-            "Capture d'écran 2024-12-17 204231.png",
-            "CSV-GENERATOR - Capture d'écran 2024-12-18 142855.png.1"
+            "/images/CompetancesETC/Competance4.png",
+            "/images/CompetancesETC/An2/c4/CSVGenerateurPythonpng.png"
           ]
         },
         {
@@ -1107,9 +1103,9 @@
             }
           ],
           "evidences": [
-            "Capture d'écran 2024-12-17 205039.png",
-            "KBAN - Capture d'écran 2024-12-18 143123.png",
-            "Backlog - Capture d'écran 2024-12-18 143226.png"
+            "/images/CompetancesETC/Competance5.png",
+            "/images/CompetancesETC/An2/c5/Backlog.png",
+            "/images/CompetancesETC/An2/c5/KABANProjet.png"
           ]
         },
         {
@@ -1219,8 +1215,8 @@
             }
           ],
           "evidences": [
-            "Capture d'écran 2024-12-17 205949.png",
-            "SI - Capture d'écran 2024-12-18 143814.png"
+            "/images/CompetancesETC/Competance6.png",
+            "/images/CompetancesETC/An2/c6/OrgaSI.png"
           ]
         },
         {
@@ -1322,10 +1318,7 @@
               "shortDescription": "Assurer la qualité de l'application"
             }
           ],
-          "evidences": [
-            "Ecrit+ - Capture d'écran 2024-12-17 222545.png",
-            "Alternance - progression professionnelle"
-          ]
+          "evidences": "/images/CompetancesETC/An2/c7/PreuveEcritplus2.png"
         }
       ]
     },
@@ -1405,12 +1398,7 @@
               "shortDescription": "Installer et configurer un système"
             }
           ],
-          "evidences": [
-            "S5.A.01 Développement avancé",
-            "S6.A.01 Évolution d'une application",
-            "S6.A.St Stage",
-            "P6.A.01 Portfolio"
-          ]
+          "evidences": "/images/CompetancesETC/Competance1.png"
         },
         {
           "id": 2,
@@ -1484,12 +1472,7 @@
               "shortDescription": "Installer et configurer un système"
             }
           ],
-          "evidences": [
-            "R5.A.04 Qualité algorithmique",
-            "R5.A.11 Aide à la décision",
-            "R5.A.12 Modélisations mathématiques",
-            "R6.A.05 Développement avancé"
-          ]
+          "evidences": "/images/CompetancesETC/Competance2.png"
         },
         {
           "id": 6,
@@ -1563,12 +1546,83 @@
               "shortDescription": "Installer et configurer un système"
             }
           ],
+          "evidences": "/images/CompetancesETC/Competance6.png"
+        },
+        {
+          "id": 7,
+          "title": "Compétence 7 : Culture et expression",
+          "description": "Vous êtes sur la page 4/4 - Année 3 (S5-S6)",
+          "acs": [
+            {
+              "id": "AC1",
+              "title": "Produire des écrits professionnels structurés et argumentés",
+              "levels": {
+                "nonAcquis": [
+                  "Le propos est peu structuré et difficile à suivre",
+                  "Les sources sont absentes ou mal exploitées",
+                  "Le registre n'est pas adapté au contexte"
+                ],
+                "enCours": [
+                  "La structure est globalement cohérente avec quelques imprécisions",
+                  "Les sources sont présentes mais inégalement intégrées",
+                  "Le style est compréhensible mais encore perfectible"
+                ],
+                "acquis": [
+                  "Le document est clair, hiérarchisé et argumenté",
+                  "Les sources sont pertinentes et bien mobilisées",
+                  "Le registre est adapté au cadre académique et professionnel"
+                ]
+              },
+              "shortDescription": "Rédiger des contenus professionnels clairs, structurés et convaincants"
+            },
+            {
+              "id": "AC2",
+              "title": "Synthétiser et restituer une information complexe",
+              "levels": {
+                "nonAcquis": [
+                  "La synthèse est incomplète ou hors sujet",
+                  "Les idées clés ne sont pas identifiées",
+                  "La restitution manque de clarté"
+                ],
+                "enCours": [
+                  "Les idées principales sont repérées mais mal hiérarchisées",
+                  "La restitution est correcte avec quelques redondances",
+                  "Le format est adapté mais encore perfectible"
+                ],
+                "acquis": [
+                  "La synthèse isole clairement les points essentiels",
+                  "La restitution est concise, fidèle et exploitable",
+                  "La présentation facilite la compréhension et la décision"
+                ]
+              },
+              "shortDescription": "Transformer une information riche en synthèse claire et directement exploitable"
+            },
+            {
+              "id": "AC3",
+              "title": "Adapter sa communication au public et à la situation",
+              "levels": {
+                "nonAcquis": [
+                  "Le message n'est pas adapté à l'audience",
+                  "Les supports choisis sont peu pertinents",
+                  "La prise de parole manque de maîtrise"
+                ],
+                "enCours": [
+                  "Le message est globalement adapté avec quelques maladresses",
+                  "Les supports sont lisibles mais parfois trop chargés",
+                  "La posture et le rythme restent irréguliers"
+                ],
+                "acquis": [
+                  "Le message est ciblé selon le public technique ou non technique",
+                  "Les supports sont clairs et efficaces",
+                  "La prise de parole est fluide, assurée et convaincante"
+                ]
+              },
+              "shortDescription": "Communiquer efficacement selon l'objectif, le support et le public visé"
+            }
+          ],
           "evidences": [
-            "R5.01 Initiation au management",
-            "R6.01 Entrepreneuriat",
-            "R6.04 PPP",
-            "S6.A.St Stage",
-            "P6.A.01 Portfolio"
+            "/images/CompetancesETC/An3/Ecrisplus3.png",
+            "/images/CompetancesETC/An3/PreuveEcrisPlus3.png"
           ]
         }
       ]

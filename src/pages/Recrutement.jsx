@@ -3,22 +3,79 @@ import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/professional-pages.css'
 
 const offers = [
-  { company: 'Numidev', desc: 'Développeur fullstack: WordPress, Symfony, Laravel, React Native, ASP.NET/C#, SQL', fit: 'Élevé' },
-  { company: 'Winflotte', desc: 'Développement Winflotte 10: CSS, Angular, C#, API, travail équipe', fit: 'Élevé' },
-  { company: 'Lactalis', desc: 'Stage développement web: PHP, HTML, JS', fit: 'Élevé' },
-  { company: 'ATWOPI', desc: 'Linux Debian, sécurité, scripts shell, ERP interne', fit: 'Moyen' },
-  { company: 'KALYA', desc: 'Refonte back-office, Angular, Lumen, dataflow Python/SQL', fit: 'Moyen' },
-  { company: 'VINCI', desc: 'Applications C# .NET sous SharePoint + tests', fit: 'Moyen' },
-  { company: 'IETR', desc: 'Amélioration contrôle-commande industriel, Python, STM32', fit: 'Élevé' },
-  { company: 'LIUM', desc: 'Applications web PHP/MySQL/JS/CSS, API XML, Git', fit: 'Élevé' }
+  {
+    company: 'Numidev',
+    desc: 'Développeur fullstack | Bac +3 à Bac +5. WordPress, Symfony, Laravel, React Native, ASP.NET/C#, mobile Android/iOS, SQL.',
+    fit: 'Élevé'
+  },
+  {
+    company: 'Ocetic',
+    desc: 'Évaluation qualité d architecture logicielle. Etat de l art outils/normes, questionnaire dynamique, interface FR/EN, analyse BigData/Cloud/Web.',
+    fit: 'Moyen'
+  },
+  {
+    company: 'Winflotte',
+    desc: 'Développement Winflotte 10. CSS, Angular, C#, APIs, collaboration équipe et utilisateurs réels.',
+    fit: 'Élevé'
+  },
+  {
+    company: 'Particeep',
+    desc: 'Ingénieur test logiciel: stratégie/plans de tests, automatisation, anomalies, suivi mise en production, support client.',
+    fit: 'Moyen'
+  },
+  { company: 'Lactalis', desc: 'Stage développement web: PHP, HTML, JS.', fit: 'Élevé' },
+  { company: 'SEAp', desc: 'Stagiaire développement application web. Missions précises à définir.', fit: 'Moyen' },
+  {
+    company: 'ATWOPI',
+    desc: 'Linux Debian, sécurisation, shell, pare-feu, ERP interne (Windev/Webdev), modifications mobile et webservices.',
+    fit: 'Moyen'
+  },
+  {
+    company: 'KALYA',
+    desc: 'Refonte back-office Angular/Lumen, optimisation processus, dataflow Python/SQL, produits Kalya Research et Kalya Pro.',
+    fit: 'Moyen'
+  },
+  { company: 'Abys', desc: 'Tests fonctionnels logiciels médicaux, scénarios, validation évolutions, conformité CE/FDA.', fit: 'Moyen' },
+  {
+    company: 'VINCI',
+    desc: 'Applications C# .NET sous SharePoint, conception/réalisation tests, stack C#, HTML, JS, CSS, Office365.',
+    fit: 'Moyen'
+  },
+  { company: 'Isatech', desc: 'Assistant consultant technique: Microsoft Dynamics 365, tests, maintenance corrective, support client.', fit: 'Moyen' },
+  {
+    company: 'IETR',
+    desc: 'Contrôle-commande industriel: Python, interfaces dispositifs laser, implémentation STM32.',
+    fit: 'Élevé'
+  },
+  {
+    company: 'LIUM',
+    desc: 'Développement/amélioration applications web et back-office: PHP, MySQL, JS, CSS, Git, API XML.',
+    fit: 'Élevé'
+  }
 ]
 
 const myChoices = [
-  { company: 'Numidev', reason: 'Proximité et missions variées', note: 'Très intéressant' },
-  { company: 'Winflotte', reason: 'Travail équipe ingénieurs, cadre formateur', note: 'Intéressant' },
-  { company: 'Lactalis', reason: 'Développement web pour progression', note: 'Intéressant' },
-  { company: 'ATWOPI', reason: 'Proche de mon alternance actuelle', note: 'À considérer' },
-  { company: 'VINCI', reason: 'Nouveaux langages et environnement structuré', note: 'À considérer' }
+  { company: 'Numidev', reason: 'Pas loin de chez moi, missions intéressantes.', note: 'Priorité haute' },
+  { company: 'Ocetic', reason: 'Beaucoup de test/évaluation, moins orienté dev pur.', note: 'Priorité basse' },
+  { company: 'Winflotte', reason: 'Equipe d ingénieurs, environnement formateur.', note: 'Priorité haute' },
+  { company: 'Particeep', reason: 'Fortement orienté tests.', note: 'Priorité basse' },
+  { company: 'Lactalis', reason: 'Proche de chez moi, développement web utile pour progresser.', note: 'Priorité haute' },
+  { company: 'SEAp', reason: 'Peu d informations disponibles sur la mission.', note: 'A confirmer' },
+  { company: 'ATWOPI', reason: 'Assez proche de mon alternance actuelle.', note: 'A considérer' },
+  { company: 'KALYA', reason: 'Projet existant + dataflow, intéressant techniquement.', note: 'A considérer' },
+  { company: 'Abys', reason: 'Encore beaucoup de tests fonctionnels.', note: 'Priorité basse' },
+  { company: 'VINCI', reason: 'Présence de tests mais permet de découvrir d autres technos.', note: 'A considérer' },
+  { company: 'Isatech', reason: 'Travail sur un existant en contexte client.', note: 'A considérer' },
+  { company: 'IETR', reason: 'Charge technique forte, environnement stimulant.', note: 'Intéressant' },
+  { company: 'LIUM', reason: 'Missions web concrètes et variées.', note: 'Intéressant' }
+]
+
+const recrutmentImages = [
+  '/images/CompetancesETC/Recrutment/Daniil MINEVICH CV .png',
+  '/images/CompetancesETC/Recrutment/carte de visite.png',
+  '/images/CompetancesETC/Recrutment/organisationsecheSI.png',
+  '/images/CompetancesETC/Recrutment/Seché.png',
+  '/images/CompetancesETC/Recrutment/workflow.png'
 ]
 
 export default function Recrutement() {
@@ -32,7 +89,7 @@ export default function Recrutement() {
       >
         <div className="pro-content">
           <h2>Recrutement</h2>
-          <p className="muted">Veille d'annonces et justification des choix</p>
+          <p className="muted">Veille d annonces, sélection des offres et justification de mes choix</p>
 
           <section className="pro-legend" aria-label="Légende des tableaux de recrutement">
             <h3>Légende</h3>
@@ -44,7 +101,7 @@ export default function Recrutement() {
           </section>
 
           <section className="pro-block">
-            <h3>Offres ciblées</h3>
+            <h3>Offres ciblées avec annonces intéressantes</h3>
             <div className="pro-table-wrap">
               <table className="pro-table">
                 <thead>
@@ -72,7 +129,7 @@ export default function Recrutement() {
           </section>
 
           <section className="pro-block">
-            <h3>Mon avis sur les offres</h3>
+            <h3>Explication de mes choix</h3>
             <div className="pro-table-wrap">
               <table className="pro-table">
                 <thead>
@@ -96,12 +153,18 @@ export default function Recrutement() {
           </section>
 
           <section className="pro-block">
-            <h3>Preuves / Emplacements</h3>
-            <ul>
-              <li>Daniil MINEVICH CV (1).png</li>
-              <li>Design sans titre.png</li>
-              <li>Capture d'écran 2024-12-17 221347.png</li>
-            </ul>
+            <h3>Emplacements</h3>
+            <div className="pro-image-grid">
+              {recrutmentImages.map((imgPath) => {
+                const label = imgPath.split('/').pop() || 'Image'
+                return (
+                  <a key={imgPath} href={encodeURI(imgPath)} target="_blank" rel="noreferrer" className="pro-image-card">
+                    <img src={encodeURI(imgPath)} alt={label} loading="lazy" />
+                    <span>{label}</span>
+                  </a>
+                )
+              })}
+            </div>
           </section>
         </div>
       </ExplorerWindow>

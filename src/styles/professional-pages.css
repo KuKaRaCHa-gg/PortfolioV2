@@ -102,6 +102,37 @@
   border: 1px solid #d1a440;
 }
 
+.pro-image-grid {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+
+.pro-image-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  border: 1px solid #335633;
+  background: rgba(13, 22, 13, 0.96);
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.pro-image-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border: 1px solid #2f5f2f;
+  background: #071007;
+}
+
+.pro-image-card span {
+  color: #dfffe1;
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+
 @media (max-width: 900px) {
   .pro-page {
     padding: 0.8rem;
