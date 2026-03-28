@@ -181,7 +181,8 @@
   font-size: 2rem;
   text-align: center;
   margin: 2rem 0 1.5rem;
-  text-shadow: 0 0 10px #00ff00;
+  color: #b8ead0;
+  text-shadow: 0 0 8px rgba(111, 255, 167, 0.22);
 }
 
 .activities-grid {
@@ -249,15 +250,15 @@
 }
 
 .activity-title {
-  color: #00ff00;
+  color: #b7f5d0;
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
   font-family: 'Courier New', monospace;
-  text-shadow: 0 0 5px #00ff00;
+  text-shadow: 0 0 6px rgba(128, 237, 174, 0.32);
 }
 
 .activity-description {
-  color: #00aa00;
+  color: #8cc7a2;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -293,18 +294,18 @@
 }
 
 .experience-role {
-  color: #00ff00;
+  color: #b7f5d0;
   font-size: 1.2rem;
   font-family: 'Courier New', monospace;
 }
 
 .experience-company {
-  color: #00aa00;
+  color: #8cc7a2;
   font-style: italic;
 }
 
 .experience-year {
-  color: #00ff00;
+  color: #b7f5d0;
   background: rgba(0, 255, 0, 0.1);
   padding: 0.3rem 0.8rem;
   border: 1px solid #00ff00;
@@ -319,7 +320,7 @@
 }
 
 .experience-details li {
-  color: #00aa00;
+  color: #8cc7a2;
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
@@ -347,16 +348,16 @@
 }
 
 .education-card strong {
-  color: #00ff00;
+  color: #b7f5d0;
   font-size: 1.1rem;
 }
 
 .education-status {
-  color: #00aa00;
+  color: #8cc7a2;
 }
 
 .education-note {
-  color: #00ff00;
+  color: #b7f5d0;
   background: rgba(0, 255, 0, 0.1);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
@@ -391,17 +392,17 @@
 
 .stat-value {
   font-size: 3rem;
-  color: #00ff00;
+  color: #b7f5d0;
   font-family: 'Courier New', monospace;
   font-weight: bold;
-  text-shadow: 0 0 15px #00ff00;
+  text-shadow: 0 0 12px rgba(128, 237, 174, 0.45);
   display: block;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: #00aa00;
+  color: #8cc7a2;
   font-family: 'Courier New', monospace;
   text-transform: uppercase;
 }
@@ -442,26 +443,14 @@
   }
 }
 
-.about-page .neon-text,
-.about-page .section-title,
-.about-page .activity-title,
-.about-page .activity-description,
-.about-page .experience-role,
-.about-page .experience-company,
-.about-page .experience-year,
-.about-page .experience-details li,
-.about-page .education-card strong,
-.about-page .education-status,
-.about-page .education-note,
-.about-page .stat-value,
-.about-page .stat-label,
+.about-page .about-header .neon-text,
+.about-page .cv-video-section .section-title,
+.about-page .about-header,
+.about-page .about-header p,
+.about-page .cv-video-section,
+.about-page .cv-video-section p,
 .about-page .social-btn,
-.about-page .location-badge,
-.about-page .favorite-techs-section,
-.about-page .favorite-techs-section p,
-.about-page .tech-logo-card,
-.about-page .tech-logo-card p,
-.about-page .tech-logo-card h3 {
+.about-page .location-badge {
   color: #12161b;
   text-shadow: none;
 }
@@ -527,15 +516,15 @@
 }
 
 .tech-name {
-  color: #00ff00;
+  color: #b8ead0;
   font-size: 1.2rem;
   margin: 0.5rem 0 0.3rem;
   font-family: 'Courier New', monospace;
-  text-shadow: 0 0 10px #00ff00;
+  text-shadow: 0 0 8px rgba(111, 255, 167, 0.22);
 }
 
 .tech-desc {
-  color: #00aa00;
+  color: #8cc7a2;
   font-size: 0.85rem;
   line-height: 1.4;
 }
