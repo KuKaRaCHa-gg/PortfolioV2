@@ -1,6 +1,6 @@
 {
   "name": "porfolio-terminal",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "private": true,
   "description": "Portfolio style vieux terminal vert - React + Vite",
   "scripts": {

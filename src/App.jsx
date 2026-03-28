@@ -1,14 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
-import Tools from './pages/Tools'
-import Blog from './pages/Blog'
-import Competences from './pages/Competences'
-import Graph3D from './pages/Graph3D'
-import Entreprise from './pages/Entreprise'
-import Recrutement from './pages/Recrutement'
+import React, { lazy, Suspense, useState, useEffect } from 'react'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
@@ -16,10 +6,20 @@ import FlyingCode from './components/FlyingCode'
 import { initEffects } from './utils/effects'
 import soundManager from './utils/soundManager'
 
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Contact = lazy(() => import('./pages/Contact'))
+const Tools = lazy(() => import('./pages/Tools'))
+const Blog = lazy(() => import('./pages/Blog'))
+const Competences = lazy(() => import('./pages/Competences'))
+const Graph3D = lazy(() => import('./pages/Graph3D'))
+const Entreprise = lazy(() => import('./pages/Entreprise'))
+const Recrutement = lazy(() => import('./pages/Recrutement'))
+
 export default function App() {
   const [route, setRoute] = useState('home')
   const [soundEnabled, setSoundEnabled] = useState(true)
-  const [secretUnlocked, setSecretUnlocked] = useState(true)
 
   const secretRoutes = ['competences', 'entreprise', 'recrutement']
 
@@ -29,16 +29,12 @@ export default function App() {
 
     // Debloque les pages secretes via URL, ex: ?key=31MARS2026&page=competences
     const params = new URLSearchParams(window.location.search)
-    const secretKey = params.get('key') || params.get('secret')
     const page = params.get('page')
 
     if (page && secretRoutes.includes(page)) {
       setRoute(page)
     }
 
-    if (secretKey === '31MARS2026') {
-      setSecretUnlocked(true)
-    }
   }, [])
 
   const handleNavigation = (newRoute) => {
@@ -59,16 +55,18 @@ export default function App() {
       <Header />
       <Sidebar currentRoute={route} onNavigate={handleNavigation} showSecretPages />
       
-      {route === 'home' && <Home onEnter={() => handleNavigation('about')} />}
-      {route === 'about' && <About />}
-      {route === 'projects' && <Projects />}
-      {route === 'contact' && <Contact />}
-      {route === 'tools' && <Tools />}
-      {route === 'blog' && <Blog />}
-      {route === 'competences' && <Competences />}
-      {route === 'entreprise' && <Entreprise />}
-      {route === 'recrutement' && <Recrutement />}
-      {route === 'graph3d' && <Graph3D onNavigate={handleNavigation} />}
+      <Suspense fallback={<div style={{ padding: '1rem 1.5rem', color: '#8aff8a' }}>Chargement de la page...</div>}>
+        {route === 'home' && <Home onEnter={() => handleNavigation('about')} />}
+        {route === 'about' && <About />}
+        {route === 'projects' && <Projects />}
+        {route === 'contact' && <Contact />}
+        {route === 'tools' && <Tools />}
+        {route === 'blog' && <Blog />}
+        {route === 'competences' && <Competences />}
+        {route === 'entreprise' && <Entreprise />}
+        {route === 'recrutement' && <Recrutement />}
+        {route === 'graph3d' && <Graph3D onNavigate={handleNavigation} />}
+      </Suspense>
       
       <Footer />
       

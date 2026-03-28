@@ -6,5 +6,13 @@ export default defineConfig({
   root: '.',
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          three: ['three']
+        }
+      }
+    }
   }
 })
