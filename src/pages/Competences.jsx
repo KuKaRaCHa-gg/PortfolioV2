@@ -128,12 +128,17 @@ export default function Competences() {
     setSelectedCompetence(idx)
   }
 
-  const isAbsoluteUrl = (value) => /^https?:\/\//i.test(value || '')
+  const getCompetenceHeroImage = (comp) => {
+    if (!comp.evidences || comp.evidences.length === 0) return null
+    // Cherche Competance{id}.png dans les evidences
+    return comp.evidences.find((ev) => new RegExp(`Competance${comp.id}\\.png$`, 'i').test(ev))
+  }
 
-  const isImagePath = (value) =>
-    typeof value === 'string' && value.startsWith('/') && /\.(png|jpe?g|webp|gif|svg)$/i.test(value)
-
-  const normalizePublicPath = (value) => encodeURI(value)
+  const getOtherImages = (comp) => {
+    if (!comp.evidences || comp.evidences.length === 0) return []
+    const heroImage = getCompetenceHeroImage(comp)
+    return comp.evidences.filter((ev) => ev !== heroImage && /\.(png|jpg|jpeg|webp|gif)$/i.test(ev))
+  }
 
   if (!years.length) {
     return <div className="competences-loading">Chargement des competences...</div>
@@ -178,66 +183,87 @@ export default function Competences() {
               </div>
 
               {currentCompetence && (
-                <div className="competence-page">
-                  <div className="competence-page-head">
-                    <h2>{currentCompetence.title}</h2>
-                    <p>{currentCompetence.description}</p>
-                    <p className="page-counter">
-                      Page {selectedCompetence + 1}/{currentYear.competences.length}
-                    </p>
-                  </div>
+                <div className="competence-wrapper">
+                  {(() => {
+                    const heroImg = getCompetenceHeroImage(currentCompetence)
+                    if (heroImg) {
+                      return (
+                        <section className="competence-hero">
+                          <img src={heroImg} alt={currentCompetence.title} />
+                        </section>
+                      )
+                    }
+                    return null
+                  })()}
 
-                  <section className="legend-block" aria-label="Légende des tableaux de compétences">
-                    <h3>Légende du tableau</h3>
-                    <div className="legend-grid">
-                      <div className="legend-item legend-na">
-                        <strong>Non acquis</strong>
-                        <span>Niveau initial de l'AC</span>
-                      </div>
-                      <div className="legend-item legend-eca">
-                        <strong>En cours d'acquisition</strong>
-                        <span>Niveau intermédiaire en progression</span>
-                      </div>
-                      <div className="legend-item legend-a">
-                        <strong>Acquis (néon)</strong>
-                        <span>Niveau validé et mis en valeur</span>
-                      </div>
+                  <div className="competence-page">
+                    <div className="competence-page-head">
+                      <h2>{currentCompetence.title}</h2>
+                      <p>{currentCompetence.description}</p>
+                      <p className="page-counter">
+                        Page {selectedCompetence + 1}/{currentYear.competences.length}
+                      </p>
                     </div>
-                    <p className="legend-note">
-                      Évaluation figée (non modifiable): niveau actuel défini sur Acquis, sauf quelques AC en En cours.
-                    </p>
-                  </section>
 
-                  <section className="in-progress-block" aria-label="Compétences actuellement en cours">
-                    <h3>AC actuellement en cours d'acquisition</h3>
-                    {inProgressAcs.length === 0 ? (
-                      <p>Aucune AC en cours sur cette compétence.</p>
-                    ) : (
-                      <ul>
-                        {inProgressAcs.map((item) => (
-                          <li key={item.id}>{item.id} - {item.title}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </section>
+                    <section className="legend-block" aria-label="Légende des tableaux de compétences">
+                      <h3>Légende du tableau</h3>
+                      <div className="legend-grid">
+                        <div className="legend-item legend-na">
+                          <strong>Non acquis</strong>
+                          <span>Niveau initial de l'AC</span>
+                        </div>
+                        <div className="legend-item legend-eca">
+                          <strong>En cours d'acquisition</strong>
+                          <span>Niveau intermédiaire en progression</span>
+                        </div>
+                        <div className="legend-item legend-a">
+                          <strong>Acquis (néon)</strong>
+                          <span>Niveau validé et mis en valeur</span>
+                        </div>
+                      </div>
+                      <p className="legend-note">
+                        Évaluation figée (non modifiable): niveau actuel défini sur Acquis, sauf quelques AC en En cours.
+                      </p>
+                    </section>
 
-                  <section className="ac-navigator" aria-label="Vue d'ensemble des AC">
-                    <h3>Aperçu des AC</h3>
-                    <div className="ac-cards-grid">
-                      {currentCompetence.acs.map((ac) => {
-                        const currentStep = getCurrentStep(ac)
-                        const stepLabel =
-                          currentStep === 1 ? 'Non acquis' : currentStep === 2 ? 'En cours' : 'Acquis'
-                        const stepClass =
-                          currentStep === 1 ? 'status-na' : currentStep === 2 ? 'status-eca' : 'status-a'
+                    <section className="in-progress-block" aria-label="Compétences actuellement en cours">
+                      <h3>AC actuellement en cours d'acquisition</h3>
+                      {inProgressAcs.length === 0 ? (
+                        <p>Aucune AC en cours sur cette compétence.</p>
+                      ) : (
+                        <ul>
+                          {inProgressAcs.map((item) => (
+                            <li key={item.id}>{item.id} - {item.title}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </section>
 
-                        return (
-                          <div key={`card-${ac.id}`} className={`ac-card ${stepClass}`}>
-                            <div className="ac-card-header">
-                              <span className="ac-id">{ac.id}</span>
-                              <span className={`ac-status-badge ${stepClass}`}>{stepLabel}</span>
-                            </div>
-                            <h4 className="ac-card-title">{ac.title}</h4>
+                    <section className="ac-navigator" aria-label="Vue d'ensemble des AC">
+                      <h3>Aperçu des AC</h3>
+                      <div className="ac-cards-grid">
+                        {currentCompetence.acs.map((ac) => {
+                          const currentStep = getCurrentStep(ac)
+                          const stepLabel =
+                            currentStep === 1
+                              ? 'Non acquis'
+                              : currentStep === 2
+                                ? 'En cours'
+                                : 'Acquis'
+                          const stepClass =
+                            currentStep === 1
+                              ? 'status-na'
+                              : currentStep === 2
+                                ? 'status-eca'
+                                : 'status-a'
+
+                          return (
+                            <div key={`card-${ac.id}`} className={`ac-card ${stepClass}`}>
+                              <div className="ac-card-header">
+                                <span className="ac-id">{ac.id}</span>
+                                <span className={`ac-status-badge ${stepClass}`}>{stepLabel}</span>
+                              </div>
+                              <h4 className="ac-card-title">{ac.title}</h4>
                             {ac.shortDescription && (
                               <p className="ac-card-desc">{ac.shortDescription}</p>
                             )}
@@ -307,40 +333,49 @@ export default function Competences() {
 
                   {currentCompetence.evidences && currentCompetence.evidences.length > 0 && (
                     <section className="evidences-block">
-                      <h3>Emplacement / Preuves</h3>
-                      <ul className="evidence-list">
-                        {currentCompetence.evidences.map((evidence, idx) => {
-                          const label = (evidence || '').split('/').pop() || evidence
-
-                          if (isImagePath(evidence)) {
-                            const imageSrc = normalizePublicPath(evidence)
-                            return (
-                              <li key={`ev-${idx}`} className="evidence-item evidence-image-item">
-                                <a href={imageSrc} target="_blank" rel="noreferrer">
-                                  <img src={imageSrc} alt={label} loading="lazy" />
-                                  <span>{label}</span>
-                                </a>
-                              </li>
-                            )
-                          }
-
-                          if (isAbsoluteUrl(evidence)) {
-                            return (
-                              <li key={`ev-${idx}`} className="evidence-item">
-                                <a href={evidence} target="_blank" rel="noreferrer">
-                                  {evidence}
-                                </a>
-                              </li>
-                            )
-                          }
-
-                          return (
-                            <li key={`ev-${idx}`} className="evidence-item">
-                              {evidence}
-                            </li>
-                          )
-                        })}
-                      </ul>
+                      <h3>Preuves & Ressources</h3>
+                      
+                      {(() => {
+                        const otherImgs = getOtherImages(currentCompetence)
+                        const urlLinks = currentCompetence.evidences.filter((ev) => /^https?:\/\//i.test(ev))
+                        
+                        return (
+                          <>
+                            {otherImgs.length > 0 && (
+                              <div className="evidence-gallery">
+                                <div className="gallery-grid">
+                                  {otherImgs.map((imgPath, idx) => {
+                                    const label = (imgPath || '').split('/').pop() || `Image ${idx + 1}`
+                                    return (
+                                      <div key={`img-${idx}`} className="gallery-item">
+                                        <a href={imgPath} target="_blank" rel="noreferrer" className="gallery-link">
+                                          <img src={imgPath} alt={label} loading="lazy" />
+                                          <div className="gallery-label">{label}</div>
+                                        </a>
+                                      </div>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            )}
+                            
+                            {urlLinks.length > 0 && (
+                              <div className="evidence-links">
+                                <h4>Ressources externes</h4>
+                                <ul>
+                                  {urlLinks.map((url, idx) => (
+                                    <li key={`link-${idx}`}>
+                                      <a href={url} target="_blank" rel="noreferrer">
+                                        🔗 {url.split('/').slice(2, 4).join(' - ')}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </>
+                        )
+                      })()}
                     </section>
                   )}
 
@@ -350,6 +385,7 @@ export default function Competences() {
                       <p>{currentCompetence.comment}</p>
                     </section>
                   )}
+                </div>
                 </div>
               )}
             </>
