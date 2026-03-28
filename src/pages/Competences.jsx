@@ -128,6 +128,13 @@ export default function Competences() {
     setSelectedCompetence(idx)
   }
 
+  const isAbsoluteUrl = (value) => /^https?:\/\//i.test(value || '')
+
+  const isImagePath = (value) =>
+    typeof value === 'string' && value.startsWith('/') && /\.(png|jpe?g|webp|gif|svg)$/i.test(value)
+
+  const normalizePublicPath = (value) => encodeURI(value)
+
   if (!years.length) {
     return <div className="competences-loading">Chargement des competences...</div>
   }
@@ -275,10 +282,38 @@ export default function Competences() {
                   {currentCompetence.evidences && currentCompetence.evidences.length > 0 && (
                     <section className="evidences-block">
                       <h3>Emplacement / Preuves</h3>
-                      <ul>
-                        {currentCompetence.evidences.map((evidence, idx) => (
-                          <li key={`ev-${idx}`}>{evidence}</li>
-                        ))}
+                      <ul className="evidence-list">
+                        {currentCompetence.evidences.map((evidence, idx) => {
+                          const label = (evidence || '').split('/').pop() || evidence
+
+                          if (isImagePath(evidence)) {
+                            const imageSrc = normalizePublicPath(evidence)
+                            return (
+                              <li key={`ev-${idx}`} className="evidence-item evidence-image-item">
+                                <a href={imageSrc} target="_blank" rel="noreferrer">
+                                  <img src={imageSrc} alt={label} loading="lazy" />
+                                  <span>{label}</span>
+                                </a>
+                              </li>
+                            )
+                          }
+
+                          if (isAbsoluteUrl(evidence)) {
+                            return (
+                              <li key={`ev-${idx}`} className="evidence-item">
+                                <a href={evidence} target="_blank" rel="noreferrer">
+                                  {evidence}
+                                </a>
+                              </li>
+                            )
+                          }
+
+                          return (
+                            <li key={`ev-${idx}`} className="evidence-item">
+                              {evidence}
+                            </li>
+                          )
+                        })}
                       </ul>
                     </section>
                   )}

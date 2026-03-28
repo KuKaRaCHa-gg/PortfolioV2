@@ -96,9 +96,10 @@
             }
           ],
           "evidences": [
-            "Capture_decran_2024-05-31_082034.png",
-            "INTERFACE MORPION - Capture d'écran 2024-05-10 103903.png",
-            "INTERFACE Bibliothèque jeu - Capture d'écran 2024-05-19 150927.png"
+            "/images/CompetancesETC/Competance1.png",
+            "/images/CompetancesETC/An1/c1/InterfaceBibliothequeJeu.png",
+            "/images/CompetancesETC/An1/c1/InterfaceMortPion.png",
+            "/images/CompetancesETC/An1/c1/ProgrammationDuMortPion.png"
           ]
         },
         {
@@ -171,7 +172,7 @@
             }
           ],
           "evidences": [
-            "Capture_decran_2024-05-31_082747.png.1"
+            "/images/CompetancesETC/competance2.png"
           ]
         },
         {
@@ -249,9 +250,10 @@
             }
           ],
           "evidences": [
-            "Guide d'installation VM - Capture d'écran 2024-06-04 174144.png",
-            "Lien Canva guide VM",
-            "Lien cahier des charges complet du site BDE"
+            "/images/CompetancesETC/Competance3.png",
+            "/images/CompetancesETC/An1/c3/Capture d'écran DocInstallLinuxVM.png",
+            "https://www.canva.com/design/DAF24JzYnYU/5_nAQ2rvPSvLdZgWmSpk7w/edit?utm_content=DAF24JzYnYU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "https://docs.google.com/document/d/1KPlIOGER6x0kMApIcizpNhtD39G6rBy9BWTGLGgGgyw/edit?usp=sharing"
           ]
         },
         {
@@ -312,8 +314,9 @@
             }
           ],
           "evidences": [
-            "Graphe GDF - Capture d'écran 2024-06-04 174842.png",
-            "SAE BASE DE DONNEES - lien Drive"
+            "/images/CompetancesETC/Competance4.png",
+            "/images/CompetancesETC/An1/c4/GrapheGDFpng.png",
+            "https://drive.google.com/drive/folders/1s8717wdY1zshWEbDsGkocz-DRtWSQ7h4?usp=sharing"
           ]
         },
         {
@@ -384,6 +387,9 @@
                 ]
               }
             }
+          ],
+          "evidences": [
+            "/images/CompetancesETC/Competance5.png"
           ]
         },
         {
@@ -460,6 +466,9 @@
                 ]
               }
             }
+          ],
+          "evidences": [
+            "/images/CompetancesETC/Competance6.png"
           ]
         },
         {
@@ -532,12 +541,11 @@
             }
           ],
           "evidences": [
-            "Montmartre - IMG_20230718_154347.jpg",
-            "Parc Botanique Anger - IMG_20240526_140800.jpg",
-            "Voyage Paris - lien Drive",
-            "rive DROITE - 9782253243663-001-T.jpeg",
-            "METRO CITE - 9782253243700-001-T.jpeg",
-            "Livre Metro Rive Gauche - 9782253107040-001-T.jpeg"
+            "/images/CompetancesETC/An1/c7/ChatEmpecheReviser.jpg",
+            "/images/CompetancesETC/An1/c7/ecrit plus preuves1.png",
+            "/images/CompetancesETC/An1/c7/Livre Metro Rive Gauche.jpeg",
+            "/images/CompetancesETC/An1/c7/MontLartrejpg.jpg",
+            "/images/CompetancesETC/An1/c7/ParcBotaniqueAnger.jpg"
           ]
         }
       ]
@@ -855,36 +863,96 @@
               "id": "AC1",
               "title": "Optimiser les modèles de données de l'entreprise",
               "levels": {
-                "nonAcquis": ["Normalisation non maîtrisée", "Relations mal définies", "Aucun modèle produit", "Perf non prises en compte"],
-                "enCours": ["Normalisation partielle", "Clés avec erreurs", "Modélisation basique", "Optimisation limitée"],
-                "acquis": ["Normalisation avancée", "Modèles optimisés", "Relations complexes maîtrisées", "Requêtes optimisées"]
+                "nonAcquis": [
+                  "Normalisation non maîtrisée",
+                  "Relations mal définies",
+                  "Aucun modèle produit",
+                  "Perf non prises en compte"
+                ],
+                "enCours": [
+                  "Normalisation partielle",
+                  "Clés avec erreurs",
+                  "Modélisation basique",
+                  "Optimisation limitée"
+                ],
+                "acquis": [
+                  "Normalisation avancée",
+                  "Modèles optimisés",
+                  "Relations complexes maîtrisées",
+                  "Requêtes optimisées"
+                ]
               }
             },
             {
               "id": "AC2",
               "title": "Assurer la confidentialité des données",
               "levels": {
-                "nonAcquis": ["Données sensibles en clair", "Aucune politique d'accès", "Sauvegardes non vérifiées", "Intégrité non contrôlée"],
-                "enCours": ["Chiffrement basique", "Contrôles d'accès simples", "Sauvegardes régulières", "Surveillance partielle"],
-                "acquis": ["Chiffrement avancé", "Gestion rigoureuse des droits", "Intégrité assurée", "Sauvegardes chiffrées et contrôlées"]
+                "nonAcquis": [
+                  "Données sensibles en clair",
+                  "Aucune politique d'accès",
+                  "Sauvegardes non vérifiées",
+                  "Intégrité non contrôlée"
+                ],
+                "enCours": [
+                  "Chiffrement basique",
+                  "Contrôles d'accès simples",
+                  "Sauvegardes régulières",
+                  "Surveillance partielle"
+                ],
+                "acquis": [
+                  "Chiffrement avancé",
+                  "Gestion rigoureuse des droits",
+                  "Intégrité assurée",
+                  "Sauvegardes chiffrées et contrôlées"
+                ]
               }
             },
             {
               "id": "AC3",
               "title": "Organiser la restitution de données",
               "levels": {
-                "nonAcquis": ["Données illisibles", "Aucun outil de visualisation", "Code désorganisé", "Besoins utilisateurs ignorés"],
-                "enCours": ["Graphiques basiques", "Extraction non optimisée", "Expérimente des outils", "Visuels partiels"],
-                "acquis": ["Bibliothèques avancées", "Graphiques clairs", "Code organisé", "Visualisations adaptées"]
+                "nonAcquis": [
+                  "Données illisibles",
+                  "Aucun outil de visualisation",
+                  "Code désorganisé",
+                  "Besoins utilisateurs ignorés"
+                ],
+                "enCours": [
+                  "Graphiques basiques",
+                  "Extraction non optimisée",
+                  "Expérimente des outils",
+                  "Visuels partiels"
+                ],
+                "acquis": [
+                  "Bibliothèques avancées",
+                  "Graphiques clairs",
+                  "Code organisé",
+                  "Visualisations adaptées"
+                ]
               }
             },
             {
               "id": "AC4",
               "title": "Manipuler des données hétérogènes",
               "levels": {
-                "nonAcquis": ["Formats non identifiés", "Intégration échouée", "Aucun outil", "Erreurs non corrigées"],
-                "enCours": ["JSON/CSV simples", "Fusion partielle", "Outils basiques", "Erreurs de conversion"],
-                "acquis": ["JSON/XML/CSV maîtrisés", "Fusion efficace", "Outils avancés", "Fiabilité et cohérence assurées"]
+                "nonAcquis": [
+                  "Formats non identifiés",
+                  "Intégration échouée",
+                  "Aucun outil",
+                  "Erreurs non corrigées"
+                ],
+                "enCours": [
+                  "JSON/CSV simples",
+                  "Fusion partielle",
+                  "Outils basiques",
+                  "Erreurs de conversion"
+                ],
+                "acquis": [
+                  "JSON/XML/CSV maîtrisés",
+                  "Fusion efficace",
+                  "Outils avancés",
+                  "Fiabilité et cohérence assurées"
+                ]
               }
             }
           ],
@@ -902,36 +970,96 @@
               "id": "AC1",
               "title": "Identifier les processus d'une organisation",
               "levels": {
-                "nonAcquis": ["Ne distingue pas les processus", "Pas d'analyse métier", "Ignore les interactions SI", "Ne repère pas les flux"],
-                "enCours": ["Analyse incomplète", "Besoins métier partiels", "Cartographie partielle", "Outils basiques UML"],
-                "acquis": ["Processus identifiés précisément", "Flux cartographiés", "Besoins analysés", "Améliorations concrètes proposées"]
+                "nonAcquis": [
+                  "Ne distingue pas les processus",
+                  "Pas d'analyse métier",
+                  "Ignore les interactions SI",
+                  "Ne repère pas les flux"
+                ],
+                "enCours": [
+                  "Analyse incomplète",
+                  "Besoins métier partiels",
+                  "Cartographie partielle",
+                  "Outils basiques UML"
+                ],
+                "acquis": [
+                  "Processus identifiés précisément",
+                  "Flux cartographiés",
+                  "Besoins analysés",
+                  "Améliorations concrètes proposées"
+                ]
               }
             },
             {
               "id": "AC2",
               "title": "Formaliser les besoins client/utilisateur",
               "levels": {
-                "nonAcquis": ["Attentes non recueillies", "Aucune documentation", "Spécifications ignorées", "Parties prenantes non consultées"],
-                "enCours": ["Besoins partiels", "Specs imprécises", "Outils basiques", "Formalisation incomplète"],
-                "acquis": ["Besoins clairement formalisés", "Specs détaillées", "Exigences structurées", "Retours intégrés"]
+                "nonAcquis": [
+                  "Attentes non recueillies",
+                  "Aucune documentation",
+                  "Spécifications ignorées",
+                  "Parties prenantes non consultées"
+                ],
+                "enCours": [
+                  "Besoins partiels",
+                  "Specs imprécises",
+                  "Outils basiques",
+                  "Formalisation incomplète"
+                ],
+                "acquis": [
+                  "Besoins clairement formalisés",
+                  "Specs détaillées",
+                  "Exigences structurées",
+                  "Retours intégrés"
+                ]
               }
             },
             {
               "id": "AC3",
               "title": "Identifier la faisabilité d'un projet informatique",
               "levels": {
-                "nonAcquis": ["Contraintes ignorées", "Ressources humaines ignorées", "Coûts/délais non évalués", "Aucune analyse des risques"],
-                "enCours": ["Faisabilité partielle", "Contraintes temps/budget partielles", "Estimation simple des ressources", "Risques majeurs identifiés"],
-                "acquis": ["Faisabilité complète", "Coûts/délais précis", "Ressources planifiées", "Analyse de risques mise en place"]
+                "nonAcquis": [
+                  "Contraintes ignorées",
+                  "Ressources humaines ignorées",
+                  "Coûts/délais non évalués",
+                  "Aucune analyse des risques"
+                ],
+                "enCours": [
+                  "Faisabilité partielle",
+                  "Contraintes temps/budget partielles",
+                  "Estimation simple des ressources",
+                  "Risques majeurs identifiés"
+                ],
+                "acquis": [
+                  "Faisabilité complète",
+                  "Coûts/délais précis",
+                  "Ressources planifiées",
+                  "Analyse de risques mise en place"
+                ]
               }
             },
             {
               "id": "AC4",
               "title": "Définir une démarche de suivi de projet",
               "levels": {
-                "nonAcquis": ["Aucun outil de suivi", "Tâches non suivies", "Risques/retards non identifiés", "Aucune documentation"],
-                "enCours": ["Outils simples Kanban/Gantt", "Suivi partiel", "Collecte sans analyse", "Rapports irréguliers"],
-                "acquis": ["Outils avancés", "Suivi rigoureux", "Anticipation via indicateurs", "Rapports réguliers et détaillés"]
+                "nonAcquis": [
+                  "Aucun outil de suivi",
+                  "Tâches non suivies",
+                  "Risques/retards non identifiés",
+                  "Aucune documentation"
+                ],
+                "enCours": [
+                  "Outils simples Kanban/Gantt",
+                  "Suivi partiel",
+                  "Collecte sans analyse",
+                  "Rapports irréguliers"
+                ],
+                "acquis": [
+                  "Outils avancés",
+                  "Suivi rigoureux",
+                  "Anticipation via indicateurs",
+                  "Rapports réguliers et détaillés"
+                ]
               }
             }
           ],
@@ -950,36 +1078,96 @@
               "id": "AC1",
               "title": "Comprendre la structure de l'informatique dans une organisation",
               "levels": {
-                "nonAcquis": ["Rôles des services non distingués", "Structure DSI/ESN ignorée", "Missions IT inconnues", "Interactions non comprises"],
-                "enCours": ["Acteurs principaux identifiés", "Rôles partiellement compris", "Missions IT approximatives", "Interactions partiellement prises en compte"],
-                "acquis": ["Structure et rôles maîtrisés", "Missions et responsabilités comprises", "Interactions analysées", "Place stratégique identifiée"]
+                "nonAcquis": [
+                  "Rôles des services non distingués",
+                  "Structure DSI/ESN ignorée",
+                  "Missions IT inconnues",
+                  "Interactions non comprises"
+                ],
+                "enCours": [
+                  "Acteurs principaux identifiés",
+                  "Rôles partiellement compris",
+                  "Missions IT approximatives",
+                  "Interactions partiellement prises en compte"
+                ],
+                "acquis": [
+                  "Structure et rôles maîtrisés",
+                  "Missions et responsabilités comprises",
+                  "Interactions analysées",
+                  "Place stratégique identifiée"
+                ]
               }
             },
             {
               "id": "AC2",
               "title": "Intégrer une équipe informatique dans une organisation",
               "levels": {
-                "nonAcquis": ["Rôles non compris", "Pas de participation", "Pas d'adaptation", "Outils collaboratifs ignorés"],
-                "enCours": ["Rôles partiellement identifiés", "Participation faible", "Expérimente Git/Trello", "Adaptation partielle"],
-                "acquis": ["Intégration efficace", "Collaboration active", "Outils adaptés utilisés", "Adaptation rapide"]
+                "nonAcquis": [
+                  "Rôles non compris",
+                  "Pas de participation",
+                  "Pas d'adaptation",
+                  "Outils collaboratifs ignorés"
+                ],
+                "enCours": [
+                  "Rôles partiellement identifiés",
+                  "Participation faible",
+                  "Expérimente Git/Trello",
+                  "Adaptation partielle"
+                ],
+                "acquis": [
+                  "Intégration efficace",
+                  "Collaboration active",
+                  "Outils adaptés utilisés",
+                  "Adaptation rapide"
+                ]
               }
             },
             {
               "id": "AC3",
               "title": "Mobiliser les compétences interpersonnelles",
               "levels": {
-                "nonAcquis": ["Ne communique pas", "Travail isolé", "Retours ignorés", "Évite les réunions"],
-                "enCours": ["Échanges ponctuels", "Participation peu efficace", "Retours partiellement appliqués", "Difficultés d'organisation"],
-                "acquis": ["Communication claire", "Collaboration active", "Retours pris en compte", "Environnement positif favorisé"]
+                "nonAcquis": [
+                  "Ne communique pas",
+                  "Travail isolé",
+                  "Retours ignorés",
+                  "Évite les réunions"
+                ],
+                "enCours": [
+                  "Échanges ponctuels",
+                  "Participation peu efficace",
+                  "Retours partiellement appliqués",
+                  "Difficultés d'organisation"
+                ],
+                "acquis": [
+                  "Communication claire",
+                  "Collaboration active",
+                  "Retours pris en compte",
+                  "Environnement positif favorisé"
+                ]
               }
             },
             {
               "id": "AC4",
               "title": "Rendre compte de son activité professionnelle",
               "levels": {
-                "nonAcquis": ["Aucun compte rendu", "Informations mal structurées", "Délais non respectés", "Aucun support adapté"],
-                "enCours": ["Comptes rendus simples", "Informations peu hiérarchisées", "Supports basiques", "Partage irrégulier"],
-                "acquis": ["Rapports détaillés", "Informations claires", "Supports adaptés", "Rendu régulier et dans les délais"]
+                "nonAcquis": [
+                  "Aucun compte rendu",
+                  "Informations mal structurées",
+                  "Délais non respectés",
+                  "Aucun support adapté"
+                ],
+                "enCours": [
+                  "Comptes rendus simples",
+                  "Informations peu hiérarchisées",
+                  "Supports basiques",
+                  "Partage irrégulier"
+                ],
+                "acquis": [
+                  "Rapports détaillés",
+                  "Informations claires",
+                  "Supports adaptés",
+                  "Rendu régulier et dans les délais"
+                ]
               }
             }
           ],
@@ -997,36 +1185,89 @@
               "id": "AC1",
               "title": "Rendre compte de son activité et améliorer l'expression",
               "levels": {
-                "nonAcquis": ["N'arrive pas à formuler son activité", "Comptes rendus non structurés", "Difficultés non mentionnées", "Pas d'indicateurs"],
-                "enCours": ["Comptes rendus limités", "Progrès mentionnés sans analyse", "Outils basiques", "Partage irrégulier"],
-                "acquis": ["Rapports détaillés et structurés", "Indicateurs pertinents", "Présentations claires", "Analyse critique complète"]
+                "nonAcquis": [
+                  "N'arrive pas à formuler son activité",
+                  "Comptes rendus non structurés",
+                  "Difficultés non mentionnées",
+                  "Pas d'indicateurs"
+                ],
+                "enCours": [
+                  "Comptes rendus limités",
+                  "Progrès mentionnés sans analyse",
+                  "Outils basiques",
+                  "Partage irrégulier"
+                ],
+                "acquis": [
+                  "Rapports détaillés et structurés",
+                  "Indicateurs pertinents",
+                  "Présentations claires",
+                  "Analyse critique complète"
+                ]
               }
             },
             {
               "id": "AC2",
               "title": "Cultiver l'esprit et la connaissance",
               "levels": {
-                "nonAcquis": ["Ne regarde pas de vidéos éducatives", "Connaît peu de langues", "Ne crée pas de vidéos"],
-                "enCours": ["Regarde des vidéos parfois", "Connaît quelques bases de langues", "Crée des vidéos parfois"],
-                "acquis": ["Vidéos éducatives régulières", "Plusieurs langues pratiquées", "Vidéos d'entraînement régulières"]
+                "nonAcquis": [
+                  "Ne regarde pas de vidéos éducatives",
+                  "Connaît peu de langues",
+                  "Ne crée pas de vidéos"
+                ],
+                "enCours": [
+                  "Regarde des vidéos parfois",
+                  "Connaît quelques bases de langues",
+                  "Crée des vidéos parfois"
+                ],
+                "acquis": [
+                  "Vidéos éducatives régulières",
+                  "Plusieurs langues pratiquées",
+                  "Vidéos d'entraînement régulières"
+                ]
               }
             },
             {
               "id": "AC3",
               "title": "Développer des méthodes de travail efficaces",
               "levels": {
-                "nonAcquis": ["Pas de tutoriels", "Conseils non suivis", "Devoirs non corrigés"],
-                "enCours": ["Tutoriels parfois", "Conseils parfois suivis", "Sources partiellement diversifiées"],
-                "acquis": ["Tutoriels réguliers", "Conseils appliqués systématiquement", "Sources variées", "Entraînement régulier"]
+                "nonAcquis": [
+                  "Pas de tutoriels",
+                  "Conseils non suivis",
+                  "Devoirs non corrigés"
+                ],
+                "enCours": [
+                  "Tutoriels parfois",
+                  "Conseils parfois suivis",
+                  "Sources partiellement diversifiées"
+                ],
+                "acquis": [
+                  "Tutoriels réguliers",
+                  "Conseils appliqués systématiquement",
+                  "Sources variées",
+                  "Entraînement régulier"
+                ]
               }
             },
             {
               "id": "AC4",
               "title": "Activités de lecture et écriture",
               "levels": {
-                "nonAcquis": ["Ne lit pas", "N'entraîne pas son écriture", "N'écrit pas régulièrement"],
-                "enCours": ["Lit parfois", "Écriture travaillée parfois", "Écrit parfois"],
-                "acquis": ["Lit régulièrement", "Améliore activement son écriture", "Écrit régulièrement", "Écoute des livres audio"]
+                "nonAcquis": [
+                  "Ne lit pas",
+                  "N'entraîne pas son écriture",
+                  "N'écrit pas régulièrement"
+                ],
+                "enCours": [
+                  "Lit parfois",
+                  "Écriture travaillée parfois",
+                  "Écrit parfois"
+                ],
+                "acquis": [
+                  "Lit régulièrement",
+                  "Améliore activement son écriture",
+                  "Écrit régulièrement",
+                  "Écoute des livres audio"
+                ]
               }
             }
           ],
