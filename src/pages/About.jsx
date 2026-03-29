@@ -7,11 +7,20 @@ import '../styles/about.css'
 export default function About() {
   const [profile, setProfile] = useState(null)
   const [techLogosOpen, setTechLogosOpen] = useState(false) // État pour accordéon mobile
+  const resolveAssetPath = (path) => {
+    if (!path || /^https?:\/\//i.test(path)) return path
+    return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+  }
 
   useEffect(()=>{
-    fetch('/profile.json')
+    fetch(`${import.meta.env.BASE_URL}profile.json`)
       .then(r=>r.json())
-      .then(setProfile)
+      .then((data) => {
+        if (data?.avatar) {
+          data.avatar = resolveAssetPath(data.avatar)
+        }
+        setProfile(data)
+      })
       .catch(err => {
         console.error('Erreur chargement profile:', err)
         setProfile({}) // Évite le chargement infini

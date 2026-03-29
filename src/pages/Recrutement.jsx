@@ -79,6 +79,11 @@ const recrutmentImages = [
 ]
 
 export default function Recrutement() {
+  const resolveAssetPath = (path) => {
+    if (!path || /^https?:\/\//i.test(path)) return path
+    return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+  }
+
   return (
     <div className="pro-page">
       <ExplorerWindow
@@ -157,9 +162,10 @@ export default function Recrutement() {
             <div className="pro-image-grid">
               {recrutmentImages.map((imgPath) => {
                 const label = imgPath.split('/').pop() || 'Image'
+                const displayPath = encodeURI(resolveAssetPath(imgPath))
                 return (
-                  <a key={imgPath} href={encodeURI(imgPath)} target="_blank" rel="noreferrer" className="pro-image-card">
-                    <img src={encodeURI(imgPath)} alt={label} loading="lazy" />
+                  <a key={imgPath} href={displayPath} target="_blank" rel="noreferrer" className="pro-image-card">
+                    <img src={displayPath} alt={label} loading="lazy" />
                     <span>{label}</span>
                   </a>
                 )

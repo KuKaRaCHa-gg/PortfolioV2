@@ -8,11 +8,25 @@ export default function Projects() {
   const [projects, setProjects] = useState([])
   const [filter, setFilter] = useState('all')
 
+  const resolveAssetPath = (path) => {
+    if (!path || /^https?:\/\//i.test(path)) return path
+    return `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+  }
+
   useEffect(() => {
     // Edit `public/projects.json` to add or update projects displayed here
-    fetch('/projects.json')
+    fetch(`${import.meta.env.BASE_URL}projects.json`)
       .then(r => r.json())
-      .then(setProjects)
+      .then((data) => {
+        const normalized = (data || []).map((project) => ({
+          ...project,
+          images: (project.images || []).map((img) => ({
+            ...img,
+            url: resolveAssetPath(img.url)
+          }))
+        }))
+        setProjects(normalized)
+      })
       .catch(() => setProjects([]))
   }, [])
 

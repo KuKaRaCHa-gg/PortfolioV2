@@ -9,7 +9,7 @@ export default function Competences() {
   const [selectedCompetence, setSelectedCompetence] = useState(0)
 
   useEffect(() => {
-    fetch('/competences.json')
+    fetch(`${import.meta.env.BASE_URL}competences.json`)
       .then((res) => res.json())
       .then((data) => {
         setYears(data.years || [])
@@ -139,10 +139,15 @@ export default function Competences() {
     return `Description: ${label.replace(/[_-]+/g, ' ')}`
   }
 
+  const getEvidenceList = (comp) => {
+    if (!comp?.evidences) return []
+    return Array.isArray(comp.evidences) ? comp.evidences : [comp.evidences]
+  }
+
   const toDisplayPath = (path) => {
     if (!path) return ''
     if (/^https?:\/\//i.test(path)) return path
-    return encodeURI(path)
+    return encodeURI(`${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`)
   }
 
   const getCompetenceDescription = (comp, year, pageIndex, total) => {
@@ -354,12 +359,12 @@ export default function Competences() {
                     )})}
                   </div>
 
-                  {currentCompetence.evidences && currentCompetence.evidences.length > 0 && (
+                  {getEvidenceList(currentCompetence).length > 0 && (
                     <section className="evidences-block">
                       <h3>Preuves & Ressources</h3>
 
                       <ul className="evidence-list">
-                        {currentCompetence.evidences.map((ev, idx) => {
+                        {getEvidenceList(currentCompetence).map((ev, idx) => {
                           const isImage = /\.(png|jpe?g|webp|gif)(\?.*)?$/i.test(ev)
                           const label = getEvidenceLabel(ev, idx)
                           const displayPath = toDisplayPath(ev)
