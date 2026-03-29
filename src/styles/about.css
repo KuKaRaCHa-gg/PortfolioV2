@@ -467,6 +467,34 @@
   color: #2b3137;
 }
 
+/* Contraste local: les cartes About restent en theme sombre lisible */
+.about-page .experience-card.terminal-card,
+.about-page .education-card.terminal-card {
+  color: #b7f5d0;
+}
+
+.about-page .experience-card.terminal-card .experience-role,
+.about-page .experience-card.terminal-card .experience-year,
+.about-page .education-card.terminal-card strong,
+.about-page .education-card.terminal-card .education-note {
+  color: #b7f5d0;
+}
+
+.about-page .experience-card.terminal-card .experience-company,
+.about-page .experience-card.terminal-card .experience-details li,
+.about-page .education-card.terminal-card .education-status {
+  color: #8cc7a2;
+}
+
+.about-page .experience-card.terminal-card a,
+.about-page .education-card.terminal-card a,
+.about-page .experience-card.terminal-card span,
+.about-page .education-card.terminal-card span,
+.about-page .experience-card.terminal-card strong,
+.about-page .education-card.terminal-card strong {
+  text-shadow: none;
+}
+
 /* Favorite Technologies Section */
 .favorite-techs-section {
   margin: 3rem 0;
