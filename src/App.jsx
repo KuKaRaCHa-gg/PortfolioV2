@@ -21,8 +21,10 @@ export default function App() {
   const [route, setRoute] = useState('home')
   const [soundEnabled, setSoundEnabled] = useState(true)
   const [showFlyingCode, setShowFlyingCode] = useState(true)
+  const [secretUnlocked, setSecretUnlocked] = useState(false)
 
   const secretRoutes = ['competences', 'entreprise', 'recrutement']
+  const SECRET_KEY = '31MARS2026'
 
   // Initialiser les effets visuels au montage
   useEffect(() => {
@@ -30,9 +32,13 @@ export default function App() {
 
     // Debloque les pages secretes via URL, ex: ?key=31MARS2026&page=competences
     const params = new URLSearchParams(window.location.search)
+    const secretKey = params.get('key') || params.get('secret')
     const page = params.get('page')
+    const hasSecretAccess = secretKey === SECRET_KEY
 
-    if (page && secretRoutes.includes(page)) {
+    setSecretUnlocked(hasSecretAccess)
+
+    if (page && secretRoutes.includes(page) && hasSecretAccess) {
       setRoute(page)
     }
 
@@ -65,6 +71,12 @@ export default function App() {
 
   }, [])
 
+  useEffect(() => {
+    if (!secretUnlocked && secretRoutes.includes(route)) {
+      setRoute('home')
+    }
+  }, [route, secretUnlocked])
+
   const handleNavigation = (newRoute) => {
     soundManager.playBeep(600, 0.08)
     setRoute(newRoute)
@@ -81,7 +93,7 @@ export default function App() {
   return (
     <div className="terminal-root">
       <Header />
-      <Sidebar currentRoute={route} onNavigate={handleNavigation} showSecretPages />
+      <Sidebar currentRoute={route} onNavigate={handleNavigation} showSecretPages={secretUnlocked} />
       
       <Suspense fallback={<div style={{ padding: '1rem 1.5rem', color: '#8aff8a' }}>Chargement de la page...</div>}>
         {route === 'home' && <Home onEnter={() => handleNavigation('about')} />}
