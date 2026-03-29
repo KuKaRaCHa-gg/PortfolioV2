@@ -20,6 +20,7 @@ const Recrutement = lazy(() => import('./pages/Recrutement'))
 export default function App() {
   const [route, setRoute] = useState('home')
   const [soundEnabled, setSoundEnabled] = useState(true)
+  const [showFlyingCode, setShowFlyingCode] = useState(true)
 
   const secretRoutes = ['competences', 'entreprise', 'recrutement']
 
@@ -33,6 +34,33 @@ export default function App() {
 
     if (page && secretRoutes.includes(page)) {
       setRoute(page)
+    }
+
+    const mobileOrReduced = window.matchMedia('(max-width: 900px), (pointer: coarse), (prefers-reduced-motion: reduce)')
+    const syncExperienceMode = () => {
+      const shouldReduce = mobileOrReduced.matches
+      setShowFlyingCode(!shouldReduce)
+
+      if (shouldReduce && soundManager.enabled) {
+        const enabled = soundManager.toggle()
+        setSoundEnabled(enabled)
+      }
+    }
+
+    syncExperienceMode()
+
+    if (mobileOrReduced.addEventListener) {
+      mobileOrReduced.addEventListener('change', syncExperienceMode)
+    } else if (mobileOrReduced.addListener) {
+      mobileOrReduced.addListener(syncExperienceMode)
+    }
+
+    return () => {
+      if (mobileOrReduced.removeEventListener) {
+        mobileOrReduced.removeEventListener('change', syncExperienceMode)
+      } else if (mobileOrReduced.removeListener) {
+        mobileOrReduced.removeListener(syncExperienceMode)
+      }
     }
 
   }, [])
@@ -71,7 +99,7 @@ export default function App() {
       <Footer />
       
       {/* Code volant en arrière-plan */}
-      <FlyingCode />
+      {showFlyingCode && <FlyingCode />}
       
       {/* Bouton de contrôle du son */}
       <button 
