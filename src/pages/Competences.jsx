@@ -179,6 +179,91 @@ export default function Competences() {
     return ac?.shortDescription || 'Mettre en oeuvre la competence avec rigueur et justification technique.'
   }
 
+  const getSocioCulturalActivities = (yearId, compId) => {
+    const catalog = {
+      annee1: {
+        7: [
+          {
+            title: 'Club lecture techno-fiction',
+            summary: 'Animation d un mini-club autour de textes de science-fiction pour améliorer vocabulaire et argumentation.',
+            impact: 'Renforce la prise de parole et la capacité de synthèse.'
+          },
+          {
+            title: 'Atelier critique de film',
+            summary: 'Rédaction d une critique structurée (problématique, argument, conclusion) après projection.',
+            impact: 'Améliore l expression écrite et la logique argumentative.'
+          },
+          {
+            title: 'Podcast étudiant',
+            summary: 'Enregistrement d un court podcast sur un sujet culturel ou numérique avec conducteur éditorial.',
+            impact: 'Travaille la diction, la clarté et la structuration du message oral.'
+          }
+        ],
+        6: [
+          {
+            title: 'Organisation d un événement campus',
+            summary: 'Répartition des rôles, planning, communication interne et bilan collectif.',
+            impact: 'Développe coordination, entraide et leadership.'
+          }
+        ]
+      },
+      annee2: {
+        7: [
+          {
+            title: 'Journal de veille culturelle',
+            summary: 'Publication hebdomadaire de notes courtes: actualité tech, culture numérique, analyse critique.',
+            impact: 'Améliore la régularité d écriture et l esprit critique.'
+          },
+          {
+            title: 'Débat encadré FR/EN',
+            summary: 'Débat en binôme sur un sujet de société (IA, écologie numérique, inclusion).',
+            impact: 'Renforce l argumentation et l adaptation au public.'
+          },
+          {
+            title: 'Exposition photo commentée',
+            summary: 'Création d une mini-exposition avec cartels explicatifs et présentation orale.',
+            impact: 'Développe narration, sens esthétique et communication multimodale.'
+          }
+        ],
+        5: [
+          {
+            title: 'Projet solidaire local',
+            summary: 'Pilotage d une action associative avec planning, budget et rétrospective.',
+            impact: 'Travaille la gestion de projet dans un cadre réel.'
+          }
+        ]
+      },
+      annee3: {
+        7: [
+          {
+            title: 'Conférence flash professionnelle',
+            summary: 'Présentation de 5 minutes sur un sujet métier avec support visuel sobre.',
+            impact: 'Renforce posture pro et capacité de synthèse rapide.'
+          },
+          {
+            title: 'Atelier CV/Portfolio narratif',
+            summary: 'Réécriture du parcours sous forme de récit de compétences et preuves contextualisées.',
+            impact: 'Valorise l employabilité et la communication de l expérience.'
+          },
+          {
+            title: 'Médiation numérique intergénérationnelle',
+            summary: 'Animation d une séance d accompagnement aux outils numériques pour un public non expert.',
+            impact: 'Développe pédagogie, écoute active et communication claire.'
+          }
+        ],
+        6: [
+          {
+            title: 'Coordination événement tech-campus',
+            summary: 'Pilotage d une équipe mixte pour organiser une démonstration projet.',
+            impact: 'Consolide coordination, communication inter-équipe et restitution finale.'
+          }
+        ]
+      }
+    }
+
+    return (catalog[yearId] && catalog[yearId][compId]) || []
+  }
+
   if (!years.length) {
     return <div className="competences-loading">Chargement des competences...</div>
   }
@@ -358,6 +443,29 @@ export default function Competences() {
                       </section>
                     )})}
                   </div>
+
+                  {(() => {
+                    const socioActivities = getSocioCulturalActivities(currentYear?.id, Number(currentCompetence?.id))
+                    if (socioActivities.length === 0) return null
+
+                    return (
+                      <section className="socio-block" aria-label="Activités socio-culturelles proposées">
+                        <h3>Activités socio-culturelles proposées</h3>
+                        <p className="socio-intro">
+                          Suggestions d activités valorisables dans le portfolio pour renforcer les preuves de compétence.
+                        </p>
+                        <div className="socio-grid">
+                          {socioActivities.map((activity, index) => (
+                            <article key={`socio-${index}`} className="socio-card">
+                              <h4>{activity.title}</h4>
+                              <p>{activity.summary}</p>
+                              <p className="socio-impact">Impact: {activity.impact}</p>
+                            </article>
+                          ))}
+                        </div>
+                      </section>
+                    )
+                  })()}
 
                   {getEvidenceList(currentCompetence).length > 0 && (
                     <section className="evidences-block">
