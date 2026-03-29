@@ -1,8 +1,8 @@
 {
   "name": "Daniil MINEVICH",
   "age": 19,
-  "title": "Étudiant à IUT de Laval & Alternant Séché Alliance",
-  "summary": "Je suis étudiant en troisième année de BUT Informatique à Laval et je travaille en alternance chez Séché Alliance. J'avance pas à pas dans mon parcours en développant mes compétences en programmation, gestion de projet et systèmes d'information.",
+  "title": "Etudiant en BUT Informatique - Alternant IT chez Seche Alliance",
+  "summary": "Actuellement en troisieme annee de BUT Informatique a l IUT de Laval, je combine formation academique et alternance chez Seche Alliance. Je travaille sur des sujets de developpement, d automatisation et de gestion de postes, avec un objectif clair: livrer des solutions fiables, utiles et maintenables.",
   "avatar": "/images/PP&logo/PhotoProfileDaniilMinevich.png",
   "logo": "/images/PP&logo/LogoRond.png",
   "cvVideo": "https://youtu.be/YHs_1_mAryU",
@@ -104,49 +104,49 @@
   ],
   "activities": [
     {
-      "icon": "🎵",
-      "title": "Vibe Coding",
-      "description": "Je code souvent en écoutant de la musique, ça me met dans un flow créatif parfait pour résoudre des problèmes complexes"
+      "icon": "[MIND]",
+      "title": "Concentration & Flow",
+      "description": "Je travaille souvent en musique pour garder un rythme constant et rester concentre sur la resolution de problemes techniques. Cette routine m aide a mieux structurer mon raisonnement et a produire un code plus propre."
     },
     {
-      "icon": "",
-      "title": "Plugin Obsidian en cours",
-      "description": "Création d'un plugin Obsidian pour tracker ma progression personnelle avec stats, niveaux et visualisations (TypeScript)"
+      "icon": "[OBSID]",
+      "title": "Plugin Obsidian",
+      "description": "Je developpe un plugin Obsidian en TypeScript pour suivre ma progression personnelle avec des indicateurs clairs, des niveaux et des visualisations. L objectif est de creer un outil simple, utile et evolutif."
     },
     {
-      "icon": "[CODE]",
-      "title": "Web Coding",
-      "description": "J'adore faire du web coding pour me détendre. Ça me permet d'apprendre de nouvelles choses tout en créant des designs uniques"
+      "icon": "[WEB]",
+      "title": "Web Development",
+      "description": "Je realise regulierement des interfaces web pour progresser en integration, architecture front-end et experience utilisateur. Chaque projet est l occasion d ameliorer la qualite du design et la performance globale."
     },
     {
-      "icon": "🔧",
+      "icon": "[AUTO]",
       "title": "Scripting & Automatisation",
-      "description": "Développement de scripts Python pour automatiser et optimiser des outils internes chez Séché Alliance"
+      "description": "Je cree des scripts Python et PowerShell pour automatiser des taches recurrentes et fiabiliser les processus internes. Le but est de gagner du temps, limiter les erreurs et standardiser les actions techniques."
     },
     {
-      "icon": "🖥️",
+      "icon": "[MDM]",
       "title": "Device Management",
-      "description": "Gestion des droits utilisateurs et déploiement d'applications avec Microsoft Intune"
+      "description": "J interviens sur la gestion des postes avec Microsoft Intune: droits utilisateurs, packaging, deploiement d applications et suivi de la conformite. Je veille a un parc stable et coherent pour les equipes."
     },
     {
       "icon": "[GAME]",
-      "title": "Gaming",
-      "description": "Passionné de jeux vidéo : FPS (CS2, Valorant, Apex), Survival (Satisfactory, STALKER), RPG (Cyberpunk 2077, Dark Souls). Profil Steam : steamcommunity.com/id/MINEVICH"
+      "title": "Gaming & Analyse",
+      "description": "Le gaming reste un loisir important, avec une preference pour les FPS, les jeux de survie et les RPG. Cette pratique developpe ma reactivite, ma prise de decision et ma capacite a m adapter rapidement a un contexte changeant."
     },
     {
-      "icon": "🏀",
-      "title": "Basket",
-      "description": "Esprit d'équipe et discipline sportive"
+      "icon": "[TEAM]",
+      "title": "Sport Collectif",
+      "description": "Le basket m aide a entretenir discipline, regularite et esprit d equipe. Ces reflexes sont directement utiles dans un cadre projet ou la coordination et la communication sont essentielles."
     },
     {
-      "icon": "📜",
-      "title": "Certifications à venir",
-      "description": "Préparation de certifications professionnelles pour valider mes compétences en développement et cybersécurité"
+      "icon": "[CERT]",
+      "title": "Certifications",
+      "description": "Je prepare des certifications professionnelles pour consolider mes acquis en developpement, administration et securite. L objectif est de valider mes competences avec des standards reconnus."
     },
     {
-      "icon": "🎯",
-      "title": "Objectif professionnel",
-      "description": "Continuer à progresser et préparer un poste de développeur junior, avec possibilité de poursuite en école d'ingénieur"
+      "icon": "[GOAL]",
+      "title": "Projet Professionnel",
+      "description": "Mon objectif est d evoluer vers un poste de developpeur junior puis de poursuivre une progression continue sur des projets a impact, avec possibilite de specialisation ou de poursuite d etudes en ingenierie."
     }
   ],
   "games": [
