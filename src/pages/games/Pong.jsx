@@ -75,7 +75,12 @@ export default function Pong(){
     <div className="terminal-screen">
       <div className="terminal-frame">
         <h3>Pong (mini-jeu)</h3>
-        <canvas ref={canvasRef} style={{border:'2px solid #00FF00'}} />
+        <canvas
+          ref={canvasRef}
+          width={640}
+          height={360}
+          style={{ border: '2px solid #00FF00', width: '100%', maxWidth: '640px', aspectRatio: '16 / 9', background: '#001100' }}
+        />
         <div className="hint">Déplacez la souris pour contrôler le paddle vert</div>
       </div>
     </div>
