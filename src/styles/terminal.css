@@ -706,6 +706,118 @@ img {
   }
 }
 
+/* === MASTER RESPONSIVE & ECO OVERRIDES === */
+html {
+  font-size: clamp(14px, 0.7vw + 12px, 18px);
+}
+
+body,
+.terminal-root,
+.terminal-screen,
+.terminal-frame,
+.xp-window,
+.xp-content {
+  overflow-x: clip;
+}
+
+.terminal-frame,
+.xp-window,
+.project-card,
+.article-card,
+.tool-card,
+.gameoflife-container,
+.maze-container,
+.snake-container,
+.tetris-container,
+.graph3d-frame,
+.three-scene-container,
+.video-container,
+.cv-video-iframe {
+  contain: layout;
+}
+
+.terminal-frame,
+.terminal-header-enhanced,
+.terminal-foot,
+.project-card,
+.article-card,
+.tool-card,
+.terminal-card {
+  box-shadow: 0 0 0 1px rgba(111, 255, 166, 0.16), 0 0 10px rgba(0, 255, 128, 0.08);
+}
+
+.terminal-frame,
+.xp-window {
+  margin-inline: auto;
+}
+
+.cv-video-iframe,
+iframe {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .terminal-root {
+    padding-top: 4.25rem;
+  }
+
+  .terminal-screen {
+    padding: 0.35rem 0.2rem;
+  }
+
+  .terminal-frame,
+  .xp-window {
+    width: 95vw;
+    max-width: 95vw;
+    min-width: 0;
+    padding: 0.65rem 0.5rem;
+  }
+
+  .xp-titlebar,
+  .xp-toolbar,
+  .xp-statusbar {
+    font-size: 0.78rem;
+  }
+
+  .ultra-home-layout {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .ultra-menu {
+    width: 100%;
+  }
+
+  .ultra-menu-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .terminal-frame,
+  .xp-window {
+    width: min(95vw, 56rem);
+    max-width: min(95vw, 56rem);
+  }
+
+  .ultra-home-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1920px) {
+  .terminal-frame,
+  .xp-window {
+    width: min(78vw, 96rem);
+    max-width: 96rem;
+  }
+}
+
 /* === SKILLS SHOWCASE === */
 .skills-showcase {
   margin: 2rem 0;

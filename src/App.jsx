@@ -34,7 +34,9 @@ export default function App() {
     const savedEcoMode = window.localStorage.getItem('ecoMode') === '1'
     const lowPerfDevice = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4)
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const shouldEnableEco = savedEcoMode || lowPerfDevice || reducedMotion
+    const saveData = navigator.connection?.saveData === true
+    const slowNetwork = ['slow-2g', '2g'].includes(navigator.connection?.effectiveType || '')
+    const shouldEnableEco = savedEcoMode || lowPerfDevice || reducedMotion || saveData || slowNetwork
     setEcoMode(shouldEnableEco)
 
     // Debloque les pages secretes via URL, ex: ?key=31MARS2026&page=competences
