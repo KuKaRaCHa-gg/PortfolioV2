@@ -759,6 +759,45 @@ iframe {
   height: auto;
 }
 
+/* CLS final pass: reserve media slots before JS/canvas initialization */
+.gameoflife-canvas-wrapper,
+.maze-canvas-wrapper,
+.snake-canvas-wrapper,
+.graph3d-canvas,
+.three-scene-advanced,
+.tetris-main,
+.cv-video-iframe,
+iframe {
+  background: #001100;
+}
+
+.gameoflife-canvas-wrapper,
+.maze-canvas-wrapper,
+.snake-canvas-wrapper {
+  aspect-ratio: 1 / 1;
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  min-height: 12rem;
+}
+
+.gameoflife-canvas,
+.maze-canvas,
+.snake-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.tetris-main {
+  aspect-ratio: 1 / 2;
+  width: min(100%, 20rem);
+  min-height: 20rem;
+}
+
+.tetris-canvas {
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 480px) {
   .terminal-root {
     padding-top: 4.25rem;
