@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ExplorerWindow from '../components/ExplorerWindow'
-import '../styles/terminal.css'
 
 export default function Contact() {
   const [formData, setFormData] = useState({

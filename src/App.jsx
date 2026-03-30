@@ -3,10 +3,10 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 import FlyingCode from './components/FlyingCode'
+import Home from './pages/Home'
 import { initEffects } from './utils/effects'
 import soundManager from './utils/soundManager'
 
-const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
 const Projects = lazy(() => import('./pages/Projects'))
 const Contact = lazy(() => import('./pages/Contact'))
@@ -21,6 +21,7 @@ export default function App() {
   const [route, setRoute] = useState('home')
   const [soundEnabled, setSoundEnabled] = useState(true)
   const [showFlyingCode, setShowFlyingCode] = useState(true)
+  const [ecoMode, setEcoMode] = useState(false)
   const [secretUnlocked, setSecretUnlocked] = useState(false)
 
   const secretRoutes = ['competences', 'entreprise', 'recrutement']
@@ -29,6 +30,12 @@ export default function App() {
   // Initialiser les effets visuels au montage
   useEffect(() => {
     initEffects()
+
+    const savedEcoMode = window.localStorage.getItem('ecoMode') === '1'
+    const lowPerfDevice = (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4)
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const shouldEnableEco = savedEcoMode || lowPerfDevice || reducedMotion
+    setEcoMode(shouldEnableEco)
 
     // Debloque les pages secretes via URL, ex: ?key=31MARS2026&page=competences
     const params = new URLSearchParams(window.location.search)
@@ -70,6 +77,14 @@ export default function App() {
     }
 
   }, [])
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('eco-mode', ecoMode)
+    window.localStorage.setItem('ecoMode', ecoMode ? '1' : '0')
+    if (ecoMode) {
+      setShowFlyingCode(false)
+    }
+  }, [ecoMode])
 
   useEffect(() => {
     if (!secretUnlocked && secretRoutes.includes(route)) {
@@ -120,6 +135,14 @@ export default function App() {
         title={soundEnabled ? "Désactiver les sons" : "Activer les sons"}
       >
         {soundEnabled ? '[SOUND-ON] SON' : '[SOUND-OFF] SON'}
+      </button>
+
+      <button
+        className={`eco-control ${ecoMode ? 'active' : ''}`}
+        onClick={() => setEcoMode((prev) => !prev)}
+        title={ecoMode ? 'Désactiver le mode éco' : 'Activer le mode éco'}
+      >
+        {ecoMode ? '[ECO-ON]' : '[ECO-OFF]'}
       </button>
     </div>
   )

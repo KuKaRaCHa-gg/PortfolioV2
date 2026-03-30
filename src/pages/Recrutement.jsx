@@ -165,7 +165,7 @@ export default function Recrutement() {
                 const displayPath = encodeURI(resolveAssetPath(imgPath))
                 return (
                   <a key={imgPath} href={displayPath} target="_blank" rel="noreferrer" className="pro-image-card">
-                    <img src={displayPath} alt={label} loading="lazy" />
+                    <img src={displayPath} alt={label} width="960" height="540" loading="lazy" decoding="async" />
                     <span>{label}</span>
                   </a>
                 )

@@ -11,6 +11,8 @@
   --font:'Share Tech Mono','Courier New',monospace;
   --trans:0.3s ease;
   --glow:rgba(0, 255, 0,0.3);
+  --header-height:60px;
+  --sidebar-width:250px;
 }
 
 /* === CUSTOM CURSOR === */
@@ -109,13 +111,12 @@ body::before{
   content:'';position:fixed;inset:0;
   background:repeating-linear-gradient(0deg,rgba(0,0,0,0.15) 1px,transparent 1px,transparent 2px);
   pointer-events:none;z-index:9999;
-  animation:scanlineMove 1.5s linear infinite;
+  opacity:0.28;
 }
 @keyframes scanlineMove{0%{transform:translateY(0)}100%{transform:translateY(4px)}}
 
 body{
-  box-shadow:inset 0 0 50px var(--glow);
-  animation:bg-pulse 2s infinite alternate;
+  box-shadow:inset 0 0 26px rgba(0, 255, 0, 0.16);
   padding:0; /* Supprimé le padding pour fullscreen */
 }
 @keyframes bg-pulse{0%{box-shadow:inset 0 0 50px var(--glow)}100%{box-shadow:inset 0 0 70px rgba(0, 255, 0,0.4)}}
@@ -127,7 +128,6 @@ a:hover{background:var(--text);color:var(--bg);padding:0 5px;animation:text-flic
 h1,h2,h3,h4,h5,h6{
   color:var(--text);font-weight:normal;text-transform:uppercase;
   margin:0 0 10px;text-shadow:0 0 5px var(--text);
-  animation:neon-text 0.8s infinite alternate;
 }
 h1::before{content:"C:\\> "}
 h2::before{content:"DIR> "}
@@ -141,6 +141,27 @@ p, li, span, a, button, label,
 .experience-card, .education-card {
   overflow-wrap: anywhere;
   word-break: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tech-logo {
+  aspect-ratio: 1 / 1;
+}
+
+.project-card-image img,
+.gallery-thumbnail img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.pro-image-card img,
+.evidence-image-item img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -184,15 +205,15 @@ p, li, span, a, button, label,
   min-height:100vh;
   width:100%;
   max-width:100vw;
-  padding-top: 60px; /* Header fixe */
+  padding-top: var(--header-height); /* Header fixe */
   overflow-x:hidden;
 }
 
 /* Desktop: décalage pour la sidebar */
 @media (min-width: 1025px) {
   .terminal-root {
-    margin-left: 250px;
-    width: calc(100% - 250px);
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
   }
 }
 
@@ -215,7 +236,6 @@ p, li, span, a, button, label,
   padding:1.5rem;
   box-shadow:0 0 40px var(--glow);
   position:relative;
-  animation:neon-pulse 1.5s infinite alternate;
   margin:0 auto;
   overflow-x:hidden;
 }
@@ -287,13 +307,14 @@ p, li, span, a, button, label,
   display:flex;justify-content:center;align-items:center;gap:15px;
   padding:10px;color:var(--text);
   border-top:var(--border-dashed);
-  animation:neon-glow 2s infinite alternate;
+  min-height:56px;
 }
 .terminal-foot a{text-decoration:underline}
 
 .footer-logo {
   width: 35px;
   height: 35px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #00ff00;
@@ -339,11 +360,12 @@ p, li, span, a, button, label,
 .home-logo {
   width: 150px;
   height: 150px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 50%;
   border: 3px solid #00ff00;
   box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
-  animation: logoEntrance 2s ease-out, logoGlow 3s infinite;
+  animation: logoEntrance 0.6s ease-out;
 }
 
 @keyframes logoEntrance {
@@ -655,6 +677,33 @@ p, li, span, a, button, label,
   .portfolio-grid{grid-template-columns:1fr}
   .terminal-footer{flex-direction:column}
   body{padding:10px}
+
+  .terminal-screen {
+    padding: 0.45rem 0.3rem;
+  }
+
+  .terminal-frame {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .ultra-title {
+    font-size: clamp(1.15rem, 6vw, 1.7rem);
+    line-height: 1.2;
+  }
+
+  .ultra-subtitle,
+  .terminal-text,
+  p,
+  li {
+    font-size: clamp(0.88rem, 3.7vw, 0.98rem);
+  }
+
+  .eco-control {
+    right: 20px;
+    bottom: 70px;
+  }
 }
 
 /* === SKILLS SHOWCASE === */
@@ -916,6 +965,46 @@ p, li, span, a, button, label,
 .sound-control.muted {
   opacity: 0.5;
   text-decoration: line-through;
+}
+
+.eco-control {
+  position: fixed;
+  bottom: 20px;
+  right: 150px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #7fffb1;
+  color: #7fffb1;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  z-index: 1000;
+  font-family: 'Courier New', monospace;
+}
+
+.eco-control.active {
+  background: rgba(0, 255, 120, 0.16);
+}
+
+html.eco-mode body::before,
+html.eco-mode .terminal-frame::before {
+  display: none;
+}
+
+html.eco-mode *,
+html.eco-mode *::before,
+html.eco-mode *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+html.eco-mode .terminal-frame,
+html.eco-mode .terminal-foot,
+html.eco-mode .header-logo,
+html.eco-mode .home-logo,
+html.eco-mode .status-dot,
+html.eco-mode .sound-control,
+html.eco-mode .eco-control {
+  box-shadow: none !important;
 }
 
 .modal-close {
@@ -1352,7 +1441,8 @@ p, li, span, a, button, label,
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: var(--header-height);
+  min-height: var(--header-height);
   background: rgba(0, 0, 0, 0.95);
   border-bottom: 3px solid #00ff00;
   display: flex;
@@ -1373,12 +1463,12 @@ p, li, span, a, button, label,
 .header-logo {
   width: 40px;
   height: 40px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #00ff00;
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
   transition: all 0.3s ease;
-  animation: logoGlow 3s infinite;
 }
 
 .header-logo:hover {
@@ -1407,6 +1497,7 @@ p, li, span, a, button, label,
 .header-right {
   flex: 1;
   justify-content: flex-end;
+  min-width: 320px;
 }
 
 .header-icon {
@@ -1460,7 +1551,6 @@ p, li, span, a, button, label,
   background: #00ff00;
   border-radius: 50%;
   box-shadow: 0 0 10px #00ff00;
-  animation: blink 2s infinite;
 }
 
 @keyframes blink {
@@ -1479,6 +1569,7 @@ p, li, span, a, button, label,
   font-weight: bold;
   text-shadow: 0 0 5px #00ff00;
   min-width: 90px;
+  font-variant-numeric: tabular-nums;
 }
 
 .header-date {
@@ -1512,7 +1603,7 @@ p, li, span, a, button, label,
 
 /* Ajustement du contenu principal pour compenser le header fixe */
 .terminal-root {
-  padding-top: 60px;
+  padding-top: var(--header-height);
 }
 
 /* Responsive Header */

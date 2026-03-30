@@ -35,7 +35,7 @@ export default function About() {
         <div className="about-header">
           {profile.avatar && (
             <div className="profile-avatar">
-              <img src={profile.avatar} alt={profile.name} />
+              <img src={profile.avatar} alt={profile.name} width="256" height="256" loading="eager" decoding="async" />
             </div>
           )}
           <h1 className="glitch-text" data-text={profile.name}>{profile.name}</h1>
@@ -109,52 +109,52 @@ export default function About() {
           </h2>
           <div className={`favorite-techs-grid ${techLogosOpen ? 'open' : 'closed'}`}>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/JS.png" alt="JavaScript" className="tech-logo" />
+              <img src="/images/JS.png" alt="JavaScript" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">JavaScript</h3>
               <p className="tech-desc">Ce portfolio a été développé avec React + Vite</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/Python.png" alt="Python" className="tech-logo" />
+              <img src="/images/Python.png" alt="Python" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">Python</h3>
               <p className="tech-desc">En cours d'apprentissage</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/Java.png" alt="Java" className="tech-logo" />
+              <img src="/images/Java.png" alt="Java" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">Java</h3>
               <p className="tech-desc">Projets BUT Informatique (JavaFX, POO)</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/PHP.png" alt="PHP" className="tech-logo" />
+              <img src="/images/PHP.png" alt="PHP" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">PHP</h3>
               <p className="tech-desc">WordPress, sites web dynamiques</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/C.png" alt="C" className="tech-logo" />
+              <img src="/images/C.png" alt="C" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">C</h3>
               <p className="tech-desc">Programmation système</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/C++.png" alt="C++" className="tech-logo" />
+              <img src="/images/C++.png" alt="C++" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">C++</h3>
               <p className="tech-desc">POO, classe Date</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/HTML.png" alt="HTML" className="tech-logo" />
+              <img src="/images/HTML.png" alt="HTML" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">HTML</h3>
               <p className="tech-desc">Structure des pages web</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/css.png" alt="CSS" className="tech-logo" />
+              <img src="/images/css.png" alt="CSS" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">CSS</h3>
               <p className="tech-desc">Design et animations</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/SQL.png" alt="SQL" className="tech-logo" />
+              <img src="/images/SQL.png" alt="SQL" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">SQL</h3>
               <p className="tech-desc">Bases de données (MySQL, SQLite)</p>
             </div>
             <div className="tech-logo-card" onMouseEnter={() => soundManager.playHover()}>
-              <img src="/images/NODE.png" alt="Node.js" className="tech-logo" />
+              <img src="/images/NODE.png" alt="Node.js" className="tech-logo" width="96" height="96" loading="lazy" decoding="async" />
               <h3 className="tech-name">Node.js</h3>
               <p className="tech-desc">Runtime JavaScript</p>
             </div>

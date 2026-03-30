@@ -484,7 +484,10 @@ export default function Competences() {
                                   <img
                                     src={displayPath}
                                     alt={label}
+                                    width="960"
+                                    height="540"
                                     loading="lazy"
+                                    decoding="async"
                                     onError={(e) => {
                                       e.currentTarget.style.display = 'none'
                                       const fallback = e.currentTarget.parentElement?.querySelector('.img-fallback')

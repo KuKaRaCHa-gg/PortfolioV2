@@ -24,7 +24,10 @@ export default function ImageGallery({ images = [] }) {
             <img 
               src={img.url} 
               alt={img.alt || `Screenshot ${i + 1}`}
+              width="800"
+              height="450"
               loading="lazy"
+              decoding="async"
             />
             <div className="thumbnail-overlay">
               <span>🔍 Voir</span>
@@ -41,6 +44,9 @@ export default function ImageGallery({ images = [] }) {
             <img 
               src={selectedImage.url} 
               alt={selectedImage.alt}
+              width="1200"
+              height="675"
+              decoding="async"
               style={{maxWidth: '100%', maxHeight: '80vh'}}
             />
             {selectedImage.caption && (

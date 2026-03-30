@@ -42,9 +42,13 @@ export default function ProjectCard({ project, index }) {
         <img 
           src={thumbnailImage} 
           alt={project.title}
+          width="600"
+          height="400"
+          loading="lazy"
+          decoding="async"
           onError={(e) => {
-            // Fallback vers une image générée si l'image n'existe pas
-            e.target.src = `https://via.placeholder.com/600x400/001100/00FF00?text=${encodeURIComponent(project.title)}`
+            // Fallback local pour éviter une requête externe
+            e.target.src = `${import.meta.env.BASE_URL}images/PP&logo/LogoRond.png`
           }}
         />
         <div className="project-card-overlay">

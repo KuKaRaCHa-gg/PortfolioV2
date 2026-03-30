@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import LogoMark from './LogoMark'
 
 export default function Header(){
   const [time, setTime] = useState(new Date())
@@ -38,7 +39,7 @@ export default function Header(){
   return (
     <header className="terminal-header-enhanced">
       <div className="header-section header-left">
-        <img src="/images/PP&logo/LogoRond.png" alt="Logo" className="header-logo" />
+        <LogoMark className="header-logo" title="Logo Daniil Minevich" />
         <span className="header-brand glitch-text" data-text="DANIIL.DEV">DANIIL.DEV</span>
         <span className="header-badge">v2.0</span>
       </div>

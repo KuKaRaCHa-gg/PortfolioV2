@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Typewriter from '../shared/Typewriter'
 import soundManager from '../utils/soundManager'
 import ExplorerWindow from '../components/ExplorerWindow'
+import LogoMark from '../components/LogoMark'
 
 export default function Home({ onEnter }) {
   const [bootComplete, setBootComplete] = useState(false)
@@ -94,7 +95,7 @@ export default function Home({ onEnter }) {
           </div>
 
           <div className="ultra-home-right">
-            <img src="/images/PP&logo/LogoRond.png" alt="Logo Daniil" className="home-logo" />
+            <LogoMark className="home-logo" title="Logo Daniil Minevich" />
           </div>
         </div>
       </ExplorerWindow>

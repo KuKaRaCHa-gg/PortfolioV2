@@ -6,6 +6,12 @@ export default defineConfig({
   plugins: [react()],
   root: '.',
   build: {
+    target: 'es2019',
+    minify: 'esbuild',
+    cssMinify: 'lightningcss',
+    cssCodeSplit: false,
+    sourcemap: false,
+    reportCompressedSize: false,
     outDir: 'dist',
     rollupOptions: {
       output: {

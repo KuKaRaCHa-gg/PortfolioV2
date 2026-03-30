@@ -1,5 +1,6 @@
 .xp-window {
   width: 100%;
+  max-width: 100%;
   border: 1px solid #0f3f1e;
   background: #050a07;
   box-shadow: inset 1px 1px 0 #0f3d1c, inset -1px -1px 0 #04170a, 0 12px 26px rgba(0, 0, 0, 0.5);
@@ -7,7 +8,7 @@
 }
 
 .xp-titlebar {
-  height: 32px;
+  min-height: 32px;
   background: linear-gradient(90deg, #0a57a7 0%, #1084d7 70%, #65b6f2 100%);
   color: #ffffff;
   display: flex;
@@ -57,6 +58,9 @@
   background: #040a06;
   color: #79efaa;
   box-shadow: inset 1px 1px 0 #0c2113, inset -1px -1px 0 #020503;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .xp-content {
@@ -66,6 +70,7 @@
     radial-gradient(circle at 85% 80%, rgba(16, 68, 39, 0.24), transparent 40%),
     linear-gradient(180deg, #0a130d 0%, #040905 100%);
   position: relative;
+  overflow-x: hidden;
 }
 
 .xp-content::before {
@@ -203,9 +208,16 @@
 @media (max-width: 768px) {
   .xp-content {
     padding: 0.75rem;
+    overflow-x: hidden;
   }
 
   .xp-titlebar {
     font-size: 0.85rem;
+    min-height: 34px;
+    padding-right: 0.45rem;
+  }
+
+  .xp-toolbar {
+    padding: 0.35rem 0.5rem;
   }
 }
