@@ -10,7 +10,9 @@ const GameOfLife = () => {
   const [population, setPopulation] = useState(0);
   const canvasRef = useRef(null);
   const runningRef = useRef(isRunning);
-  
+  const speedRef = useRef(speed);
+  const timeoutRef = useRef(null);
+
   const CELL_SIZE = 10;
 
   // Patterns prédéfinis
@@ -48,6 +50,10 @@ const GameOfLife = () => {
   useEffect(() => {
     runningRef.current = isRunning;
   }, [isRunning]);
+
+  useEffect(() => {
+    speedRef.current = speed;
+  }, [speed]);
 
   const initializeGrid = () => {
     const newGrid = Array(gridSize).fill().map(() => 
@@ -123,7 +129,7 @@ const GameOfLife = () => {
       const newGrid = currentGrid.map((row, y) =>
         row.map((cell, x) => {
           const neighbors = countNeighbors(currentGrid, x, y);
-          
+
           // Règles du Game of Life
           if (cell === 1) {
             return neighbors === 2 || neighbors === 3 ? 1 : 0;
@@ -139,22 +145,38 @@ const GameOfLife = () => {
 
     setGeneration(g => g + 1);
 
-    setTimeout(runSimulation, 500 - speed * 4);
-  }, [speed, gridSize]);
+    // Lit la vitesse via une ref (toujours a jour) plutot que de dependre
+    // de `speed` : changer la vitesse en cours de route ne relance donc
+    // plus une chaine de setTimeout parallele en plus de l'existante.
+    timeoutRef.current = setTimeout(runSimulation, 500 - speedRef.current * 4);
+  }, [gridSize]);
 
   useEffect(() => {
     if (isRunning) {
       runSimulation();
     }
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
   }, [isRunning, runSimulation]);
 
   const handleCanvasClick = (e) => {
     if (isRunning) return;
-    
+
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
-    const x = Math.floor((e.clientX - rect.left) / CELL_SIZE);
-    const y = Math.floor((e.clientY - rect.top) / CELL_SIZE);
+    // Le canvas peut etre retreci en CSS (mobile) alors que sa taille
+    // intrinseque (canvas.width/height) reste gridSize * CELL_SIZE : il
+    // faut donc corriger par le ratio entre les deux, sinon le clic vise
+    // une autre cellule que celle sous le curseur/doigt.
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const x = Math.floor(((e.clientX - rect.left) * scaleX) / CELL_SIZE);
+    const y = Math.floor(((e.clientY - rect.top) * scaleY) / CELL_SIZE);
 
     if (x >= 0 && x < gridSize && y >= 0 && y < gridSize) {
       const newGrid = grid.map(row => [...row]);

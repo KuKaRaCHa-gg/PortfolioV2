@@ -33,7 +33,7 @@ const Tools = () => {
     {
       id: 'pong',
       name: '[PONG] Pong',
-      description: 'Pong classique terminal à deux joueurs',
+      description: 'Pong classique terminal - gardez la balle en jeu',
       component: Pong
     },
     {

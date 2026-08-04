@@ -90,8 +90,15 @@ const SnakeGame = () => {
           return prevSnake;
         }
 
-        // Collision avec soi-même
-        if (prevSnake.some(segment => segment[0] === newHead[0] && segment[1] === newHead[1])) {
+        const willEat = newHead[0] === food[0] && newHead[1] === food[1];
+
+        // Collision avec soi-même. Si le serpent ne mange pas cette frame,
+        // la queue (dernier segment) va se libérer au même tick : avancer
+        // dedans est un mouvement légal, pas une collision. On ne l'inclut
+        // donc dans la vérification que si le serpent grandit ce tour-ci
+        // (queue non retirée) ou est trop court pour avoir une queue distincte.
+        const bodyToCheck = (willEat || prevSnake.length < 2) ? prevSnake : prevSnake.slice(0, -1);
+        if (bodyToCheck.some(segment => segment[0] === newHead[0] && segment[1] === newHead[1])) {
           setGameOver(true);
           return prevSnake;
         }
@@ -99,7 +106,7 @@ const SnakeGame = () => {
         const newSnake = [newHead, ...prevSnake];
 
         // Manger la nourriture
-        if (newHead[0] === food[0] && newHead[1] === food[1]) {
+        if (willEat) {
           setScore(prev => prev + 10);
           generateFood(newSnake);
           // Augmenter la vitesse progressivement

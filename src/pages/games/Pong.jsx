@@ -12,16 +12,28 @@ export default function Pong(){
     let ball = {x:w/2,y:h/2, vx:3, vy:2, r:6}
     let paddle = {x:10,y:h/2-30,w:8,h:60}
     let score = 0
+    let animationId
 
-    // Contrôle par souris
-    canvas.addEventListener('mousemove', (e) => {
+    const movePaddleTo = (clientY) => {
       const rect = canvas.getBoundingClientRect()
-      const mouseY = e.clientY - rect.top
-      paddle.y = mouseY - paddle.h / 2
+      const y = clientY - rect.top
+      paddle.y = y - paddle.h / 2
       // Limiter le paddle dans le canvas
       if(paddle.y < 0) paddle.y = 0
       if(paddle.y + paddle.h > h) paddle.y = h - paddle.h
-    })
+    }
+
+    // Contrôle par souris
+    const handleMouseMove = (e) => movePaddleTo(e.clientY)
+    canvas.addEventListener('mousemove', handleMouseMove)
+
+    // Contrôle tactile (mobile/tablette) : le jeu était injouable au doigt
+    const handleTouchMove = (e) => {
+      if (e.touches.length === 0) return
+      e.preventDefault()
+      movePaddleTo(e.touches[0].clientY)
+    }
+    canvas.addEventListener('touchmove', handleTouchMove, { passive: false })
 
     function loop(){
       // Fond noir
@@ -66,17 +78,26 @@ export default function Pong(){
       // Rebond droite
       if(ball.x > w) ball.vx *= -1
 
-      requestAnimationFrame(loop)
+      animationId = requestAnimationFrame(loop)
     }
     loop()
+
+    // Sans ce nettoyage, quitter puis revenir sur Pong (changement d'onglet
+    // dans Outils & Jeux) empilait une boucle de rendu + un listener par
+    // visite, qui continuaient tous de tourner indéfiniment en arrière-plan.
+    return () => {
+      cancelAnimationFrame(animationId)
+      canvas.removeEventListener('mousemove', handleMouseMove)
+      canvas.removeEventListener('touchmove', handleTouchMove)
+    }
   },[])
 
   return (
     <div className="terminal-screen">
       <div className="terminal-frame">
         <h3>Pong (mini-jeu)</h3>
-        <canvas ref={canvasRef} style={{border:'2px solid #00FF00'}} />
-        <div className="hint">Déplacez la souris pour contrôler le paddle vert</div>
+        <canvas ref={canvasRef} style={{border:'2px solid #00FF00', touchAction: 'none', maxWidth: '100%'}} />
+        <div className="hint">Déplacez la souris (ou le doigt) pour contrôler le paddle vert</div>
       </div>
     </div>
   )

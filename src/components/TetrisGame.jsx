@@ -109,8 +109,11 @@ export default function TetrisGame() {
     return { ...piece, shape: rotated }
   }
 
-  // Vérifier collision
-  const checkCollision = useCallback((piece, pos) => {
+  // Vérifier collision. `checkBoard` est optionnel : passer un board
+  // fraîchement calculé (ex: juste après un verrouillage de pièce) permet
+  // de vérifier contre son état à jour plutôt que contre le state React
+  // pas encore re-rendu.
+  const checkCollision = useCallback((piece, pos, checkBoard = board) => {
     for (let y = 0; y < piece.shape.length; y++) {
       for (let x = 0; x < piece.shape[y].length; x++) {
         if (piece.shape[y][x]) {
@@ -121,7 +124,7 @@ export default function TetrisGame() {
             newX < 0 ||
             newX >= BOARD_WIDTH ||
             newY >= BOARD_HEIGHT ||
-            (newY >= 0 && board[newY][newX])
+            (newY >= 0 && checkBoard[newY][newX])
           ) {
             return true
           }
@@ -130,23 +133,6 @@ export default function TetrisGame() {
     }
     return false
   }, [board])
-
-  // Fusionner pièce avec le board
-  const mergePiece = useCallback(() => {
-    const newBoard = board.map(row => [...row])
-    for (let y = 0; y < currentPiece.shape.length; y++) {
-      for (let x = 0; x < currentPiece.shape[y].length; x++) {
-        if (currentPiece.shape[y][x]) {
-          const boardY = position.y + y
-          const boardX = position.x + x
-          if (boardY >= 0) {
-            newBoard[boardY][boardX] = currentPiece.color
-          }
-        }
-      }
-    }
-    return newBoard
-  }, [board, currentPiece, position])
 
   // Supprimer les lignes complètes
   const clearLines = useCallback((newBoard) => {
@@ -176,6 +162,47 @@ export default function TetrisGame() {
     return clearedBoard
   }, [level])
 
+  // Verrouille la pièce courante à la position donnée : fusion avec le
+  // board, nettoyage des lignes, puis passage à la pièce suivante. Prend
+  // la position explicitement en paramètre (plutôt que de relire le state
+  // `position`, pas encore à jour juste après un setPosition) afin d'être
+  // appelable aussi bien depuis un pas normal que depuis un drop instantané.
+  const lockPiece = useCallback((pos) => {
+    const newBoard = board.map(row => [...row])
+    for (let y = 0; y < currentPiece.shape.length; y++) {
+      for (let x = 0; x < currentPiece.shape[y].length; x++) {
+        if (currentPiece.shape[y][x]) {
+          const boardY = pos.y + y
+          const boardX = pos.x + x
+          if (boardY >= 0) {
+            newBoard[boardY][boardX] = currentPiece.color
+          }
+        }
+      }
+    }
+
+    const cleared = clearLines(newBoard)
+    setBoard(cleared)
+
+    const newPiece = nextPiece
+    const nextNew = createPiece()
+    const startPos = { x: Math.floor(BOARD_WIDTH / 2) - 1, y: 0 }
+
+    // Vérifie contre `cleared` (le board qu'on vient de calculer), pas
+    // contre le state `board` encore périmé à ce stade du rendu.
+    if (checkCollision(newPiece, startPos, cleared)) {
+      setGameOver(true)
+      if (score > highScore) {
+        setHighScore(score)
+        localStorage.setItem('tetris-highscore', score.toString())
+      }
+    } else {
+      setCurrentPiece(newPiece)
+      setNextPiece(nextNew)
+      setPosition(startPos)
+    }
+  }, [board, currentPiece, nextPiece, createPiece, checkCollision, clearLines, score, highScore])
+
   // Déplacer la pièce vers le bas
   const moveDown = useCallback(() => {
     if (!currentPiece || gameOver || isPaused) return
@@ -185,28 +212,9 @@ export default function TetrisGame() {
     if (!checkCollision(currentPiece, newPos)) {
       setPosition(newPos)
     } else {
-      // Fusionner et créer nouvelle pièce
-      const merged = mergePiece()
-      const cleared = clearLines(merged)
-      setBoard(cleared)
-
-      const newPiece = nextPiece
-      const nextNew = createPiece()
-      const startPos = { x: Math.floor(BOARD_WIDTH / 2) - 1, y: 0 }
-
-      if (checkCollision(newPiece, startPos)) {
-        setGameOver(true)
-        if (score > highScore) {
-          setHighScore(score)
-          localStorage.setItem('tetris-highscore', score.toString())
-        }
-      } else {
-        setCurrentPiece(newPiece)
-        setNextPiece(nextNew)
-        setPosition(startPos)
-      }
+      lockPiece(position)
     }
-  }, [currentPiece, position, board, gameOver, isPaused, nextPiece, createPiece, checkCollision, mergePiece, clearLines, score, highScore])
+  }, [currentPiece, position, gameOver, isPaused, checkCollision, lockPiece])
 
   // Déplacements
   const move = useCallback((dir) => {
@@ -238,9 +246,8 @@ export default function TetrisGame() {
     while (!checkCollision(currentPiece, { x: newPos.x, y: newPos.y + 1 })) {
       newPos.y++
     }
-    setPosition(newPos)
-    moveDown()
-  }, [currentPiece, position, gameOver, isPaused, checkCollision, moveDown])
+    lockPiece(newPos)
+  }, [currentPiece, position, gameOver, isPaused, checkCollision, lockPiece])
 
   // Contrôles clavier
   useEffect(() => {
