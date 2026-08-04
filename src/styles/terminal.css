@@ -160,6 +160,24 @@ p, li, span, a, button, label,
   }
 }
 
+/* === RESPECT DE "prefers-reduced-motion" (accessibilité + performance) ===
+   Jusqu'ici seul le mobile (<=768px) coupait les animations perpétuelles ;
+   les visiteurs desktop ayant explicitement demandé moins de mouvement à
+   leur OS (économie de batterie, confort visuel) recevaient quand même
+   toutes les animations "infinite" (glow des titres, scanlines, blink...). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body::before {
+    display: none;
+  }
+}
+
 /* === ANIMATIONS - ACCÉLÉRÉES === */
 @keyframes neon-text{0%{text-shadow:0 0 5px var(--text)}100%{text-shadow:0 0 15px var(--text)}}
 @keyframes text-flicker{0%,100%{opacity:1}50%{opacity:0.7}}

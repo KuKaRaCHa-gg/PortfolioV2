@@ -8,6 +8,16 @@ export default function AdvancedThreeScene() {
   useEffect(() => {
     if (!mountRef.current) return
 
+    // Désactiver sur mobile et pour les utilisateurs "reduced motion" :
+    // la scène est masquée en CSS (.mobile-hide / .three-scene-container)
+    // sur mobile, mais sans ce garde la boucle de rendu (particules +
+    // rotations) continuait de tourner invisible en arrière-plan et de
+    // consommer CPU/GPU/batterie pour rien.
+    const skip3D = window.matchMedia(
+      '(max-width: 768px), (prefers-reduced-motion: reduce)'
+    ).matches
+    if (skip3D) return
+
     // Scene setup
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(
