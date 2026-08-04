@@ -816,3 +816,36 @@
     margin-left: 200px !important;
   }
 }
+
+/* ===== BOUTON SON FLOTTANT : réduit au minimum pour limiter le chevauchement avec le contenu qui défile ===== */
+@media (max-width: 768px) {
+  .sound-control {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    font-size: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .sound-control::after {
+    content: '\266A';
+    font-size: 1.2rem;
+  }
+
+  .sound-control.muted::after {
+    content: '\2715';
+    font-size: 1.1rem;
+  }
+
+  /* Réserve de l'espace en bas de page pour que le bouton son
+     fixe ne se superpose jamais au dernier élément cliquable */
+  .terminal-root {
+    padding-bottom: 4.5rem;
+  }
+}

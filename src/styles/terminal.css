@@ -1432,6 +1432,7 @@ p, li, span, a, button, label,
   color: #00ff00;
   font-family: 'Courier New', monospace;
   letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 .header-badge {
@@ -1442,6 +1443,7 @@ p, li, span, a, button, label,
   border-radius: 4px;
   font-size: 0.7rem;
   font-family: 'Courier New', monospace;
+  white-space: nowrap;
 }
 
 .system-status {
@@ -1452,6 +1454,7 @@ p, li, span, a, button, label,
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .status-dot {
@@ -1479,6 +1482,7 @@ p, li, span, a, button, label,
   font-weight: bold;
   text-shadow: 0 0 5px #00ff00;
   min-width: 90px;
+  white-space: nowrap;
 }
 
 .header-date {
@@ -1486,6 +1490,7 @@ p, li, span, a, button, label,
   font-family: 'Courier New', monospace;
   font-size: 0.85rem;
   min-width: 120px;
+  white-space: nowrap;
 }
 
 .header-battery {
@@ -1499,6 +1504,7 @@ p, li, span, a, button, label,
   padding: 0.3rem 0.8rem;
   border: 1px solid #00ff00;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .battery-icon {
@@ -1555,9 +1561,14 @@ p, li, span, a, button, label,
     font-size: 0.75rem;
     min-width: auto;
   }
-  
+
   .header-brand {
     font-size: 0.9rem;
+  }
+
+  .header-logo {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -1565,20 +1576,25 @@ p, li, span, a, button, label,
   .terminal-header-enhanced {
     padding: 0.5rem 0.25rem;
   }
-  
+
   .header-section {
     font-size: 0.7rem;
   }
-  
+
   .header-brand {
     font-size: 0.8rem;
   }
-  
+
+  .header-badge,
+  .header-battery {
+    display: none; /* Cachés sur très petit écran, faute de place */
+  }
+
   .header-time {
     font-size: 0.8rem;
     min-width: 70px;
   }
-  
+
   .header-date {
     display: none; /* Caché sur très petit écran */
   }
