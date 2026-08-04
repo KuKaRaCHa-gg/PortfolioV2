@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import ExplorerWindow from '../components/ExplorerWindow'
 import '../styles/terminal.css'
 
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,6 +13,7 @@ export default function Contact() {
   })
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
+  const [error, setError] = useState(null)
 
   function handleChange(e) {
     setFormData({
@@ -19,22 +22,48 @@ export default function Contact() {
     })
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSending(true)
-    
-    // Utilisation de mailto avec votre vraie adresse Hostinger
-    const mailtoLink = `mailto:contact@daniilminevich.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`De: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`
-    
-    // Ouvrir le client email
-    window.location.href = mailtoLink
-    
-    // Simuler succès après 1 seconde
-    setTimeout(() => {
+    setError(null)
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      // Pas de clé configurée : on retombe sur mailto pour ne jamais bloquer le visiteur
+      const mailtoLink = `mailto:contact@daniilminevich.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`De: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`
+      window.location.href = mailtoLink
       setSent(true)
-      setSending(false)
       setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 1000)
+      return
+    }
+
+    setSending(true)
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `[Portfolio] ${formData.subject}`,
+          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSent(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setError(result.message || "Echec de l'envoi, reessayez.")
+      }
+    } catch (err) {
+      setError('Connexion impossible. Verifiez votre reseau et reessayez.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -111,8 +140,12 @@ export default function Contact() {
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            {error && (
+              <p className="form-error" role="alert">[ERROR] {error}</p>
+            )}
+
+            <button
+              type="submit"
               className="terminal-button primary submit-btn"
               disabled={sending}
             >

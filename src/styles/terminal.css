@@ -486,6 +486,16 @@ p, li, span, a, button, label,
   margin-right: 0.5rem;
 }
 
+.form-error {
+  color: #ff5f5f;
+  border: 1px solid #ff5f5f;
+  background: rgba(255, 95, 95, 0.08);
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 .form-input,
 .form-textarea {
   width: 100%;
