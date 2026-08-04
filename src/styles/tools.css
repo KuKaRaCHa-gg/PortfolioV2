@@ -16,12 +16,12 @@
   text-align: center;
   padding: 2rem;
   margin-bottom: 2rem;
-  background: #b8bcc2;
-  border: 2px solid #edf2f7;
-  border-right-color: #3b3f44;
-  border-bottom-color: #3b3f44;
-  border-radius: 0;
-  box-shadow: 2px 2px 0 #101010;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(62, 232, 255, 0.07), transparent 45%),
+    linear-gradient(180deg, rgba(11, 28, 17, 0.94) 0%, rgba(6, 15, 9, 0.97) 100%);
+  border: 1px solid #2f7a52;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 255, 140, 0.08), 0 10px 26px rgba(0, 0, 0, 0.4);
 }
 
 .tools-header h1 {
@@ -37,17 +37,16 @@
 }
 
 .tool-nav-button {
-  background: #bcc0c6;
-  border: 2px solid #edf2f7;
-  border-right-color: #3b3f44;
-  border-bottom-color: #3b3f44;
+  background: rgba(6, 17, 10, 0.85);
+  border: 1px solid #2f7a52;
+  border-radius: 4px;
   padding: 1.5rem;
   cursor: pointer;
   transition: all 0.3s;
   text-align: left;
   position: relative;
   overflow: hidden;
-  color: #101317;
+  color: #bdf5d3;
 }
 
 .tool-nav-button::before {
@@ -66,15 +65,16 @@
 }
 
 .tool-nav-button:hover {
-  background: #c7ccd2;
-  box-shadow: 3px 3px 0 #101010;
+  background: rgba(21, 56, 34, 0.85);
+  border-color: #7bffae;
+  box-shadow: 0 0 18px rgba(123, 255, 174, 0.25);
   transform: translateY(-2px);
 }
 
 .tool-nav-button.active {
-  background: #d0d5db;
-  border-color: #0a1fbf;
-  box-shadow: 0 0 0 1px #0a1fbf inset, 2px 2px 0 #101010;
+  background: rgba(21, 56, 34, 0.85);
+  border-color: #3ee8ff;
+  box-shadow: 0 0 0 1px rgba(62, 232, 255, 0.35), 0 0 18px rgba(62, 232, 255, 0.25);
 }
 
 .tool-nav-button.coming-soon {
@@ -91,22 +91,14 @@
 .tool-icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #0a1fbf;
-  text-shadow: none;
+  color: #3ee8ff;
+  text-shadow: 0 0 10px rgba(62, 232, 255, 0.5);
 }
 
 .tool-description {
-  color: #20262c;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: #a9e0bf;
+  font-family: var(--font);
   font-size: 0.9rem;
-}
-
-.tools-page .terminal-text,
-.tools-page .neon-text,
-.tools-page .section-title,
-.tools-page .tools-header h1 {
-  color: #12161b;
-  text-shadow: none;
 }
 
 .tool-display {

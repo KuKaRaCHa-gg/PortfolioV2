@@ -1,27 +1,76 @@
 .xp-window {
+  --hud-accent: #3ee8ff;
   width: 100%;
-  border: 1px solid #0f3f1e;
+  position: relative;
+  border: 1px solid #1c5a34;
   background: #050a07;
-  box-shadow: inset 1px 1px 0 #0f3d1c, inset -1px -1px 0 #04170a, 0 12px 26px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 128, 0.08),
+    0 0 24px rgba(0, 255, 140, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.55);
   overflow: hidden;
 }
 
+/* Accents d'angle façon HUD sci-fi, en plus du cadre plein */
+.xp-window::before,
+.xp-window::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid var(--hud-accent);
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 0 4px rgba(62, 232, 255, 0.7));
+}
+
+.xp-window::before {
+  left: -1px;
+  border-left: 2px solid var(--hud-accent);
+}
+
+.xp-window::after {
+  right: -1px;
+  border-right: 2px solid var(--hud-accent);
+}
+
 .xp-titlebar {
-  height: 32px;
-  background: linear-gradient(90deg, #0a57a7 0%, #1084d7 70%, #65b6f2 100%);
-  color: #ffffff;
+  height: 34px;
+  background: linear-gradient(180deg, #0c2416 0%, #061109 100%);
+  border-bottom: 1px solid #1f7a44;
+  box-shadow: 0 1px 12px rgba(0, 255, 140, 0.15);
+  color: #c9ffe0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.55rem 0 0.7rem;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
-  font-size: 0.95rem;
+  padding: 0 0.6rem 0 0.7rem;
+  font-family: var(--font);
+  font-size: 0.85rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.xp-title-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.xp-title-left::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff85;
+  box-shadow: 0 0 8px #00ff85, 0 0 2px #fff;
+  flex-shrink: 0;
 }
 
 .xp-title-buttons {
   display: flex;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
 .xp-title-buttons span {
@@ -30,11 +79,12 @@
   justify-content: center;
   width: 20px;
   height: 18px;
-  border: 1px solid #083f7f;
-  background: linear-gradient(180deg, #f9fbff 0%, #d6e8ff 100%);
-  color: #003b7e;
-  font-size: 0.72rem;
+  border: 1px solid #1f7a44;
+  background: rgba(0, 255, 140, 0.06);
+  color: #7cf3a8;
+  font-size: 0.68rem;
   font-weight: 700;
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
 }
 
 .xp-toolbar {
@@ -43,8 +93,8 @@
   border-bottom: 1px solid #163521;
   padding: 0.4rem 0.7rem;
   color: #7cf3a8;
-  font-family: 'MS Sans Serif', Arial, sans-serif;
-  font-size: 0.85rem;
+  font-family: var(--font);
+  font-size: 0.8rem;
 }
 
 .xp-path {
@@ -56,13 +106,14 @@
   border: 1px solid #1d4d2a;
   background: #040a06;
   color: #79efaa;
-  box-shadow: inset 1px 1px 0 #0c2113, inset -1px -1px 0 #020503;
+  box-shadow: inset 0 0 0 1px rgba(0, 255, 140, 0.05);
 }
 
 .xp-content {
   padding: 1.1rem;
   background:
     radial-gradient(circle at 15% 20%, rgba(36, 121, 63, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(62, 232, 255, 0.08), transparent 38%),
     radial-gradient(circle at 85% 80%, rgba(16, 68, 39, 0.24), transparent 40%),
     linear-gradient(180deg, #0a130d 0%, #040905 100%);
   position: relative;
@@ -88,9 +139,17 @@
   border-top: 1px solid #1d4a2a;
   background: linear-gradient(180deg, #102015 0%, #0a140d 100%);
   color: #7cf3a8;
-  font-size: 0.8rem;
-  font-family: 'MS Sans Serif', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-family: var(--font);
+  letter-spacing: 0.04em;
   padding: 0.32rem 0.7rem;
+}
+
+.xp-statusbar span::before {
+  content: '\25B8';
+  display: inline-block;
+  margin-right: 0.4em;
+  color: var(--hud-accent, #3ee8ff);
 }
 
 .home-hero-window .xp-content {
@@ -138,6 +197,8 @@
 }
 
 .ultra-menu-btn {
+  position: relative;
+  overflow: hidden;
   border: 2px solid #2f7a52;
   background: rgba(6, 17, 10, 0.85);
   color: #bdf5d3;
@@ -148,7 +209,22 @@
   letter-spacing: 0.08em;
   text-align: left;
   cursor: pointer;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.ultra-menu-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(123, 255, 174, 0.35) 50%, transparent 60%);
+  transform: translateX(-120%);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.ultra-menu-btn:hover::before {
+  transform: translateX(120%);
 }
 
 .ultra-menu-btn:hover {

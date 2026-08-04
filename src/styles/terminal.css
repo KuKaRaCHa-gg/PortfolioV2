@@ -1636,13 +1636,21 @@ body {
 .project-card,
 .tool-card,
 .article-card {
-  border-radius: 0;
-  border: 2px solid #ecf1f6;
-  border-right-color: #34393f;
-  border-bottom-color: #34393f;
-  background: linear-gradient(180deg, #bec3c9 0%, #b4b9bf 100%);
-  box-shadow: 2px 2px 0 rgba(10, 10, 10, 0.9);
-  color: #12161b;
+  border-radius: 4px;
+  border: 1px solid #2f7a52;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(62, 232, 255, 0.06), transparent 45%),
+    linear-gradient(180deg, rgba(11, 28, 17, 0.94) 0%, rgba(6, 15, 9, 0.97) 100%);
+  box-shadow: 0 0 0 1px rgba(0, 255, 140, 0.08), 0 10px 26px rgba(0, 0, 0, 0.4);
+  color: #d9ffe9;
+}
+
+.terminal-card:hover,
+.project-card:hover,
+.tool-card:hover,
+.article-card:hover {
+  border-color: #6fffa7;
+  box-shadow: 0 0 0 1px rgba(111, 255, 167, 0.2), 0 14px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 255, 140, 0.15);
 }
 
 .terminal-card h1,
@@ -1677,7 +1685,7 @@ body {
 .article-card span,
 .article-card strong,
 .article-card a {
-  color: #12161b;
+  color: #d9ffe9;
 }
 
 .terminal-button,
